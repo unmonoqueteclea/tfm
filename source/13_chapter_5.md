@@ -1,5 +1,12 @@
-# Research containing a table
+# Diseño de sistema para la clasificación automática de RD y DMAE
 
+## Exploración inicial de los datos
+
+
+
+
+
+<!-- ------------------------------------------------------------>
 ## Introduction
 
 This is the introduction. Phasellus non purus id mauris aliquam rutrum vitae quis tellus. Maecenas rhoncus ligula nulla, fringilla placerat mi consectetur eu. Aenean nec metus ac est ornare posuere. Nunc ipsum lacus, gravida commodo turpis quis, rutrum eleifend erat. Pellentesque id lorem eget ante porta tincidunt nec nec tellus.
@@ -16,9 +23,9 @@ This is the first part of the methodology.  Integer leo erat, commodo in lacus v
 
 This is the second part of the methodology. Nullam accumsan condimentum eros eu volutpat. Maecenas quis ligula tempor, interdum ante sit amet, aliquet sem. Fusce tellus massa, blandit id tempus at, cursus in tortor. Nunc nec volutpat ante. Phasellus dignissim ut lectus quis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<!-- 
+<!--
 Comments can be added like this.
---> 
+-->
 
 ## Results
 
@@ -35,7 +42,7 @@ Row 1               0.1                     0.2
 
 Row 2               0.3                     0.3
 
-Row 3               0.4                     0.4      
+Row 3               0.4                     0.4
 
 Row 4               0.5                     0.6
 
@@ -51,6 +58,3 @@ This is the discussion. Etiam sit amet mi eros. Donec vel nisi sed purus gravida
 ## Conclusion
 
 This is the conclusion to the chapter. Nullam porta tortor id vehicula interdum. Quisque pharetra, neque ut accumsan suscipit, orci orci commodo tortor, ac finibus est turpis eget justo. Cras sodales nibh nec mauris laoreet iaculis. Morbi volutpat orci felis, id condimentum nulla suscipit eu. Fusce in turpis quis ligula tempus scelerisque eget quis odio. Vestibulum et dolor id erat lobortis ullamcorper quis at sem.
-
-
-
