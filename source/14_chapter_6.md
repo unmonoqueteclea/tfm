@@ -1,4 +1,4 @@
-# Resultados obtenidos
+# Resultados obtenidos {#resultados}
 
 ## Introduction
 

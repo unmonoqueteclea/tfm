@@ -1,4 +1,4 @@
-# Diseño de sistema para la clasificación automática de RD y DMAE
+# Diseño de sistema para la clasificación automática de RD y DMAE {#sistema}
 
 ## Exploración inicial de los datos
 

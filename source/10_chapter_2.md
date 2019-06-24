@@ -1,4 +1,4 @@
-# El ojo y sus patologías
+# El ojo y sus patologías {#ojo}
 <!-- Comienzo: 14 Mayo
      Previsión: Miercoles 22 Mayo
      Papers útiles: (P0) (P7) (P8)
@@ -179,7 +179,13 @@ ambas patologías tienen algo en común: la mayoría de casos de ceguera
 provocados por ellas hubieran sido evitables con una detección y
 tratamiento de las mismas en los primeros estadios. La detección de
 estas, como veremos más adelante, pasa comunmente por el análisis de
-la retina mediante imágenes de fondo de ojo.
+la retina mediante imágenes de fondo de ojo. Este tipo de imágenes
+permiten proyectar la estructura 3D de la retina en un plano 2D. Para
+captarlas, utilizamos un tipo especial de cámaras que cuentan con un
+microscopio de baja potencia con una cámara adherida, permitiendo una
+factor de magnificación de 2.5x. Los rayos de luz viajan desde la
+retina a la cámara atravasando la pupila. El sensor de la cámara es
+un sensor RGB similar al de otros tipos de cámaras.
 
 ### Retinopatía diabética
 <!-- 1 día
@@ -187,19 +193,6 @@ la retina mediante imágenes de fondo de ojo.
     Fin V1:
     Papers útiles: (P1)
 -->
-
-La Retinopatía Diabética (RD) pertenece al grupo de las enfermedades
-vasculares, y se ha convertido en la principal causa evitable de
-ceguera en todo el mundo. Esta patología se da en el 35% de las
-personas con diabetes, que afecta al 8.5% de la población mundial
-[@idf2017] [@IAPB]. Se estima que 191 millones de personas sufrirán
-retinopatía diabética en 2030 [@zheng2012worldwide].
-
-La diabetes supone, aproximadamente, el 11.6% del presupuesto total de
-salud de la mayoría de países [@{zhang2009economic].  Además, el coste
-de los pacientes con RD supera notablemente al de los pacientes sin
-dicha patología, incrementándose con la gravedad de la
-retinopatía [@zhang2017direct].
 
 Las personas que sufren de diabetes, presentan altos niveles de azucar
 en sangre debido a la incapacidad de su páncreas de generar suficiente
@@ -218,20 +211,23 @@ principales de RD: proliferativa y no proliferativa.
   complicados, el bloqueo de una gran cantidad de vasos sanguíneos
   provoca que haya áreas de la retina que dejen de recibir sangre por
   completo.
-- **DR Proliferativa (PDR)**: En esta etapa, de mayor gravedad, las áreas de
-  la retina que no estaban recibiendo sangre, envían señales al cuerpo
-  para que se hagan crecer nuevos vasos sanguíneos. Sin embargo, estos
-  nuevos vasos sanguíneos son frágiles y anormales, y en el caso de
-  rotura y goteo de sangre, podrían provocar una pérdida severa en la
-  visión o incluso resultar en la ceguera.
+- **DR Proliferativa (PDR)**: En esta etapa, de mayor gravedad, las
+  áreas de la retina que no estaban recibiendo sangre, envían señales
+  al cuerpo para que se hagan crecer nuevos vasos sanguíneos. Sin
+  embargo, estos nuevos vasos sanguíneos son frágiles y anormales, y
+  en el caso de rotura y goteo de sangre, podrían provocar una pérdida
+  severa en la visión o incluso resultar en la ceguera.
 
 La detección temprana de la RD ha demostrado ser de vital importancia
 para evitar la pérdida de vista e incluso la ceguera causada por la
-misma. El tratamiento de la retinopatía diabética más común es la
-**fotocoagulación con láser**. Este tratamiento se puede realizar en
-una o varias sesiones, tras haber comprobado, mediante una angiografía
-fluoresceínica el estado de los vasos sanguíneos. Además, este
-tratamiento puede ir acompañada de inyecciones intravítreas de
+misma. Sin embargo, los primeros estadios de la Retinopatía Diabética
+son casi asintomáticos.
+
+El tratamiento de la retinopatía diabética más
+común es la **fotocoagulación con láser**. Este tratamiento se puede
+realizar en una o varias sesiones, tras haber comprobado, mediante una
+angiografía fluoresceínica el estado de los vasos sanguíneos. Además,
+este tratamiento puede ir acompañada de inyecciones intravítreas de
 medicación antangiogénica, que se encargará de evitar el desarrollo
 excesibo y anormal de los vasos sanguíneos. En casos de gravedad,
 puede ser preciso recurrir a la vitrectomía, una técnica de
@@ -244,21 +240,35 @@ puntos rojos edbidos a microaneurismas o, incluso, hemorragias.
 Las lesiones típicas derivadas de la retinopatía diabética son:
 
 - **Exudados duros**: Son depósitos lipídicos de color amarillento
-  brillante y bien definidos
+  brillante y bien definidos, que se filtran procedentes de los vasos
+  sanguíneos de la retina. Suelen encontrarse en la capa más externa
+  de la misma [@early1991grading].
 - **Exudados blandos**: Son engrosamientos isquémicos de la capa de
   fibras nerviosas. Presentan bordes difusos y un color blanco.
 - **Microaneurismas**: Aparcen normalmente como pequeños grupos de
    puntos rojos con bordes muy definidos. Son causados por la
-  dilatación de pqueñas venas, y son uno de los primeros signos de
-  retinopatía diabética no proliferativa.
-- **Hemorragias**: Son pequeñas manchas con diversas formas que
-  aparecen en las imágenes de fondo de ojo debido a los puntos de
-  sangrado en la retina.
+   dilatación de pqueñas venas, y son uno de los primeros signos de
+   retinopatía diabética no proliferativa
+   [@williams2004epidemiology]. Los microaneurismas selen tener bordes
+   bien definidos y su tamaño suele variar entre los 20$\mu$m y
+   200$\mu$m, lo que supone menos de un 8% del tamaño total del disco
+   óptico [@early1991grading].
+- **Hemorragias**: Son pequeñas manchas rojas con diversas formas y
+  márgenes ligeramente definidos que aparecen en las imágenes de fondo
+  de ojo debido a los puntos de sangrado en la retina. Suelen tener un
+  tamaño de unos 125$\mu$m [@early1991grading].
+
+Además, como hemos visto anteriormente, en la DR Proliferativa se da
+la neovascularización, aparición de nuevos vasos sanguíneos en la
+retina.
 
 La tabla \ref{estadios_lesiones} nos muestra una posible clasificación
 de los diferentes estadios de la retinopatía diabética en función de
 las lesiones presentes en el paciente ^[Basada en la clasificación de
-https://idrid.grand-challenge.org/grading/]:
+https://idrid.grand-challenge.org/grading/].  Los pacientes con
+Retinopatía Diabética No Proliferativa en grado 3, tienen un 50% de
+probabilidad de desarrollar Retinopatía Diabética Proliferativa en
+menos de un año [@mansour2017evolutionary].
 
 
 ---------------------------------------------------------------------------
@@ -296,6 +306,12 @@ Table: Niveles de gravedad de la retinopatía diabética en función de las lesi
 
 <!-- TODO: Imagenes de fondo de ojo con distintos tipos de lesiones etc -->
 
+
+Existen, incluso, estudios que han demostrado que los pacientes que
+padecen de Retinopatía Diabética Proliferativa, sufren más riesgo de
+tener ataques al corazón, amputaciones o nefropatía diabética
+[@acharya2009computer] [@klein1984wisconsin] [@cade2008diabetes].
+
 ### Degeneración macular asociada a la edad
 <!-- 1 día
     Comienzo: 18 Mayo
@@ -303,19 +319,13 @@ Table: Niveles de gravedad de la retinopatía diabética en función de las lesi
     Papers útiles:
 -->
 
-La Degeneración Macular Asociada a la Edad (DMAE) es la más común de
-las enfermedades que afectan a la retina. Esta patología, de tipo
-degenerativo, afecta a la mácula provocando que, quien la sufre,
-comience a ver imágenes desenfocadas o deformadas y con zonas
-oscurecidas. Como se ha explicado previamente, la mácula permite la
-visión central, y su degeneración afecta directamente al día a día del
-paciente incapacitándolo para hacer tareas comunes como puede ser la
-lectura o la conducción
 
-La DMAE is la mayor causa de ceguera en países desarrollados, dándose
-en un 9% de la población mundial [@wong2014global]. Hasta el 80% de
-los casos de ceguera causados por esta enfermedad son evitables si son
-detectados y tratados a tiempo.[@pascolini2012global]
+La Degeneración Macular Asociada a la Edad (DMAE) afecta a la mácula
+provocando que, quien la sufre, comience a ver imágenes desenfocadas o
+deformadas y con zonas oscurecidas. Como se ha explicado previamente,
+la mácula permite la visión central, y su degeneración afecta
+directamente al día a día del paciente incapacitándolo para hacer
+tareas comunes como puede ser la lectura o la conducción
 
 Aunque en sus primeros estadios, la progresión de la enfermedad sea
 muy lenta y el paciente puede que únicamente perciba un ligero cambio

@@ -63,19 +63,23 @@ aproximadamente a 750 horas de trabajo.
 La **Retinopatía Diabética (RD)** pertenece al grupo de las
 enfermedades vasculares, y se ha convertido en la **principal causa
 evitable de ceguera en todo el mundo**. Esta patología se da
-actualmente en el 35% de las personas con diabetes, que afecta al 8.5% de
-la población mundial [@idf2017] [@IAPB]. Se estima que 191 millones de
-personas sufrirán retinopatía diabética en 2030 [@zheng2012worldwide].
+actualmente en el 35% de las personas con diabetes, que afecta al 8.5%
+de la población mundial [@idf2017] [@IAPB]. Se estima que 191 millones
+de personas sufrirán retinopatía diabética en 2030
+[@zheng2012worldwide].  La incidencia de la RD es del 50% a partir de
+los 10 años de la aparición de la diabetes, y del 90% a partir de los
+30 años [@mookiah2013computer].
 
-Casi el 75% de las personas que sufren Retinopatía Diabética pertencen
-a países en vías de desarrollo [@mansour2017evolutionary], donde no
-existen los medios adecuados para su tratamiento. La incidencia de la
-RD es del 50% a partir de los 10 años de la aparición de la diabetes,
-y del 90% a partir de los 30 años [@mookiah2013computer].
+Es importante destacar el hecho de que casi el 75% de las personas que
+sufren Retinopatía Diabética pertencen a países en vías de desarrollo
+[@mansour2017evolutionary], donde no existen los medios adecuados para
+su tratamiento. 
 
-En la figura \ref{diabetes_dr} podemos ver cómo afecta
+En la figura \ref{diabetes_dr}, con datos de un estudio de 
 
-![Prueba 1 3 4 Fuente etc \label{diabetes_dr}](source/figures/diabetes_dr.png){width=100%}
+![Estadísticas y previsiones sobre la diabetes y la RD a nivel
+mundial. Gráfico de elaboración propia
+\label{diabetes_dr}](source/figures/diabetes_dr.png){width=100%}
 
 La diabetes supone, aproximadamente, el 11.6% del presupuesto total de
 salud de la mayoría de países [@zhang2009economic]. Además, el coste
