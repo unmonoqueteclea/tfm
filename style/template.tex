@@ -5,12 +5,12 @@ $else$
 \usepackage{lmodern}
 $endif$
 
-% Overwrite \begin{figure}[htbp] with \begin{figure}[H]
+% Overwrite \begin{figure}[htbp] with \begin{figure}[h]
 \usepackage{float}
 \let\origfigure=\figure
 \let\endorigfigure=\endfigure
 \renewenvironment{figure}[1][]{%
-\origfigure[b]
+\origfigure[]
 }{%
 \endorigfigure
 }
@@ -143,13 +143,9 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
+
 $if(lang)$
-\ifxetex
-  \usepackage{polyglossia}
-  \setmainlanguage{$mainlang$}
-\else
   \usepackage[$lang$]{babel}
-\fi
 $endif$
 
 $if(title)$
@@ -164,6 +160,9 @@ $header-includes$
 $endfor$
 
 \begin{document}
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\tablename}{Tabla}
+
 $if(title)$
 \maketitle
 $endif$

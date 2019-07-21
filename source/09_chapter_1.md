@@ -1,3 +1,7 @@
+---
+lang: es
+---
+
 <!--
 Para crear PDF: make pdf
 For italic, add one * on either side of the text
@@ -45,43 +49,69 @@ h. \label{ref_a_figure}](source/figures/example_figure.pdf){ width=100% }
 
 # Introducción {#intro}
 
-En este capítulo introductorio se presentará el contexto y la
+En este capítulo inicial se presentará el contexto y la
 motivación principal detrás de este trabajo, los objetivos perseguidos
 y la estructura en la que será plasmada toda la información a lo largo
 del mismo.
 
 El presente documento pretende mostrar todas las tareas de
-investigación realizadas para la realización del Trabajo Final de
-Máster que permite la obtención del título de **Máster Universitario
+investigación realizadas para la realización del **Trabajo Final de
+Máster** que permite la obtención del título de **Máster Universitario
 en Ingeniería de Telecomunicaciones** de la Universidad Politécnica de
-Valencia. El Trabajo Final de Máster supone 30 créditos ECTS (de los
+Valencia. Este trabajo supone 30 créditos ECTS (de los
 120 créditos totales de la titulación), lo que equivale
 aproximadamente a 750 horas de trabajo.
 
 ## Motivación
 
+La Organización Mundial de la Salud (OMS) estima que, en 2010, 285
+millones de personas padecían algún tipo de discapacidad visual. De
+ellas, 39 millones eran ciegas. [@world2013universal]. El informe
+detallaba 7 principales causas de discapacidad visual entre las que se
+encontraban las 2 enfermedades que se analizarán en este trabajo: la
+**Retinopatía Diabética** y la **Degeneración Macular Asociada a la
+Edad**. Según se estimaba, el 80% de estas discapacidades podrían
+haberse evitado con las intervenciones adecuadas para su
+prevención. En respuesta, la OMS lanzaba su plan de acción que
+comenzaría en 2014 y finalizaría en 2019. El informe
+^[https://www.who.int/blindness/actionplan/en/] asociado a este plan de
+acción ponía de manifiesto la necesidad de que los servicios de salud
+ocular se convirtieran en parte integral del sistema primario de salud
+y se resaltaba la importancia de las campañas de prevención.
+
 La **Retinopatía Diabética (RD)** pertenece al grupo de las
 enfermedades vasculares, y se ha convertido en la **principal causa
 evitable de ceguera en todo el mundo**. Esta patología se da
-actualmente en el 35% de las personas con diabetes, que afecta al 8.5% de
-la población mundial [@idf2017] [@IAPB]. Se estima que 191 millones de
-personas sufrirán retinopatía diabética en 2030 [@zheng2012worldwide].
+actualmente en el 35% de las personas con diabetes, enfermedad que
+afecta al 8.5% de la población mundial [@idf2017] [@IAPB]. Se estima
+que 191 millones de personas sufrirán retinopatía diabética en 2030
+[@zheng2012worldwide].  La incidencia de la RD es del 50% a partir de
+los 10 años de la aparición de la diabetes, y del 90% a partir de los
+30 años [@mookiah2013computer].
 
-Casi el 75% de las personas que sufren Retinopatía Diabética pertencen
-a países en vías de desarrollo [@mansour2017evolutionary], donde no
-existen los medios adecuados para su tratamiento. La incidencia de la
-RD es del 50% a partir de los 10 años de la aparición de la diabetes,
-y del 90% a partir de los 30 años [@mookiah2013computer].
+En la figura \ref{diabetes_dr}, se puede observar la previsión
+esperada de crecimiento entre 2015 y 2040, tanto en el número de casos
+de diabetes, como en el de casos de diabetes que dan lugar a RD
+^[Datos de
+https://atlas.iapb.org/vision-trends/diabetic-retinopathy]. El aumento
+de la población mundial, y el envejecimiento de la misma serán
+factores determinantes en este crecimiento, pero también lo serán el
+aumento de casos de sobrepeso y la vida sedentaria.
 
-En la figura \ref{diabetes_dr} podemos ver cómo afecta
-
-![Prueba 1 3 4 Fuente etc \label{diabetes_dr}](source/figures/diabetes_dr.png){width=100%}
+![Prevalecencia y previsión de crecimiento de la diabetes y la RD a
+nivel mundial. Gráfico de elaboración propia
+\label{diabetes_dr}](source/figures/stats.eps){width=100%}
 
 La diabetes supone, aproximadamente, el 11.6% del presupuesto total de
 salud de la mayoría de países [@zhang2009economic]. Además, el coste
 de los pacientes con RD supera notablemente al de los pacientes sin
-dicha patología, incrementándose con la gravedad de la retinopatía
+dicha patología, incrementándose con la gravedad de la RD
 [@zhang2017direct].
+
+Es importante destacar el hecho de que casi el 75% de las personas que
+sufren Retinopatía Diabética pertencen a países en vías de desarrollo
+[@mansour2017evolutionary], donde no existen los medios adecuados para
+su detección temprana ni su tratamiento.
 
 Por otro lado, La **Degeneración Macular Asociada a la Edad (DMAE)**
 es la más común de las enfermedades que afectan a la retina. Esta
@@ -89,56 +119,48 @@ patología, de tipo degenerativo, es la **mayor causa de ceguera en
 países desarrollados**, dándose en un 9% de la población mundial
 [@wong2014global]. Hasta el 80% de los casos de ceguera causados por
 esta enfermedad son evitables si son detectados y tratados a
-tiempo.[@pascolini2012global]
-
-La Organización Mundial de la Salud (OMS) estima que, en 2010, 285
-millones de personas padecían algún tipo de discapacidad visual. De
-ellas, 39 millones eran ciegas. [@world2013universal]. En el informe,
-detallaba 7 principales causas de discapacidad visual entre las que se
-encontraban las 2 enfermedades que se analizarán en este trabajo: la
-Retinopatía Diabética y la Degeneración Macular Asociada a la
-Edad. Según se estimaba, el 80% de estas discapacidades podrían
-haberse evitado con las intervenciones adecuadas para su
-prevención. En respuesta, la OMS lanzaba su plan de acción que
-comenzaría en 2014 y finalizaría en 2019. Este plan de acción ponía de
-manifiesto la necesidad de que los servicios de salud ocular se
-convirtieran en parte integral del sistema primario de salud y se
-resaltaba la importancia de las campañas de prevención.
-
-A la fecha de publicación de este trabajo (Septiembre de 2019) aún se
-desconoce cuál ha sido el grado de eficacia del plan de acción, cuyo
-objetivo principal era la reducción de un 25% de los casos de
-discapacidad visual evitables. Lo que sí que se ha podido comprobar es
-el crecimiento experimentado en el número de investigaciones
-realizadas en torno a la detección automática de algunas de estas
-enfermedades entrando a la obra nuevos actores como Google que han
-permitido dar pasos de gigante en la lucha contra este tipo de
-patologías.
+tiempo. [@pascolini2012global]
 
 El rápido crecimiento de estas enfermedades hace insostenible el
 sistema actual basado únicamente en la revisión de expertos. Es
 necesario introducir en las clínicas, sistemas de detección automática
-a partir de imágenes degitales que permitirían agilizar el trabajo de
+a partir de imágenes digitales que permitirían agilizar el trabajo de
 los médicos o incluso permitir el diagnóstico en zonas donde ni
 siquiera existen ese tipo de expertos. Aunque existen diferentes
 métodos para el diagnóstico como la tomografía de coherencia óptica
 (TCO) o la angiografía, el método más utilizado actualmente se basa en
-el uso de imágenes de fondo de ojo obtenidas mediante cámaras
-especializadas. Este tipo de cámaras se han impuesto al resto de
-métodos por su facilidad de uso y su menor coste.
+el análisis de **imágenes de fondo de ojo** obtenidas mediante cámaras
+especializadas (figura \ref{eidon}). Este tipo de análisis se ha
+impuesto al resto de métodos por la facilidad de uso de las cámaras y
+su menor coste.
+
+![Modelo de cámara de fondo de ojo Eidon de la compañía Centervue
+\label{eidon}](source/figures/eidon.jpg){width=40%}
+
+A la fecha de publicación de este trabajo (Septiembre de 2019) aún se
+desconoce cuál ha sido el grado de eficacia del plan de acción
+propuesto por la OMS, cuyo objetivo principal era la reducción de un
+25% de los casos de discapacidad visual evitables. Lo que sí que se ha
+podido comprobar es el crecimiento experimentado en el número de
+investigaciones realizadas en torno a la detección automática de
+algunas de estas enfermedades, entrando a la obra nuevos actores como
+Google que han permitido dar pasos de gigante en la lucha contra este
+tipo de
+patologías. ^[https://ai.googleblog.com/2018/12/improving-effectiveness-of-diabetic.html]
 
 ## Objectivos
-El objetivo principal de esta investigación ha sido el desarrollo de
-sistemas de detección automática de Retinopatía Diabética y
-Degeneración Macular Asociada a la Edad. Sin embargo, al ser este un
-objetivo demasiado amplio, se han establecido una serie de objetivos
-más específicos que se detallan a continuación:
+
+El objetivo principal de esta investigación ha sido el **desarrollo de
+un sistema de detección automática de Retinopatía Diabética y
+Degeneración Macular Asociada a la Edad**. Sin embargo, al ser este un
+objetivo amplio, se han establecido una serie de objetivos más
+específicos que se detallan a continuación:
 
 - Estudio de la anatomía y fisiología del ojo humano, enfocándose en
   las causas y los efectos de las enfermedades analizadas.
 - Análisis y comparación de todas las aproximaciones a la detección
-  automática de ambas patologías realizadas hasta la fecha, tanto de
-  Machine Learning como de Deep Learning.
+  automática de ambas patologías realizadas hasta la fecha, tanto las
+  basadas en Machine Learning como en Deep Learning.
 - Evaluación de diversas topologías de redes neuronales
   convolucionales en la detección de ambas patologías
 - Interpretación de las redes entrenadas, tratando de comprender qué
@@ -148,30 +170,32 @@ más específicos que se detallan a continuación:
 
 ## Principales contribuciones
 <!-- TODO: Cuando termine todo -->
+
 ## Estructura
-Este documento está dividido en los siguientes 7 capítulos.
+El presente documento está dividido en los siguientes 7 capítulos:
 
 1. **[Introducción](#intro)**: Este primer capítulo ha presentado el
-   problema y ha presentado la forma en la que éste será abordado en
-   los sucesivos capítulos.
+   problema y la forma en la que éste será abordado en los sucesivos
+   capítulos.
 2. **[El ojo y sus patologías](#ojo)**: Durante este segundo capítulo
    se ha estudiado la anatomía y fisiología del ojo y se han analizado
    las características principales las dos patologías que han motivado
-   esta investigación
+   esta investigación: RD y DMAE.
 3. **[Machine Learning y aplicaciones médicas](#ml)**: Además de
-   ofrecer una visión superficial del funcionamiento y características
+   ofrecer una visión general del funcionamiento y características
    de los sistemas de Machine Learning, durante estas páginas se han
-   mostrado ejemplos de las aplicaciones médicas de estos sistemas.
-4. **[Estado del arte en la detección de RD y DMAE](#arte)**: También
-   se han analizado las aproximaciones que habían realizado hasta la
-   fecha los investigadores para la detección de RD y DMAE.
+   mostrado ejemplos de las aplicaciones médicas de los mismos.
+4. **[Estado del arte en la detección de RD y DMAE](#arte)**: Han sido
+   analizadas las aproximaciones para la detección de RD y DMAE que
+   habían realizado diversos investigadores hasta el momento.
 5. **[Diseño de sistema para la clasificación automática de RD y
    DMAE](#sistema)**: En este capítulo se ha mostrado el sistema
-   propuesto para la detección de RD y DMAE.
+   propuesto para la detección de RD y DMAE. También se han detallado
+   las características de todos los conjuntos de imágenes utilizados
+   para el entrenamiento del sistema.
 6. **[Resultados y evaluación del sistema](#resultados)**: Este
    capítulo detalla las evaluaciones realizadas al sistema presentado
-   en el capítulo anterior, además de los conjuntos de imágenes que
-   han sido utilizados para las mismas.
+   en el capítulo anterior.
 7. **[Conclusiones](#conclusiones)**: Para finalizar, se han analizado
    las aportaciones realizadas por esta investigación, su
    aplicabilidad en el mundo real y las posibles líneas de

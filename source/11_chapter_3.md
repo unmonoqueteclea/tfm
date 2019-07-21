@@ -93,7 +93,7 @@ pre-procesamiento manual previo que los simplifique. Los algoritmos de
 Deep Learning son actualmente el estado del arte en tareas como
 reconocimeiento de imágenes [@krizhevsky2012imagenet], reconocimiento
 del habla [@deng2013new], procesamiento del lenguaje natural
-[@collobert2011natura], análisis de información de aceleradores de
+[@collobert2011natural], análisis de información de aceleradores de
 partículas [@baldi2014searching] o reconstrucción de los circuitos
 cerebrales [@helmstaedter2013connectomic], entre muchas otras.
 
@@ -146,7 +146,7 @@ referimos a Deep Learning cuando tenemos una red con más de una capa
 oculta. El Deep Learning permite crear modelos computacionales
 compuestos de múltiples capas de procesamiento que son capaces de
 aprender representaciones de los datos con múltiples capas de
-abstracción [@lecun2015dee].
+abstracción [@lecun2015deep].
 
 
 En las redes profundas, cada capa de neuronas se entrena en un
@@ -437,7 +437,7 @@ Machine Learning son capaces de identificar a los pacientes que están
 en riesgo de tener que ser transferidos a las unidades de cuidados
 intensivos. [@escobar2016piloting]. Además, diversos estudios sugieren
 que se pueden crear eficaces modelos de pronóstico médico a partir de
-la información en bruto de historiales [@rajkomar2018scalabl] e
+la información en bruto de historiales [rajkomar2018scalable] e
 imágenes médicas [@de2018clinically].
 
 La estandarización de los historiales médicos electrónicos sería de

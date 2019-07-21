@@ -7,9 +7,9 @@
 Aunque comúnmente se suele hablar de los ojos como de los ojos como
 nuestra ventana al exterior [@zhu2001eye], la realidad es que su
 funcionamiento y estructura es considerablemente más complicado que el
-de una simple ventana de cristal. Dada su extrema perfección, Charles
-Darwin reconoció tener grandes dificultades para explicar los ojos
-únicamente mediante variación y selección.[@darwin2004origin]
+de una simple ventana de cristal. Dada su extrema perfección, incluso
+Charles Darwin reconoció tener grandes dificultades para explicar los
+ojos únicamente mediante variación y selección.[@darwin2004origin]
 
 ## Anatomía y fisiología ocular
 <!-- Comienzo: 14 Mayo
@@ -17,7 +17,7 @@ Darwin reconoció tener grandes dificultades para explicar los ojos
      Papers útiles: (P0) (P7) (P8)
 -->
 
-Los ojos son el principal órgano de la visión.  La perfección del ojo
+Los ojos son el principal órgano de la visión. La perfección del ojo
 es tal, que cada ojo ha evolucionado adaptándose a las necesidades del
 organismo poseedor, esto ha provocado que existan diversas diferencias
 en la anatomía y fisiología ocular de los diferentes organismos.
@@ -25,48 +25,50 @@ en la anatomía y fisiología ocular de los diferentes organismos.
 
 La estructura más simple de ojo consiste en una concentración de
 células fotorreceptoras mediante las cuales un organismo puede
-distinguir, no sólo la luz y la oscuridad, sino la dirección de la luz
-incidente. Esta última característica supondría para los organismos
-con este tipo de sistema ocular una ventaja evolutiva ante otros tipos
-de organismos que únicamente podrían diferenciar entre luz y
-oscuridad.
+distinguir, no sólo la luz y la oscuridad, sino también la dirección
+de la luz incidente. Esta última característica supondría, para los
+organismos con este tipo de sistema ocular, una ventaja evolutiva ante
+otros tipos de organismos que únicamente podrían diferenciar entre luz
+y oscuridad.
 
 Sin embargo, el sistema óptico complejo presente en el 96% de las
 especies animales, es capaz de realizar un proceso completo que
-comienza con la detección de la luz y termina con unos impulsos
+comienza con la detección de la luz y finaliza con unos impulsos
 electroquímicos viajando a través de las neuronas. Durante ese
 proceso, los ojos tienen que captar la luz, regular la intensidad
-mediante un diafragma y, mediante un sistema de lentes (cristalina)
+mediante un diafragma y, mediante un sistema de lentes (cristalino)
 enfocarla en único punto que se encargará de realizar la
 transformación en impulsos eléctricos.  Este punto, que será objeto de
-estudio durante este trabajo, es conocido como la retina.
+estudio durante este trabajo, es conocido como la **retina**.
 
-<!-- TODO: Imagen del globo ocular con sus partes -->
+La anatomía y fisiología ocular (figura \ref{ojohumano}) es similar en
+la mayoría de los vertebrados.  El globo ocular, que contiene el resto
+de elementos del sistema, es una esfera llena de **humor acuoso**, que
+es un líquido compuesto en un 99% por agua. El constante flujo de este
+líquido en el ojo permite regular la presión ocular, de forma que las
+propiedades del ojo puedan mantenerse constantes. Además, también
+permite aportar nutrientes y oxígeno a la parte anterior del ojo y
+eliminar deshechos de esta zona del ojo, a la que los capilares no son
+capaces de llegar [@zhu2001eye].
 
-La anatomía y fisiología ocular es similar en la mayoría de los
-vertebrados.  El globo ocular, que contiene el resto de elementos del
-sistema, es una esfera llena de **humor acuoso**, que es un líquido
-compuesto en un 99% por agua. El constante flujo de este líquido en el
-ojo permite regular la presión ocular, de forma que las propiedades
-del ojo puedan mantenerse constantes. Además, también permite aportar
-nutrientes y oxígeno a la parte anterior del ojo y eliminar deshechos
-de la parte anterior del ojo, a la que los capilares no son capaces de
-llegar [@zhu2001eye]. La pared del globo ocular la forman 3 capas
-conocidas como (desde la más interna a la más externa): retina,
-coroides y esclerótica.
 
-Cuando la luz llega al ojo, el primer elemento con el que tiene
-contacto es la **córnea**, que pertenece a la capa esclerótica.  Esta
-se encargo de refractar la luz, haciéndola converger dentro del
-ojo. La cornea protege al resto del ojo de polvo, gérmenesy cualquier
-tipo de sustancia dañina. Además, también filtra los rayos
-ultravioleta procedentes de la luz solar [@zhu2001eye]. Debido a su
-índice de refracción (mayor que el del aire), la córnea también
-provocará que se desvíen los rayos de luz que lleguen a ella
-permitiendo así que convergan en el centro del ojo. La mínima
-dispersión que se producen en los rayos de luz, lo que nos permite
-obtener una imagen clara y definida, está asegurada por la uniformidad
-espacial de sus células [@oyster1999human].
+![Estructura del ojo humano. Fuente: Wikipedia
+\label{ojohumano}](source/figures/human-eye.eps){width=80%}
+
+La pared del globo ocular la forman 3 capas conocidas como (desde la
+más interna a la más externa): **retina**, **coroides** y
+**esclerótica**. Cuando la luz llega al ojo, el primer elemento con el
+que tiene contacto es la **córnea**, que pertenece a la capa
+esclerótica.  Esta se encarga de refractar la luz, haciéndola
+converger dentro del ojo. La cornea protege al resto del ojo de polvo,
+gérmenes y cualquier tipo de sustancia dañina. Además, también filtra
+los rayos ultravioleta procedentes de la luz solar
+[@zhu2001eye]. Debido a su índice de refracción (mayor que el del
+aire), la córnea también provocará que se desvíen los rayos de luz que
+lleguen a ella permitiendo, así, que convergan en el centro del
+ojo. La mínima dispersión que se producen en los rayos de luz, que nos
+permite obtener una imagen clara y definida, está asegurada por la
+uniformidad espacial de sus células [@oyster1999human].
 
 Posteriormente, es el **iris** quien se encargará de contraer o
 expandir la **pupila**, lo que permitirá regular la cantidad de luz
@@ -74,7 +76,7 @@ que entra al ojo.  Esta es la razón por la que, en condiciones de baja
 luminosidad, nuestras pupilas se ven dilatadas, para poder permitir el
 paso de la mayor cantidad posible de luz.
 
-Posteriormente, y como en otros sistemas ópticos artificiales,
+A continuación, y como en otros sistemas ópticos artificiales,
 necesitamos un elemento que enfoque toda esa luz en un único
 punto. Este proceso se realiza mediante el **cristalino** que actúa
 como lente, y una serie de músculos a su alrededor que modifican su
@@ -98,39 +100,53 @@ será capaz de procesar y comprender la imagen recibida.
 -->
 
 La palabra **retina** procede del latín mediaval **rete** o **retis**
-(red). Toma ese nombre, debido a la gran red de vasos sanguíneos que
-la forman.
+(red). Toma ese nombre debido a la gran red de vasos sanguíneos que la
+forman. Utilizando términos de ingeniería, la retina es el transductor
+en el proceso de visión. Es la capa de tejido sensible a la luz,
+situada en el fondo del ojo, sin la cual todo el proceso detallado
+anteriormente carecería por completo de sentido, puesto que el cerebro
+no recibiría la información captada por los ojos. Su color, rojo, es
+debido a la inmensa cantidad de vasos sanguíneos que existen detrás de
+ella.
 
-Utilizando términos de ingeniería, la retina es el transductor en el
-proceso de visión. Es la capa de tejido sensible a la luz, situada en
-el fondo del ojo, sin la cual todo el proceso detallado anteriormente
-carecería por completo de sentido. Su color, rojo, es debido a la
-inmensa cantidad de vasos sanguíneos que existen detrás de ella.
+A nivel macroscópico, la retina está formada por los siguientes
+elementos (figura \ref{retina}):
 
-A nivel macroscópico, la retina está formada por los siguientes elementos:
-
-- **Papila o disco óptico**: Es el conocido como *punto ciego*, debida
-  a la ausencia de fotoreceptores. Es el punto de entrada del nervio
-  óptico en el globo ocular
+- **Papila o disco óptico**: Conocido como *punto ciego* debido a la
+  ausencia de fotoreceptores, es el punto de entrada del nervio óptico
+  en el globo ocular. Tiene un diámetro aproximado de 1.5 mm y forma
+  circular de color amarillo. A través del disco óptico entra al globo
+  ocular la arteria central de la retina y sale la vena central de la
+  retina. En el disco óptico encontramos también una excavación
+  fisiológica conocida como **cúpula**. Su tamaño, y más
+  concretamente, el cociente entre su diámetro y el del disco óptico
+  es un buen indicador para la detección de la enfermedad conocida
+  como glaucoma.
 - **Arterias y venas**: Encargadas de proveer de oxígeno y nutrientes
-  a la retina. La arteria central de la retina entre en el ojo a
-  través del nervio óptico y se separa en dos ramos, que a su vez se
-  separarán formando una extensa red de capilares.
+  a la retina. La arteria central de la retina entra en el ojo a
+  través del nervio óptico y se separa en dos ramas, que a su vez se
+  separarán formando una extensa red de capilares. Muchas de las
+  enfermedades de la vista afectan a estos vasos sanguíneos,
+  bloqueándolas o haciéndolas más frágiles.
 - **Mácula**: Esta pequeña área, con gran pigmentación, se encuentra
   en el centro de nuestra retina. La mácula tiene un diámetro
   aproximado de 5 mm. Es la encargada tanto la visión central como de
   la visión en detalle y en movimiento.
 - **Fóvea**: Es una hendidura en el centro de la mácula, con un
-  diámetro aproximado de 1.0 mm, que permite enfocar los rayos que
+  diámetro aproximado de 1.0 mm que permite enfocar los rayos que
   llegan a la retina.
 - **Retina periférica**: Como su nombre indica, nos permite la visión
   periférica, es decir, la de los rayos de luz que no están en nuestro
   foco central de visión.
 
+![Elementos de la retina. Fuente: Kaggle (anotaciones de elaboración
+propia) \label{retina}](source/figures/sitnice.eps){width=90%}
+
+
 A nivel microscópico, la retina tiene una estructura compleja formada
-por varias capas de neuronas interconectads. Existen dos tipos
-principales de fotoreceptores en la retina: los conos y los
-bastones. Las células de la retina presentan grandes similitudes con
+por varias capas de neuronas interconectadas. Existen dos tipos
+principales de fotoreceptores en la retina: los **conos** y los
+**bastones**. Las células de la retina presentan grandes similitudes con
 las del cerebro, apoyando la afirmación común de que el sistema visual
 es una extensión del sistema nervioso cetral [@zhu2001eye].
 
@@ -150,7 +166,6 @@ responden a diferentes longitudes de onda distinta de la luz. Esto da
 lugar a los conocidos como 3 colores primarios de la luz: rojo, azul,
 y verde.
 
-
 En la fóvea central, los únicos fotoreceptores existentes son los
 conos, encargados de la visión en detalle y visión en color. Según nos
 alejamos de la fóvea y nos dirigimos hacia la parte más periférica de
@@ -160,7 +175,14 @@ de luminosidad.
 
 En la retina humana existen aproximadamente 125 millones de
 fotoreceptores, de los cuales, aproximadamente 120 millones son
-bastones y 5 millones son conos
+bastones y 5 millones son conos.
+
+Conectadas a los conos y bastones encontramos las **células
+ganglionares**, un tipo de neuronas en la superficie interna de la
+retina donde se produce una diferencia de potencial que se transmite a
+través de su largo axón hasta el tálamo, hipotálamo y mesencéfalo del
+cerebro. Ya en el cerebro, esta información es procesada e
+interpretada por el córtex visual.
 
 ## Principales patologías de la retina
 <!-- 1 día
@@ -171,14 +193,22 @@ bastones y 5 millones son conos
 
 Existen dos tipos principales de enfermedades que afectan a la retina:
 las enfermedades vasculares y las degenerativas. Durante este trabajo
-analizaremos dos de las más importantes: la Retinopatía Diabética (RD)
-y la Degeneración Macular Asociada a la Edad (DMAE).
+analizaremos dos de las más importantes: la **Retinopatía Diabética
+(RD)** y la **Degeneración Macular Asociada a la Edad (DMAE)**. En la
+figura \ref{enfermedades} podemos ver el efecto que tienen estas en la
+visión.
+
+![Efectos en la visión de las enfermedades analizadas en este trabajo:
+(a) Visión normal, (b) con Retinopatía Diabética no proliferativa, (c)
+con Retinopatía Diabética proliferativa y (d) con degeneración macular
+asociada a la edad. Fuente: American Academy of Ophtalmology (www.aao.org)
+\label{enfermedades}](source/figures/vision.png){width=100%}
 
 Aún siendo de naturaleza distinta y provocando distintos efectos,
 ambas patologías tienen algo en común: la mayoría de casos de ceguera
 provocados por ellas hubieran sido evitables con una detección y
 tratamiento de las mismas en los primeros estadios. La detección de
-estas, como veremos más adelante, pasa comunmente por el análisis de
+estas, como veremos más adelante, pasa comúnmente por el análisis de
 la retina mediante imágenes de fondo de ojo. Este tipo de imágenes
 permiten proyectar la estructura 3D de la retina en un plano 2D. Para
 captarlas, utilizamos un tipo especial de cámaras que cuentan con un
@@ -187,7 +217,7 @@ factor de magnificación de 2.5x. Los rayos de luz viajan desde la
 retina a la cámara atravasando la pupila. El sensor de la cámara es
 un sensor RGB similar al de otros tipos de cámaras.
 
-### Retinopatía diabética
+### Retinopatía Diabética
 <!-- 1 día
     Comienzo:
     Fin V1:
@@ -201,54 +231,55 @@ incapacidad del organismo de asimilar correctamente la insulina
 (Diabetes Tipo II). Estos altos niveles de azucar pueden producir
 daños en varios organismos presentes en nuestro cuerpo.
 
-La retinopatía diabética ocurre cuando, debido a la diabetes, se dañan
+La Retinopatía Diabética ocurre cuando, debido a la diabetes, se dañan
 los vasos sanguíneos de la retina. Es común establecer dos etapas
 principales de RD: proliferativa y no proliferativa.
 
-- **DR No Proliferativa (NPDR)**: Durante etapa aparecen microaneurismas,
-  pequeñas áreas de inflamación en los vasos sanguíneos de la
-  retina. Además, algunos vasos sanguíneos se obstruyen. En casos más
-  complicados, el bloqueo de una gran cantidad de vasos sanguíneos
-  provoca que haya áreas de la retina que dejen de recibir sangre por
-  completo.
-- **DR Proliferativa (PDR)**: En esta etapa, de mayor gravedad, las
+- **RD No Proliferativa (NPDR)**: Es el primer estadio de la
+  enfermedad. Durante esta etapa aparecen microaneurismas, pequeñas áreas
+  de inflamación en los vasos sanguíneos de la retina. Además, algunos
+  vasos sanguíneos se obstruyen. En casos más complicados, el bloqueo
+  de una gran cantidad de vasos sanguíneos provoca que haya áreas de
+  la retina que dejen de recibir sangre por completo.
+- **RD Proliferativa (PDR)**: En esta etapa, de mayor gravedad, las
   áreas de la retina que no estaban recibiendo sangre, envían señales
   al cuerpo para que se hagan crecer nuevos vasos sanguíneos. Sin
   embargo, estos nuevos vasos sanguíneos son frágiles y anormales, y
   en el caso de rotura y goteo de sangre, podrían provocar una pérdida
-  severa en la visión o incluso resultar en la ceguera.
+  severa en la visión o incluso resultar en ceguera total.
 
 La detección temprana de la RD ha demostrado ser de vital importancia
 para evitar la pérdida de vista e incluso la ceguera causada por la
-misma. Sin embargo, los primeros estadios de la Retinopatía Diabética
-son casi asintomáticos.
+misma.  Los primeros estadios de la Retinopatía Diabética son casi
+asintomáticos, y no empiezan a afectar a la visión del paciente hasta
+que la enfermedad ha avanzado a un estadio en el que el tratamiento es
+mucho más complicado y costoso.  Se recomienda a los pacientes
+diabéticos al menos un análisis anual, para poder aplicar un
+tratamiento de la Retinopatía Diabética a tiempo [@fong2004diabetic].
 
-El tratamiento de la retinopatía diabética más
+El tratamiento de la Retinopatía Diabética más
 común es la **fotocoagulación con láser**. Este tratamiento se puede
 realizar en una o varias sesiones, tras haber comprobado, mediante una
 angiografía fluoresceínica el estado de los vasos sanguíneos. Además,
 este tratamiento puede ir acompañada de inyecciones intravítreas de
 medicación antangiogénica, que se encargará de evitar el desarrollo
-excesibo y anormal de los vasos sanguíneos. En casos de gravedad,
-puede ser preciso recurrir a la vitrectomía, una técnica de
+excesivo y anormal de los vasos sanguíneos. En casos de gravedad,
+puede ser preciso recurrir a la **vitrectomía**, una técnica de
 microcirugía intraocular.
 
-La detección de la retinopatía diabética en las primeras etapas se
-basa en la aparición en las imágenes de fondo de ojo de pequeños
-puntos rojos edbidos a microaneurismas o, incluso, hemorragias.
-
-Las lesiones típicas derivadas de la retinopatía diabética son:
+Las lesiones típicas derivadas de la Retinopatía Diabética son:
 
 - **Exudados duros**: Son depósitos lipídicos de color amarillento
   brillante y bien definidos, que se filtran procedentes de los vasos
   sanguíneos de la retina. Suelen encontrarse en la capa más externa
   de la misma [@early1991grading].
-- **Exudados blandos**: Son engrosamientos isquémicos de la capa de
-  fibras nerviosas. Presentan bordes difusos y un color blanco.
-- **Microaneurismas**: Aparcen normalmente como pequeños grupos de
+- **Exudados blandos (o manchas algodonosas)**: Son engrosamientos
+  isquémicos de la capa de fibras nerviosas. Presentan bordes difusos
+  y un color blanco.
+- **Microaneurismas**: Aparecen normalmente como pequeños grupos de
    puntos rojos con bordes muy definidos. Son causados por la
-   dilatación de pqueñas venas, y son uno de los primeros signos de
-   retinopatía diabética no proliferativa
+   dilatación de pequeñas venas, y son uno de los primeros signos de
+   Retinopatía Diabética no proliferativa
    [@williams2004epidemiology]. Los microaneurismas selen tener bordes
    bien definidos y su tamaño suele variar entre los 20$\mu$m y
    200$\mu$m, lo que supone menos de un 8% del tamaño total del disco
@@ -258,12 +289,24 @@ Las lesiones típicas derivadas de la retinopatía diabética son:
   de ojo debido a los puntos de sangrado en la retina. Suelen tener un
   tamaño de unos 125$\mu$m [@early1991grading].
 
+En la figura \ref{lesiones} podemos ver algunas de las lesiones
+descritas anteriormente.
+
+![Lesiones típicas de la Retinopatía Diabética
+\label{lesiones}](source/figures/dr-example.eps){width=70%}
+
+
 Además, como hemos visto anteriormente, en la DR Proliferativa se da
 la neovascularización, aparición de nuevos vasos sanguíneos en la
-retina.
+retina (figura \ref{vascular}).
+
+![Ejemplo de retina en la que se ha producido neovascularización
+\label{vascular}](source/figures/vascular.jpg){width=70%}
+
+
 
 La tabla \ref{estadios_lesiones} nos muestra una posible clasificación
-de los diferentes estadios de la retinopatía diabética en función de
+de los diferentes estadios de la Retinopatía Diabética en función de
 las lesiones presentes en el paciente ^[Basada en la clasificación de
 https://idrid.grand-challenge.org/grading/].  Los pacientes con
 Retinopatía Diabética No Proliferativa en grado 3, tienen un 50% de
@@ -302,10 +345,8 @@ Nivel de gravedad             Observaciones
 
 ---------------------------------------------------------------------------
 
-Table: Niveles de gravedad de la retinopatía diabética en función de las lesiones observadas \label{estadios_lesiones}
-
-<!-- TODO: Imagenes de fondo de ojo con distintos tipos de lesiones etc -->
-
+Table: Niveles de gravedad de la Retinopatía Diabética en función de
+las lesiones observadas \label{estadios_lesiones}
 
 Existen, incluso, estudios que han demostrado que los pacientes que
 padecen de Retinopatía Diabética Proliferativa, sufren más riesgo de
@@ -325,9 +366,9 @@ provocando que, quien la sufre, comience a ver imágenes desenfocadas o
 deformadas y con zonas oscurecidas. Como se ha explicado previamente,
 la mácula permite la visión central, y su degeneración afecta
 directamente al día a día del paciente incapacitándolo para hacer
-tareas comunes como puede ser la lectura o la conducción
+tareas comunes como pueden ser la lectura o la conducción.
 
-Aunque en sus primeros estadios, la progresión de la enfermedad sea
+Aunque en sus primeros estadios la progresión de la enfermedad sea
 muy lenta y el paciente puede que únicamente perciba un ligero cambio
 en su visión, en fases avanzadas la DMAE puede provocar la pérdida
 total de la visión central.
@@ -342,25 +383,32 @@ número y tamaño de drusas, podemos definir tres estadios en la
 enfermedad:
 
 - **Estadio inicial**: En este estadop existe un reducido número de
-  drusas redondas y de pequeño tamaño (menos de 125 μm). Además, estas
-  tienen unos bordes bien definidos. Los pacientes con este grado de
-  DMAE no sufren pérdida de visión y tienen un riesgo bajo de
-  desarrollar complicaciones.
+  drusas redondas y de pequeño tamaño (menos de 125 $\mu$m). Además,
+  estas tienen unos bordes bien definidos. Los pacientes con este
+  grado de DMAE no sufren pérdida de visión y tienen un riesgo bajo de
+  desarrollar complicaciones [@age2001randomized].
 - **Estadio intermedio**: En este estadio existen muchas más drusas, y
   estas tienen un tamaño mayor, llegando incluso a aparecer algunas de
-  más de 125 μm. Se pueden apreciar cambios en la pigmentación de la
-  retina.
+  más de 125 $\mu$m. Se pueden apreciar cambios en la pigmentación de la
+  retina. Cuando las drusas dejan de tener bordes definidos, y
+  aparercen en grupos, el riesgo de complicaciones de la DMAE es mucho
+  mayor.
 - **Estadio avanzado**: Existen dos subniveles dentro del estadio
   avanzado:
-  - **DMAE seca o atrófica**: Se produce por la acumulación de desechos
-    que atrofian la zona macular. Es la forma más común, y tiene una
-    evolución lenta y progresiva.
-  - **DMAE húmeda o exudativa**: Es la DMAE húmeda, crece una membrana
-    vascular bajo la retina. Estos nuevos vasos sanguíneos son muy
+  - **DMAE seca o atrófica**: Se produce por la acumulación de
+    desechos que atrofian las células fotosensibles de la zona
+    macular. Es la forma más común, y tiene una evolución lenta y
+    progresiva.
+  - **DMAE húmeda o exudativa**: En la DMAE húmeda, crece una membrana
+    vascular bajo la retina. De la misma forma que en la Retinopatía
+    Diabética Proliferativa, estos nuevos vasos sanguíneos son muy
     frágiles y pueden romperse derramando líquido que afectará
     severamente a la visión.
 
-<!-- TODO: Imagenes de fondo de ojo de DMAE -->
+![Retina con drusas a causa de una DMAE atrófica
+\label{drusen}](source/figures/drusen.jpg){width=70%}
+
+
 
 ### Sistemas de diagnóstico
 <!--
@@ -370,25 +418,29 @@ enfermedad:
     Webs:
 -->
 
-Uno de los grandes problemas de la retinopatía diabética es que no
+Uno de los grandes problemas de la Retinopatía Diabética es que no
 existe ninguna señal que nos avise en estadios muy tempranos de la
 enfermedad, y en el momento que los usuarios deciden hacerse una
 examinación, suele ser demasiado tarde para un tratamiento óptimo.
 
-
 Existen varios tipos de sistemas para el diagnóstico de la retinopatía
 diabética y la degenración macular, entre los que destacan las
-fotografías de fondo de ojo, la tomografía de coherencia óptica (OCT)
-o la angiografía. Sin embargo, la fotografía de fondo de ojo puede ser
-realizada con sistemas relativamente baratos y fáciles de manejar y de
-transportar. Además, las cámaras de fondo de ojo pueden capturar la
-información de la retina mediante técnicas no invasivas. Es por ello,
-por lo que es el sistema más utilizado en los centros de atención
-primaria y en el que enfocaremos nuestro estudio. Sin embargo, cabe
-destacar que, en ocasiones, éstas no son suficientes, y tendrán que
-ser combinadas con otros tipos de sistemas.
+**fotografías de fondo de ojo**, la **tomografía de coherencia óptica
+(OCT)** o la **angiografía**. La fotografía de fondo de ojo, a
+diferencia de las otras dos técnicas, puede ser realizada con sistemas
+relativamente baratos y fáciles de manejar y de transportar. Además,
+las cámaras de fondo de ojo pueden capturar la información de la
+retina mediante técnicas no invasivas. En función de la patología que
+se intente diagnosticar, estas imágenes es†án centradas en la mácula o
+en el disco óptico. La figura \ref{retina} analizada anteriormente
+para ver las partes de la retina, es un ejemplo de las imágenes que
+proporcionan este tipo de cámaras, contamaños de hasta 16
+megapíxeles. Es por ello, por lo que es el sistema más utilizado en
+los centros de atención primaria y en el que enfocaremos nuestro
+estudio. Sin embargo, cabe destacar que, en ocasiones, éstas no son
+suficientes, y tendrán que ser combinadas con otros tipos de sistemas.
 
-El diagnóstico de la retinopatía diabética es tradicionalmente
+El diagnóstico de la Retinopatía Diabética es tradicionalmente
 realizado por oftalmólogos que inspeccionan las imágenes de fondo de
 ojo en busca de las diferentes lesiones que caracterizan estas
 patologías. Sin embargo, este es un proceso que requiere una gran
@@ -397,7 +449,7 @@ realizar este proceso hace imposible cubrir la demanda actual, que no
 hace más que crecer [@bjorvig2002economic]. Este hecho es más acusado
 en zonas rurales o países no desarrollados donde no es posible el
 acceso a este tipo de profesionales. El 75% de los pacientes de
-retinopatía diabética viven en áreas donde no existen especialistas ni
+Retinopatía Diabética viven en áreas donde no existen especialistas ni
 infraestructura para la detección y tratamiento de la enfermedad
 [@guariguata2014global]. Por ello, herramientos para el análisis
 automático de retina (ARIA) están siendo desarrolladas actualmente. En

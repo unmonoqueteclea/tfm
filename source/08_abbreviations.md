@@ -1,8 +1,9 @@
-# Abbreviations {.unnumbered}
+# Abreviaciones {.unnumbered}
 
 \begin{tabbing}
-\textbf{API}~~~~~~~~~~~~ \= \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \\  
-\textbf{JSON} \> \textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation \\  
+\textbf{API}~~~~~~~~~~~~ \= \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \\
+\textbf{RD} \> \textbf{R}etinopatía \textbf{D}iabética \\
+\textbf{DMAE} \> \textbf{D}egeneración \textbf{M}acular \textbf{A}sociada a la \textbf{E}dad  \\
 \end{tabbing}
 
 \newpage
