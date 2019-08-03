@@ -100,7 +100,8 @@ aumento de casos de sobrepeso y la vida sedentaria.
 
 ![Prevalecencia y previsión de crecimiento de la diabetes y la RD a
 nivel mundial. Gráfico de elaboración propia
-\label{diabetes_dr}](source/figures/stats.eps){width=100%}
+\label{diabetes_dr}](source/figures/stat.png){width=100%}
+
 
 La diabetes supone, aproximadamente, el 11.6% del presupuesto total de
 salud de la mayoría de países [@zhang2009economic]. Además, el coste

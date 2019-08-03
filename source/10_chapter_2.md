@@ -4,12 +4,12 @@
      Papers útiles: (P0) (P7) (P8)
 -->
 
-Aunque comúnmente se suele hablar de los ojos como de los ojos como
-nuestra ventana al exterior [@zhu2001eye], la realidad es que su
-funcionamiento y estructura es considerablemente más complicado que el
-de una simple ventana de cristal. Dada su extrema perfección, incluso
-Charles Darwin reconoció tener grandes dificultades para explicar los
-ojos únicamente mediante variación y selección.[@darwin2004origin]
+Aunque comúnmente se suele hablar de los ojos como nuestra ventana al
+exterior [@zhu2001eye], la realidad es que su funcionamiento y
+estructura es considerablemente más complicado que el de una simple
+ventana de cristal. Dada su extrema perfección, incluso Charles Darwin
+reconoció tener grandes dificultades para explicar los ojos únicamente
+mediante variación y selección.[@darwin2004origin]
 
 ## Anatomía y fisiología ocular
 <!-- Comienzo: 14 Mayo
@@ -19,7 +19,7 @@ ojos únicamente mediante variación y selección.[@darwin2004origin]
 
 Los ojos son el principal órgano de la visión. La perfección del ojo
 es tal, que cada ojo ha evolucionado adaptándose a las necesidades del
-organismo poseedor, esto ha provocado que existan diversas diferencias
+organismo poseedor, lo que ha provocado que existan diversas diferencias
 en la anatomía y fisiología ocular de los diferentes organismos.
 [@zhu2001eye].
 
@@ -53,7 +53,7 @@ capaces de llegar [@zhu2001eye].
 
 
 ![Estructura del ojo humano. Fuente: Wikipedia
-\label{ojohumano}](source/figures/human-eye.eps){width=80%}
+\label{ojohumano}](source/figures/human-eye.png){width=80%}
 
 La pared del globo ocular la forman 3 capas conocidas como (desde la
 más interna a la más externa): **retina**, **coroides** y
@@ -65,7 +65,7 @@ gérmenes y cualquier tipo de sustancia dañina. Además, también filtra
 los rayos ultravioleta procedentes de la luz solar
 [@zhu2001eye]. Debido a su índice de refracción (mayor que el del
 aire), la córnea también provocará que se desvíen los rayos de luz que
-lleguen a ella permitiendo, así, que convergan en el centro del
+lleguen a ella permitiendo, así, que converjan en el centro del
 ojo. La mínima dispersión que se producen en los rayos de luz, que nos
 permite obtener una imagen clara y definida, está asegurada por la
 uniformidad espacial de sus células [@oyster1999human].
@@ -86,7 +86,7 @@ que los elementos que forman el cristalino tengan un índice de
 refracción mayor que el de la córnea y del humor acuoso, lo que le
 permitirá enfocar correctamente.
 
-Una ves atravesado el cristalino, la luz llegará a la **retina** donde
+Una vez atravesado el cristalino, la luz llegará a la **retina** donde
 se producirá la transformación de la luz en impulsos eléctricos, que
 posteriormente viajarán por el nervio óptico hasta el cerebro, que
 será capaz de procesar y comprender la imagen recibida.
@@ -179,10 +179,10 @@ bastones y 5 millones son conos.
 
 Conectadas a los conos y bastones encontramos las **células
 ganglionares**, un tipo de neuronas en la superficie interna de la
-retina donde se produce una diferencia de potencial que se transmite a
-través de su largo axón hasta el tálamo, hipotálamo y mesencéfalo del
-cerebro. Ya en el cerebro, esta información es procesada e
-interpretada por el córtex visual.
+retina en las que se produce una diferencia de potencial que se
+transmite a través de su largo axón hasta el tálamo, hipotálamo y
+mesencéfalo del cerebro. Ya en el cerebro, esta información es
+procesada e interpretada por el córtex visual.
 
 ## Principales patologías de la retina
 <!-- 1 día
@@ -206,7 +206,7 @@ asociada a la edad. Fuente: American Academy of Ophtalmology (www.aao.org)
 
 Aún siendo de naturaleza distinta y provocando distintos efectos,
 ambas patologías tienen algo en común: la mayoría de casos de ceguera
-provocados por ellas hubieran sido evitables con una detección y
+provocados por ellas hubieran podido ser evitados con una detección y
 tratamiento de las mismas en los primeros estadios. La detección de
 estas, como veremos más adelante, pasa comúnmente por el análisis de
 la retina mediante imágenes de fondo de ojo. Este tipo de imágenes
@@ -214,8 +214,8 @@ permiten proyectar la estructura 3D de la retina en un plano 2D. Para
 captarlas, utilizamos un tipo especial de cámaras que cuentan con un
 microscopio de baja potencia con una cámara adherida, permitiendo una
 factor de magnificación de 2.5x. Los rayos de luz viajan desde la
-retina a la cámara atravasando la pupila. El sensor de la cámara es
-un sensor RGB similar al de otros tipos de cámaras.
+retina a la cámara atravasando la pupila. El sensor de la cámara es un
+sensor RGB similar al de otros tipos de cámaras.
 
 ### Retinopatía Diabética
 <!-- 1 día
@@ -261,7 +261,7 @@ El tratamiento de la Retinopatía Diabética más
 común es la **fotocoagulación con láser**. Este tratamiento se puede
 realizar en una o varias sesiones, tras haber comprobado, mediante una
 angiografía fluoresceínica el estado de los vasos sanguíneos. Además,
-este tratamiento puede ir acompañada de inyecciones intravítreas de
+este tratamiento puede ir acompañado de inyecciones intravítreas de
 medicación antangiogénica, que se encargará de evitar el desarrollo
 excesivo y anormal de los vasos sanguíneos. En casos de gravedad,
 puede ser preciso recurrir a la **vitrectomía**, una técnica de
@@ -292,8 +292,8 @@ Las lesiones típicas derivadas de la Retinopatía Diabética son:
 En la figura \ref{lesiones} podemos ver algunas de las lesiones
 descritas anteriormente.
 
-![Lesiones típicas de la Retinopatía Diabética
-\label{lesiones}](source/figures/dr-example.eps){width=70%}
+![Lesiones típicas de la Retinopatía Diabética. Elaboración proia
+\label{lesiones}](source/figures/dr-example.png){width=70%}
 
 
 Además, como hemos visto anteriormente, en la DR Proliferativa se da
@@ -301,7 +301,7 @@ la neovascularización, aparición de nuevos vasos sanguíneos en la
 retina (figura \ref{vascular}).
 
 ![Ejemplo de retina en la que se ha producido neovascularización
-\label{vascular}](source/figures/vascular.jpg){width=70%}
+\label{vascular}](source/figures/vascular.png){width=70%}
 
 
 
@@ -382,7 +382,7 @@ retina, procedentes de la acumulación de minerales. En función del
 número y tamaño de drusas, podemos definir tres estadios en la
 enfermedad:
 
-- **Estadio inicial**: En este estadop existe un reducido número de
+- **Estadio inicial**: En este estadio existe un reducido número de
   drusas redondas y de pequeño tamaño (menos de 125 $\mu$m). Además,
   estas tienen unos bordes bien definidos. Los pacientes con este
   grado de DMAE no sufren pérdida de visión y tienen un riesgo bajo de
@@ -405,8 +405,8 @@ enfermedad:
     frágiles y pueden romperse derramando líquido que afectará
     severamente a la visión.
 
-![Retina con drusas a causa de una DMAE atrófica
-\label{drusen}](source/figures/drusen.jpg){width=70%}
+![Retina con drusas a causa de DMAE
+\label{drusen}](source/figures/drusen.png){width=70%}
 
 
 
@@ -423,22 +423,22 @@ existe ninguna señal que nos avise en estadios muy tempranos de la
 enfermedad, y en el momento que los usuarios deciden hacerse una
 examinación, suele ser demasiado tarde para un tratamiento óptimo.
 
-Existen varios tipos de sistemas para el diagnóstico de la retinopatía
-diabética y la degenración macular, entre los que destacan las
-**fotografías de fondo de ojo**, la **tomografía de coherencia óptica
-(OCT)** o la **angiografía**. La fotografía de fondo de ojo, a
-diferencia de las otras dos técnicas, puede ser realizada con sistemas
-relativamente baratos y fáciles de manejar y de transportar. Además,
-las cámaras de fondo de ojo pueden capturar la información de la
-retina mediante técnicas no invasivas. En función de la patología que
-se intente diagnosticar, estas imágenes es†án centradas en la mácula o
-en el disco óptico. La figura \ref{retina} analizada anteriormente
-para ver las partes de la retina, es un ejemplo de las imágenes que
-proporcionan este tipo de cámaras, contamaños de hasta 16
-megapíxeles. Es por ello, por lo que es el sistema más utilizado en
-los centros de atención primaria y en el que enfocaremos nuestro
-estudio. Sin embargo, cabe destacar que, en ocasiones, éstas no son
-suficientes, y tendrán que ser combinadas con otros tipos de sistemas.
+Existen varios tipos de sistemas para el diagnóstico de la RD y DMAE,
+entre los que destacan las **fotografías de fondo de ojo**, la
+**tomografía de coherencia óptica (OCT)** o la **angiografía**. La
+fotografía de fondo de ojo, a diferencia de las otras dos técnicas,
+puede ser realizada con sistemas relativamente baratos y fáciles de
+manejar y de transportar. Además, las cámaras de fondo de ojo pueden
+capturar la información de la retina mediante técnicas no
+invasivas. En función de la patología que se intente diagnosticar,
+estas imágenes es†án centradas en la mácula o en el disco óptico. La
+figura \ref{retina} analizada anteriormente para ver las partes de la
+retina, es un ejemplo de las imágenes que proporcionan este tipo de
+cámaras, con tamaños de hasta 16 megapíxeles. Es por ello, por lo que
+es el sistema más utilizado en los centros de atención primaria y en
+el que enfocaremos nuestro estudio. Sin embargo, cabe destacar que, en
+ocasiones, éstas no son suficientes, y tendrán que ser combinadas con
+otros tipos de sistemas.
 
 El diagnóstico de la Retinopatía Diabética es tradicionalmente
 realizado por oftalmólogos que inspeccionan las imágenes de fondo de
@@ -451,13 +451,13 @@ en zonas rurales o países no desarrollados donde no es posible el
 acceso a este tipo de profesionales. El 75% de los pacientes de
 Retinopatía Diabética viven en áreas donde no existen especialistas ni
 infraestructura para la detección y tratamiento de la enfermedad
-[@guariguata2014global]. Por ello, herramientos para el análisis
-automático de retina (ARIA) están siendo desarrolladas actualmente. En
-este tipo de herramientas nos centraremos durante el desarrollo de
-este trabajo. Este tipo de herramientas llevarán el diagnóstico a
-sitios donde no sería posible de otra forma, además de reducir costes
-y reducir el tiempo necesario para los diagnósticos en los lugares
-donde ya se realizaba de forma manual.
+[@guariguata2014global]. Por ello, diversidad de herramientas para el
+análisis automático de retina (ARIA) están siendo desarrolladas
+actualmente. En este tipo de herramientas nos centraremos durante el
+desarrollo de este trabajo. Estas llevarán el diagnóstico a sitios
+donde no sería posible de otra forma, además de reducir costes y
+reducir el tiempo necesario para los diagnósticos en los lugares donde
+ya se realizaba de forma manual.
 
 Además, según se ha puesto de manifiesto en previos estudios, los
 profesionales difieren en numerosas ocasiones en el diagnóstico de los

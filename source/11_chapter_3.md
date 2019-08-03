@@ -7,210 +7,399 @@
 
 Tradicionalmente, el trabajo de los ingenieros de software ha
 consistido en dar a las computadoras una serie de reglas explícitas de
-cómo tiene que procesar la información y cómo tiene que tomar
+cómo tienen que procesar la información y cómo tiene que tomar
 decisiones. Sin embargo, la complejidad del campo de la medicina es
 tal que sería prácticamente imposible capturar toda la información
 relevante mediante una serie de reglas definidas de forma explícita
 [@schwartz1986artificial].
 
-El Machine Learning ha permitido crear sistemas que aprendan de los
-ejemplos sin necesidad de que se programen reglas específicas, lo que
-ha supuesto una auténtica revolución en prácticamente cualquier sector
-profesional imaginable entre los que, por supuesto, se encuentra
-también la medicina. Estos sistemas buscan, de forma automática, la
-mejor forma de predecir una variable en función de una serie de
-variables de entrada del sistema. De esta forma se crea un sistema
-que, idealmente, será capaz de obtener la salida correcta para
-variables de entrada nunca vistas. Esto se conoce como **aprendizaje
-supervisado** aunque es importante mencionar, que no es la única forma
-de Machine Learning o Aprendizaje Automático.
+El **Machine Learning** es la rama de la Intelicia Artificial que ha
+permitido crear **sistemas que aprendan de los datos sin necesidad de
+que se programen reglas específicas**. Esto ha supuesto una auténtica
+revolución en prácticamente cualquier sector profesional entre los
+que, por supuesto, se encuentra también la medicina. Estos sistemas
+buscan, de forma automática, **patrones** en los datos que les
+permitan predecir una variable objectivo en función de una serie de
+variables de entrada del sistema. De esta forma se crea un **modelo**
+que, idealmente, será capaz de generalizar y obtener la salida
+correcta para nuevas entradas nunca vistas. Esto se conoce como
+**Aprendizaje Supervisado** aunque es importante mencionar que no es
+la única forma de Machine Learning o Aprendizaje Automático. ^[Existe
+también, por ejemplo, el Aprendizaje No Supervisado, que permite
+encontrar patrones en los datos aunque no exista una variable objetivo
+a predecir]
 
 El principal inconveniente del Machine Learning con respecto al
 aprendizaje humano es, a la vez, su principal ventaja: la necesidad de
-grandes cantidades de datos para su correcto funcionamiento.. Si se
+grandes cantidades de datos para su correcto funcionamiento. Si se
 alimentan con una cantidad suficiente de datos, los algoritmos de
-Machine Learning podrán encontrar patrones que para los humanos sería
-prácticamente imposible. Un modelo de Machine Learning podrá analizar
-en segundos más pacientes de los que verá un médico en toda su
-vida. Además, la cantidad de predictores distintos que manejará sería
-totalmente inviable para un humano.
+Machine Learning podrán encontrar patrones que, para los humanos,
+serían prácticamente imposible de detectar. El cerebro humano es una
+máquina bastante compleja y sofisticada de encontrar patrones. Sin
+embargo, tiene grandes dificultades en realizar el análisis de datos
+con alta dimensionalidad. Un modelo de Machine Learning podrá
+analizar, en segundos, más pacientes de los que verá un médico en toda
+su vida. Además, la cantidad de predictores distintos que manejará
+sería totalmente inviable para un humano.
+
+En la figura \ref{interes-ml} vemos como, a pesar de existir desde los
+años 60, el interés de la población en el Machine Learning ha
+experimentado un gran ascenso en los últimos años. La democratización
+del Machine Learning ha comenzado y multitud de empresas han empezado
+a usar modelos predictivos de Aprendizaje Automático en sus
+procesos. Existen 3 principales motivos en este crecimiento:
+
+- **Nuevos algoritmos**: Principalmente en la rama del Deep Learning,
+  en los últimos años se ha producido una serie de importantes
+  avances. Sin embargo, este no es el factor principal del
+  crecimiento, pues la mayoría de algoritmos que se están implantando
+  en muchas compañías existen desde hace varias décadas.
+- **Mayor capacidad de computación**: Sin duda, este ha sido un factor
+  clave en el crecimiento de estas técnicas. Además, la entrada al
+  mercado de las tarjetas gráficas o GPUs, ha permitido paralelizar los
+  procesos consiguiendo ejecuciones cientos de veces más rápidas.
+- **Mayor cantidad de datos**: Todos estos algoritmos no podrían
+  aportar valor de no existir ingentes cantidades de datos, tanto
+  estructurados como no estructurados, en los que poder encontrar
+  patrones. Con el creciente uso de servicios online y la expansión
+  del IoT o Internet de las cosas se están generando mayor cantidad de
+  datos cada día que nunca antes se había generado. Según Forbes, el
+  90% de los datos existentes en 2018 en todo el mundo, se generaron
+  entre 2016
+  y 2017. ^[https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read/]
+
+![Interés, a lo largo del tiempo y en todo el mundo, del término
+Machine Learning en el buscador Google. Datos de Enero de 2014 a Julio
+de 2019. Fuente de los datos: Google Trends
+\label{interes-ml}](source/figures/interes-ml.png){width=100%}
 
 
 ## IA, Big Data,  Machine Learning y Deep Learning
 Inteligencia Artificial, Big Data, Machine Learning, Deep Learning;
 actualmente existe mucha confusión en el uso de estos términos. Aunque
 comparten características, no tienen el mismo significado. En este
-capítulo se detallarán las similitudes y diferencias entre todos
-ellos para evitar el lenguaje inexacto usado habitualmente en este
-campo.
+apartado se detallarán las similitudes y diferencias entre todos ellos
+para evitar el lenguaje inexacto usado habitualmente, principalmente,
+en medios de comunicación.
 
-Comenzaremos por el Big Data, pues es el término más vago y
+Comenzaremos por el **Big Data**, pues es el término más vago y
 confuso. Cuando hablamos de Big Data nos referimos al análisis de
 grandes cantidades de datos que no podrían ser analizados con técnicas
-convencionales. Sin embargo, las líneas que marcan las fronteras del
-Big Data están difusas, y a menudo es un término utilizado más por
-medios de comunicación y gurús que por profesionales técnicos y
-académicos.
+convencionales de computación. Sin embargo, las líneas que marcan las
+fronteras del Big Data están difusas, y a menudo es un término más
+utilizado por medios de comunicación y falsos gurús que por
+profesionales técnicos y académicos.
 
-Por otro lado, los campos de la Inteligencia Artificial, el Machine
-Learning y el Deep Learning, sí que están más claramente definidos
-aunque, el hecho de que cada uno de ellos sea un subcampo del
-anterior, a menudo da lugar a confusión. Llamamos Inteligencia
-Artificial a un conjunto de técnicas que tratan de que los ordenadores
-imiten, de alguna forma, el comportamiento humano.
+Por otro lado, los campos de la **Inteligencia Artificial (IA)**, el
+**Machine Learning** y el **Deep Learning** sí que están más
+claramente definidos aunque, el hecho de que cada uno de ellos sea un
+subcampo del anterior (figura \ref{ia-ml}), a menudo da lugar a
+confusión. Llamamos **Inteligencia Artificial** a un conjunto de
+técnicas que tratan de que los ordenadores imiten, de alguna forma, el
+comportamiento humano.
 
-El Machine Learning es un subcampo dentro de la IA, que consiste en un
-conjunto de técnicas y herramientas que permiten a los ordenadores
-obtener patrones de grandes conjuntos de datos. Gracias a esos
-patrones seremos capaces de entender mejor los datos o incluso hacer
-predicciones. La forma más común de machine learning es el conocido
-como **Aprendizaje Supervisado**. Durante el entrenamiento de los
-modelos de Aprendizaje Supervisado, se proporcionan al algoritmo una
-serie de datos históricos. Entre ellos se encuentra la **variable
-objetivo**, es decir, la que posteriormente querremos predecir en los
-nuevos datos. Por ejemplo, en un modelo de detección de cáncer a
-partir de imágenes médicas, nuestra variable objetivo será
-precisamente la que indique si una imágen pertenece a un paciente
-enfermo o un paciente sano. Esta variable, por lo tanto, tendrá dos
-posibles valores siendo este un problema de **clasificación**. En los
-problemas de clasificación se tratan de predecir variables
-discretas. Si, por ejemplo, realizáramos un modelo para predecir el
-precio de una vivienda en función de sus características, nos
-encontraríamos ante un problema de regresión, pues la probabilidad es
-un valor contínuo.
+![El Machine Learning es un campo dentro de la Inteligencia
+Artificial. El Deep Learning es un campo dentro del Machine
+Learning. Elaboración propia
+\label{ia-ml}](source/figures/ia-ml.png){width=100%}
+
+El **Machine Learning** es un subcampo dentro de la IA, que consiste
+en un conjunto de técnicas y herramientas, principalmente
+estadísticas, que permiten a los ordenadores obtener patrones a partir
+de grandes conjuntos de datos. Gracias a esos patrones seremos capaces
+de entender mejor los datos o hacer predicciones. La forma más común
+de Machine Learning es el conocido como **Aprendizaje
+Supervisado**. Durante el entrenamiento de los modelos de Aprendizaje
+Supervisado, se proporcionan al algoritmo una serie de datos
+históricos. Entre ellos se encuentra la **variable objetivo**, es
+decir, la que posteriormente querremos predecir en los nuevos datos de
+entrada. Por ejemplo, en un modelo de detección de cáncer a partir de
+imágenes médicas, nuestra variable objetivo será precisamente la que
+indique si una imágen pertenece a un paciente enfermo de cáncer o un
+paciente sano. Esta variable, por lo tanto, tendrá dos posibles
+valores, siendo este un problema de **clasificación**. En los
+problemas de clasificación se tratan de predecir **variables discretas
+o clases**, es decir, variables que solo pueden tomar un rango
+limitado de posibles valores. Si, por ejemplo, realizáramos un modelo
+para predecir el precio de una vivienda en función de sus
+características, nos encontraríamos ante un problema de **regresión**,
+pues el precio es un valor contínuo.
 
 Es común en los algoritmos para aprendizaje supervisado el uso de una
-función de pérdidas. Esta función mide el error entre las predicciones
-del modelo y los datos reales. De forma iterativa, los algoritmos
-tratarán de ajustar una serie de parámetros (o pesos) intentando
-minimizar esta función.
+**función de coste**. Esta función mide el error entre las
+predicciones del modelo y los datos reales. De forma iterativa, muchos
+de los algoritmos de Aprendizaje Automático tratarán de ajustar una
+serie de parámetros (o pesos) intentando minimizar esta función. Un
+claro ejemplo de algoritmos con este comportamiento son las conocidas
+como **redes neuronales**, de las que explicaremos su funcionamiento
+en el siguiente capítulo.
 
-Precisamente estos últimos algoritmos, las redes neuronales, son las
-que dan lugar al Deep Learning. Cuando añadimos más capas intermedias
-a las redes neuronales somos capaces de detectar patrones mucho menos
-evidentes además de tratar problemas complejos sin necesidad de un
-pre-procesamiento manual previo que los simplifique. Los algoritmos de
-Deep Learning son actualmente el estado del arte en tareas como
-reconocimeiento de imágenes [@krizhevsky2012imagenet], reconocimiento
-del habla [@deng2013new], procesamiento del lenguaje natural
+Precisamente las redes neuronales, son las que dan lugar al **Deep
+Learning**. Cuando añadimos más complejidad a las redes neuronales
+somos capaces de detectar patrones mucho menos evidentes, además de
+tratar problemas complejos sin necesidad de un pre-procesamiento
+manual previo de los datos que los simplifique. Este pre-procesamiento
+sí que es necesario en muchos proyectos de Machine Learning y, de
+hecho, supone un importante porcentaje del tiempo de trabajo de los
+ingenieros de Machine Learning. Los algoritmos de Deep Learning son
+actualmente el estado del arte en tareas como reconocimeiento de
+imágenes [@krizhevsky2012imagenet], reconocimiento del habla
+[@deng2013new], procesamiento del lenguaje natural
 [@collobert2011natural], análisis de información de aceleradores de
 partículas [@baldi2014searching] o reconstrucción de los circuitos
 cerebrales [@helmstaedter2013connectomic], entre muchas otras.
 
+Como vemos en la figura \ref{interes-ai} el término Big Data, que
+durante mucho tiempo estuvo en cabeza en popularidad, ha perdido
+fuerza en los últimos años mientras que Machine Learning y Deep
+Learning (en menor medida) siguen creciendo.
+
+![Interés, a lo largo del tiempo y en todo el mundo, de los término
+Machine Learning (en azul), Deep Learning (en rojo) y Big Data (en
+amarillo) en el buscador Google. Datos de Enero de 2014 a Julio
+de 2019. Fuente de los datos: Google Trends
+\label{interes-ai}](source/figures/interes-ai.png){width=80%}
 
 
 ## Redes neuronales, descenso de gradiente y backpropagation
-Una red neuronal consiste en un conjunto de nodos, conocidis como
-**neuronas**, conectados entre si para transmitirse señales.
+Una red neuronal consiste en un conjunto de nodos, conocidos como
+**neuronas**, conectados entre si para transmitirse señales. Estas
+neuronas suelen estar dispuestas en una serie de **capas**, en las
+que, comúnmente, cada neurona de una capa está conectado a todas las
+neuronas de las capas anteriores. De esta forma la salida de unas
+neuronas, pasa a ser la entrada de otras (figura
+\ref{neural-network}).
 
-Estas neuronas están dispuestas en una serie de capas, en las que cada
-neurona de una capa está conectado a todas las neuronas de las capas
-anteriores. Cada neurona combina sus entradas con un conjunto de
-coeficientes o pesos. El nombre de **peso** se debe a que la función
-de estos, al multiplicarse por los valores de las entradas es definir
-la importancia de cada una. Los resultados de todos estos productos se
-suman y se pasa el resultado a lo que se conoce como **función de
-activación**, que añade un comportamiento no-lineal al
-proceso. Actualmente, la función de activación más conocida es la
-**ReLU** (Rectified Linear Unit) cuya fórmula es simplemente
-$f(z)=max(z,0)$.
+![Representación de una red neuronal con dos capas ocultas. Cada uno
+de los círculos representa una neurona. Elaboración propia
+\label{neural-network}](source/figures/neural-network.png){width=90%}
 
-Durante el entrenamiento, los pesos cambian de valor, intentand
-minimizar la función de pérdidas explicada en el apartado
-anterior. Para ajustar el vector de pesos se suele calcular el vector
-de gradiente que indica, para cada peso cómo se modificaría el error
-si ese peso se aumentara ligeramente. El vector de pesos es entonces
-ajustado en el sentido opuesto al vector de gradiente. Esto es lo que
-conocemos como **descenso de gradiente**. En la práctica, este proceso
-no usa todos los datos cada vez sino que se utiliza el **Descenso de
-Gradiente Estocástico** (SGD por sus iniciales en inglés). Gracias al
-SGD podemos actualizar los pesos de nuestra red neuronal tomando cada
-vez un pequeño conjunto de datos (conocido como **batch**).
+![Representación de una sola neurona con 3 entradas. Cada una de esas
+entradas tiene asociado un peso. La neurona utiliza la función de
+activación ReLU. Elaboración propia
+\label{single-neuron}](source/figures/single-neuron.png){width=90%}
 
-El origen de las redes neuronales es el **Perceptrón** desarrollado en
-los años 40 que eran redes simples de una sola capa de entrada y una
-capa de salida. Sin embargo, fue en los años 80 cuando estas
+La figura \ref{single-neuron} representa las operaciones realizadas
+por una sola neurona durante la predicción. Estas mismas operaciones
+son realizadas en todas las neuronas de nuestra red. Cada neurona
+combina sus entradas con un conjunto de coeficientes o pesos. Las
+entradas $x_1,x_2,x_3$ y los pesos $w_1,w_2,w_3$ son números reales,
+que pueden ser positivos o negativos. ^[Aunque no se haya
+representado, también existe un término adicional, *b* (término de
+sesgo), que no está multiplicado por ningún peso y se suma a z] El
+nombre de **peso** se debe a que la función de estos, al multiplicarse
+por los valores de las entradas es definir la importancia de cada una
+de ellas. En cada una de las neuronas, los resultados de todos estos
+productos se suman (ecuacion \ref{eq:train1}) y se pasa el valor
+obtenido a lo que se conoce como **función de activación**(ecuacion
+\ref{eq:train2}) , que añade un comportamiento no-lineal al proceso
+que permite modelar funciones curvas o no triviales. Actualmente, la
+función de activación más utilizada es la **ReLU** (Rectified Linear
+Unit) ^[Otras funciones de activación usadas comúnmente son
+**softmax**, **tangente hiperbólica** o la **función sigmoide**] cuya
+fórmula podemos ver en la ecuación \ref{eq:relu}.
+
+\begin{equation} \label{eq:relu}
+f(z)=max(z,0)
+\end{equation}
+
+\begin{equation} \label{eq:train1}
+ z = x_1w_1 + x_2w_2 + x_3w_3 + b
+\end{equation}
+
+\begin{equation} \label{eq:train2}
+  out = max(z,0)
+\end{equation}
+
+Como vemos en la ecuación \ref{eq:train3}, las ecuaciones anteriores
+pueden ser generalizadas para cualquier número de entradas.
+
+\begin{equation} \label{eq:train3}
+ out(X) = max(\sum_{i}x_iw_i+b,0)
+\end{equation}
+
+Durante el **entrenamiento**, los pesos cambian de valor, intentando
+minimizar la función de coste. Suponiendo que $y$ es el valor real
+de la variable objetivo para un conjunto de entradas $X$, la función
+de coste $L(X,y)$ podría ser simplemente la de la ecuación
+\ref{eq:train4}.
+
+\begin{equation} \label{eq:train4}
+ L(X,y) = (out(X) - y)^2
+\end{equation}
+
+Para ajustar el vector de pesos se suele calcular el vector de
+gradiente. Este vector indica, para cada peso, cómo se modificaría el
+error si ese peso se aumentara ligeramente. Es decir, nos proporciona
+la pendiente de la función de coste. El vector de pesos es entonces
+ajustado en el sentido opuesto al vector de gradiente (ecuación
+\ref{eq:train5}), bucando así **minimizar el error**. El valor
+$\alpha$ representa lo que conocemos como **learning rate** o **factor
+de aprendizaje** y se encarga de controlar la velocidad a la que la
+red neuronal aprende. Es muy importante la elección correcta de este
+parámetro pues, un valor demasiado bajo supondrá que la red tarde
+muchas iteraciones en encontrar el mínimo de la función de coste. Sin
+embaro, un valor demasiado alto puede suponer que la red no sea capaz
+de converger y encontrar este mínimo. Este proceso completo es lo que
+conocemos como **descenso de gradiente**.
+
+\begin{equation} \label{eq:train5}
+ w_{ij} =  w_{ij} - \alpha\frac{\partial L(X,y)}{\partial w_{ij}}
+\end{equation}
+
+En la práctica, este proceso no usa todos los datos cada vez sino que
+se utiliza el **Descenso de Gradiente Estocástico** (SGD por sus
+iniciales en inglés). Gracias al SGD podemos actualizar los pesos de
+nuestra red neuronal tomando cada vez un pequeño conjunto de datos
+(conocido como **batch**).
+
+El origen de las redes neuronales es el **Perceptrón**, desarrollado
+en los años 60, que era una red simple de una sola capa de entrada y
+una capa de salida. Sin embargo, fue en los años 80 cuando estas
 comenzaron a desarrollar su verdadero potencial gracias al algoritmo
-de backpropagation, que permitió que se añadieran nuevas capas
-intermedias a las redes neuronales conocidas como **capas
+de **backpropagation**, que permitió que se añadieran nuevas capas
+intermedias a las redes neuronales, conocidas como **capas
 ocultas**. La técnica de backpropagation no es más que una aplicación
-de la regla de la cadena de las derivadas. Gracias a ella podemos
-propagar el error a lo largo de las capas, para calcular en cada una
-el vector de gradiente y actualizar con él los pesos.
+de la regla de la cadena de las derivadas. En la ecuación
+\ref{eq:train6} podemos ver un ejemplo de como aplicar la regla de la
+cadena de las derivadas para obtener la derivada de la función de
+coste en función de los pesos. De la misma forma, podríamos aplicar
+la regla de la cadena para obtener la derivada de la función de
+coste en función de los pesos de varias capas atrás.
 
+\begin{equation} \label{eq:train6}
+ \frac{\partial L(X,y)}{\partial  w_{ij}} =  \frac{\partial L(X,y)}{\partial out(X)} \frac{\partial out(X)}{\partial  w_{ij}}
+\end{equation}
+
+Gracias a la técnica de backpropagation, podemos propagar el error a
+lo largo de las capas, para calcular en cada una el vector de
+gradiente y actualizar con él los pesos.
 
 Estas nuevas capas intermedias añadidas a las redes neuronales
-permitían encontrar patrones más complejos, y dieron lugar a lo que
-conocemos como **Deep Learning**. Estrictamente hablando, nos
-referimos a Deep Learning cuando tenemos una red con más de una capa
-oculta. El Deep Learning permite crear modelos computacionales
-compuestos de múltiples capas de procesamiento que son capaces de
-aprender representaciones de los datos con múltiples capas de
-abstracción [@lecun2015deep].
-
-
-En las redes profundas, cada capa de neuronas se entrena en un
-conjunto de características distintos, en base a la salida de la capa
-anterior. A medida que avanzamos a través de la red, las
+permiten encontrar patrones más complejos, y dieron lugar a lo que
+conocemos como **Deep Learning**. Si no tuviéramos capas ocultas,
+nuestras redes únicamente encontrarían relaciones directas entre las
+entradas y las salidas. Sin embargo, las capas ocultas nos permiten
+modelar de forma mucho más acertada el mundo real, donde las salidas
+dependen de las interacciones y combinaciones entre las distintas
+entradas. Estrictamente hablando, nos referimos a Deep Learning cuando
+tenemos una red con más de una capa oculta. El Deep Learning permite
+crear modelos computacionales compuestos de múltiples capas de
+procesamiento que son capaces de aprender representaciones de los
+datos con múltiples capas de abstracción [@lecun2015deep]. En las
+redes profundas, cada capa de neuronas se entrena, automáticamente, en
+un conjunto de características distinto, en base a la salida de la
+capa anterior. A medida que avanzamos a través de la red, las
 características que las neuronas son capaces de detectar son más
 complejas, ya que agregan y recombinan características de capas
-anteriores. Esta propiedad, conocidad como jerarquía de
-características hace posible que este tipo de redes sean capaces de
+anteriores. Esta propiedad, conocidad como **jerarquía de
+características** hace posible que este tipo de redes sean capaces de
 tratar datasets de muy alta dimensionalidad. Las redes neuronales
-profundas realizan una **extracción automática de características**,
-sin la necesidad de la intervención de un humano.
+profundas realizan, por lo tanto, **extracción automática de
+características** sin la necesidad de la intervención de un humano
+[@lecun2015deep].
 
 ### Redes neuronales convolucionales
 La capacidad de las redes neuronales de encontrar patrones complejos
-en datasets con una gran cantidad de dimensiones las convierten en
+en datasets con una gran cantidad de dimensiones las convierte en
 candidatas perfectas para tareas como la clasificación de imágenes o
 el reconocimiento de voz. Sin embargo, y como hemos visto a lo largo
 de este capítulo, estos clasificadores necesitan un trabajo manual
-previo de extracción de características.
+previo de extracción de características, siendo este incluso más
+necesario cuando las entradas de los clasificadores son señales
+(imágenes, audios, etc).
 
-La aparición de las conocidas como **Redes Convolucionales (CNN)**
-permitió eliminar este paso y delegarlo en el propio algoritmo de
-backpropagation. De esta forma, es posible usar como entradas de
-nuestro modelo los *datos en bruto* (píxeles de las imágenes, muestras
-de las pistas de audio, etc). Un momento clave para las redes
-convolucionales fue en 2012, en el ImageNet Large Scale Visual
-Recognition Challenge (ILSVRC) cuando una solución novedosa basada en
-CNNs [@krizhevsky2012imagenet] obtuvo, de forma holgada, la primera
-posición.
+La aparición de las conocidas como **Redes Neuronales Convolucionales
+(CNN por sus siglas en inglés)** permitió eliminar este paso y
+delegarlo en el propio algoritmo de backpropagation. De esta forma, es
+posible usar como entradas de nuestro modelo los *datos en bruto*
+(píxeles de las imágenes, muestras de las pistas de audio, etc). Un
+momento clave para las redes convolucionales fue en 2012, en el
+**ImageNet Large Scale Visual Recognition Challenge (ILSVRC)**
+^[http://image-net.org/challenges/LSVRC/] cuando una solución novedosa
+basada en CNNs [@krizhevsky2012imagenet] obtuvo, de forma holgada, la
+primera posición.
+
+La arquitectura de las redes convolucionales está basada en la
+organización de la corteza visual del cerebro humano. En él, existen
+neuronas individuales que responden a estímulos en una región
+delimitada del campo visual. Este tipo de redes son muy similares a
+las redes tradicionales analizadas anteriormente. De la misma forma
+que estas, las CNN también están compuestas de neuronas dispuestas en
+capas y el objetivo también es minimizar una función de coste,
+mediante el ajuste de una serie de pesos. Sin embargo, las CNN, al
+asumir que tendrán imágenes como entradas, puden realizar tareas más
+especializadas que evitarán la carga computacional que supondría
+tratar cada píxel de la imagen como un input más de una red neuronal
+convencional.
+
+Las redes convolucionales constan de **capas convolucionales** y
+**capas de reducción (o pooling)** alternadas.
+
+- En las **capas de convolución** se aplican una serie de **filtros**
+  a las imágenes (cuyos pesos son parámetros modificados durante el
+  entrenamiento por el algoritmo de backpropagation). En ellas se
+  producen también las transformaciones no lineales (ReLU). Cada uno
+  de los filtros se desplazará sobre toda la imagen calculándose, en
+  cada posición, el producto vectorial entre la región de la imagen y
+  los valores del filtro. Este proceso, la convolución ^[Aunque es
+  común en la literatura hablar de este proceso como convolución, en
+  realidad este cálculo en Tratamiento Digital de Señal es conocido
+  como una correlación cruzada. \ref{Goodfellow-et-al-2016}] de la
+  imagen con el filtro, el el que da nombre a estas capas. Estos
+  filtros hacen de **detectores de características**. Precisamente el
+  desplazamiento de ese filtro por toda la imagen es lo que nos
+  permitirá detectar características en cualquier posición de la
+  imagen consiguiendo así la deseada invarianza al desplazamiento. En
+  la figura \ref{lena} podemos ver el efecto de la convolución sobre
+  una imagen.
+- En las **capas de reducción o pooling** se disminuye la cantidad de
+  parámetros. Para ello se obtiene el promedio o el máximo de una
+  serie de regiones, reduciendo así el tamaño del mapa de
+  características. En función de si se obtiene el promedio o el máximo
+  de las regiones, estas capas son de **Max Pooling** o de **Average
+  Pooling**. La figura \ref{maxpool} representa este proceso.
+
+![Resultado de la convolución de una imagen con un filtro Sobel de 3x3
+horizontal (arriba) y otro vertical (abajo) Fuente:
+https://victorzhou.com/blog/intro-to-cnns-part-1/
+\label{lena}](source/figures/lena.png){width=80%}
+
+![Representación de los mapas de activación de una red convolucional
+con 2 capas convolucionales y 3 fully-connected. Cada capa
+convolucional va seguida de una de max pooling. Fuente:
+https://victorzhou.com/blog/intro-to-cnns-part-1/
+\label{maxpool}](source/figures/maxpool.jpeg){width=80%}
+
+
+Al final de todas estas capas tenemos las **Fully Connected Layers**,
+redes tradicionales que, a partir de los parámetros extraídos por las
+capas convolucionales y de pooling, realizan las clasificaciones o
+regresiones finales.
+
+La figura \ref{conv} representa todo este proceso en un ejemplo de
+reconocimiento de dígitos en imágenes. En ella podemos ver la salida
+de los filtros de las dos capas convolucionales.
+
+![Representación de los mapas de activación de una red convolucional
+con 2 capas convolucionales y 3 fully-connected. Cada capa
+convolucional va seguida de una de max pooling. Fuente:
+http://scs.ryerson.ca/~aharley/vis/conv/flat.html
+\label{conv}](source/figures/conv.png){width=100%}
+
+
+El funcionamiento del algoritmo de backpropagation en las redes
+convolucionales practicamente igual que en las no convolucionales, por
+lo que no supone ninguna dificultad teórica añadida para el
+entrenamiento. La red será capaz de encontrar, durante el
+entrenamiento, los parámetros que permitan extraer las características
+adecuadas para predecir correctamente nuestra clase objetivo.
 
 Una de las principales ventajas de las redes neuronales
 convolucionales con respecto a otras aproximaciones al problema es que
-poseen un cierto grado de invarianza a la distorsión y al
-desplazamiento. Esto permite que podamos usar este tipo de redes sin
-apenas pre-procesamiento.
-
-La arquitectura de las redes convolucionales está basada en la
-organización de la corteza visual del cerebro humano. En él existen
-neuronas individuales que responden a estímulos en una región
-delimitada del campo visual.
-
-Las redes convolucionales constan de capas convolucionales y de
-reducción (o pooling) alternadas.
-
-- En las capas de convolución de aplican una serie de filtros (cuyos
-  pesos son parámetros modificados durante el entrenamiento por el
-  backpropagation). En ellas se producen también las transformaciones
-  no lineales (ReLU). Cada uno de los filtros se desplazará sobre toda
-  la imagen calculándose en cada posición el producto vectorial entre
-  la región de la imagen y los valores del filtro. Estos filtros hacen
-  de **detectores de características**.
-- En las capas de reducción o pooling se disminuye la cantidad de
-  parámetros. Para ello se obtiene el promedio o el máximo de una
-  serie de regiones.
-
-Sobre todas estas capas tenemos las **Fully Connected Layer**, redes
-tradicionales que a partir de los parámetros extraídos por las capas
-convolucionales y de pooling, realizan las clasificaciones o
-regresiones finales.
-
-El funcionamiento del algoritmo de backpropagation en las redes
-convolucionales es tan simple como en las convencionales, por lo que
-no supone ninguna dificultad añadida para el entrenamiento.
+las CNN poseen un cierto grado de **invarianza a la distorsión y al
+desplazamiento**. Esto permite que podamos usar este tipo de redes sin
+apenas pre-procesamiento de las imágenes.
 
 Las redes convolucionales explotan la propiedad de que sus principales
 características no son más que composiciones de otras características
@@ -218,9 +407,32 @@ más simples. En una imágen, por ejemplo, mediante la composición de
 varias líneas simples, damos lugar a motivos que, de nuevo mediante
 composición dará lugar a las formas de los objetos. La detección de
 cada uno de estos niveles de abstracción corresponderá a unas capas
-concretas de nuestra red convolucional.
+concretas de nuestra red convolucional, siendo las primeras capas las
+que detectarán características más simples como líneas, bordes o
+colores y las últimas capas las que detectarán elementos compuestos
+mucho más complejos.
 
-### Arquitecturas de redes neuronales
+Existe una gran cantidad de arquitecturas de redes convolucionales,
+que han demostrado ser eficaces en diversos campos. Ejemplos de ellas
+pueden ser las siguientes:
+
+- **LeNet**: Fue, en 1998, una de las primeras arquitecturas de
+  CNN. \ref{lecun1998gradient}. Su propósito era, principalente, el
+  reconocimiento de dígitos en imágenes. Era una capa pequeña con 7
+  capas, siendo dos de ellas convolucionales, otras dos de tipo
+  pooling y el resto fully-connected.
+- **Alexnet**: Fue la ganadora en 2012 del concurso ILSVRC 2014
+  \ref{@krizhevsky2012imagenet}, con una arquitectura similar a LeNet
+  pero más profunda, con cerca de 60 millones de parámetros.
+- **VGGNet**: Fue presentada en 2014, y aún sigue siendo la
+  arquitectura preferida por la comunidad para la extracción de
+  características de imágenes. Se caracteriza por ser una arquitectura
+  muy uniforme que usa únicamente filtros de 3x3. Sin embargo, era muy
+  costosa de entrenar, puediendo llegar a tener hasta 140 millones de
+  parámetros.
+- **ResNet**: Presentada un año después a la VGGNet se caracteriza por
+  tener saltos entre capas y la salida de la **capa i** puede ser la
+  entrada de la **capa i+2**.
 
 ## Evaluación de sistemas de Deep Learning
 <!--
@@ -235,7 +447,7 @@ datos, es la evaluación de los resultados. Es de vital importancia
 establecer medidas que nos permitan saber cómo se está comportando
 nuestro modelo.
 
-En la literatura, existen una extensa cantidad de medidas, aunque en
+En la literatura, existen una extensa cantidad de métricas, aunque en
 este caso nos centraremos en algunas de las más comunes en problemas
 de este tipo.
 
@@ -265,6 +477,7 @@ A partir de la cantidad de predicciones de cada uno de estos posibles
 problemas de este tipo.
 
 La **sensitividad**...
+La **sensibilidad**
 
 ## Transfer Learning
 La mayoría de métodos de Machine Learning asumen que los datos de
