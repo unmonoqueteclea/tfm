@@ -303,83 +303,87 @@ características** sin la necesidad de la intervención de un humano
 La capacidad de las redes neuronales de encontrar patrones complejos
 en datasets con una gran cantidad de dimensiones las convierte en
 candidatas perfectas para tareas como la clasificación de imágenes o
-el reconocimiento de voz. Sin embargo, y como hemos visto a lo largo
-de este capítulo, estos clasificadores necesitan un trabajo manual
-previo de extracción de características, siendo este incluso más
-necesario cuando las entradas de los clasificadores son señales
-(imágenes, audios, etc).
+el reconocimiento de voz. Sin embargo, estos clasificadores necesitan
+un trabajo manual previo de extracción de características, siendo este
+incluso más necesario cuando las entradas de los clasificadores son
+señales (imágenes, audios, etc).
 
-La aparición de las conocidas como **Redes Neuronales Convolucionales
-(CNN por sus siglas en inglés)** permitió eliminar este paso y
-delegarlo en el propio algoritmo de backpropagation. De esta forma, es
-posible usar como entradas de nuestro modelo los *datos en bruto*
-(píxeles de las imágenes, muestras de las pistas de audio, etc). Un
-momento clave para las redes convolucionales fue en 2012, en el
-**ImageNet Large Scale Visual Recognition Challenge (ILSVRC)**
+La aparición de las **Redes Neuronales Convolucionales (CNN por sus
+siglas en inglés)** permitió eliminar la extracción de características
+y delegarla en el propio algoritmo de backpropagation. De esta forma,
+es posible usar como entradas de nuestro modelo los *datos en bruto*
+(píxeles de las imágenes). Un momento clave para las redes
+convolucionales fue en 2012, en el **ImageNet Large Scale Visual
+Recognition Challenge (ILSVRC)**
 ^[http://image-net.org/challenges/LSVRC/] cuando una solución novedosa
 basada en CNNs [@krizhevsky2012imagenet] obtuvo, de forma holgada, la
-primera posición.
+primera posición en la competición.
 
 La arquitectura de las redes convolucionales está basada en la
 organización de la corteza visual del cerebro humano. En él, existen
 neuronas individuales que responden a estímulos en una región
 delimitada del campo visual. Este tipo de redes son muy similares a
-las redes tradicionales analizadas anteriormente. De la misma forma
-que estas, las CNN también están compuestas de neuronas dispuestas en
-capas y el objetivo también es minimizar una función de coste,
+las redes neuronales tradicionales analizadas anteriormente. De la
+misma forma que estas, las CNN también están compuestas de neuronas
+dispuestas en capas y se trata de minimizar una función de coste
 mediante el ajuste de una serie de pesos. Sin embargo, las CNN, al
-asumir que tendrán imágenes como entradas, puden realizar tareas más
+asumir que tendrán imágenes como entradas, pueden realizar tareas más
 especializadas que evitarán la carga computacional que supondría
-tratar cada píxel de la imagen como un input más de una red neuronal
-convencional.
+simplemente tratar cada píxel de la imagen como un input más de una
+red neuronal convencional.
+
+Una de las principales ventajas de las redes neuronales
+convolucionales con respecto a otras aproximaciones al problema es que
+las CNN poseen un cierto grado de **invarianza a la distorsión y al
+desplazamiento**. Esto permite que podamos usar este tipo de redes sin
+apenas pre-procesamiento de las imágenes.
 
 Las redes convolucionales constan de **capas convolucionales** y
 **capas de reducción (o pooling)** alternadas.
 
-- En las **capas de convolución** se aplican una serie de **filtros**
-  a las imágenes (cuyos pesos son parámetros modificados durante el
-  entrenamiento por el algoritmo de backpropagation). En ellas se
-  producen también las transformaciones no lineales (ReLU). Cada uno
-  de los filtros se desplazará sobre toda la imagen calculándose, en
-  cada posición, el producto vectorial entre la región de la imagen y
-  los valores del filtro. Este proceso, la convolución ^[Aunque es
-  común en la literatura hablar de este proceso como convolución, en
-  realidad este cálculo en Tratamiento Digital de Señal es conocido
-  como una correlación cruzada. \ref{Goodfellow-et-al-2016}] de la
-  imagen con el filtro, el el que da nombre a estas capas. Estos
-  filtros hacen de **detectores de características**. Precisamente el
-  desplazamiento de ese filtro por toda la imagen es lo que nos
-  permitirá detectar características en cualquier posición de la
-  imagen consiguiendo así la deseada invarianza al desplazamiento. En
-  la figura \ref{lena} podemos ver el efecto de la convolución sobre
-  una imagen.
-- En las **capas de reducción o pooling** se disminuye la cantidad de
-  parámetros. Para ello se obtiene el promedio o el máximo de una
-  serie de regiones, reduciendo así el tamaño del mapa de
-  características. En función de si se obtiene el promedio o el máximo
-  de las regiones, estas capas son de **Max Pooling** o de **Average
-  Pooling**. La figura \ref{maxpool} representa este proceso.
+En las **capas de convolución** se aplican una serie de **filtros** a
+las imágenes (cuyos pesos son parámetros modificados durante el
+entrenamiento por el algoritmo de backpropagation). En ellas se
+producen también las **transformaciones no lineales (ReLU)**. Cada uno
+de los filtros se desplazará sobre toda la imagen calculándose, en
+cada posición, el producto escalar entre la región de la imagen y los
+valores del filtro. Este proceso, la convolución ^[Aunque es común en
+la literatura hablar de este proceso como convolución, en realidad
+este cálculo en tratamiento digital de señal es conocido como una
+correlación cruzada. [@Goodfellow-et-al-2016]] de la imagen con el
+filtro, es el que da nombre a estas capas. Estos filtros hacen de
+**detectores de características**. Precisamente el desplazamiento de
+ese filtro por toda la imagen es lo que nos permitirá detectar formas
+y patrones en cualquier posición de la imagen, consiguiendo así la
+deseada invarianza al desplazamiento. En la figura \ref{lena} podemos
+ver el efecto de la convolución sobre una imagen.
 
 ![Resultado de la convolución de una imagen con un filtro Sobel de 3x3
 horizontal (arriba) y otro vertical (abajo) Fuente:
 https://victorzhou.com/blog/intro-to-cnns-part-1/
 \label{lena}](source/figures/lena.png){width=80%}
 
-![Representación de los mapas de activación de una red convolucional
-con 2 capas convolucionales y 3 fully-connected. Cada capa
-convolucional va seguida de una de max pooling. Fuente:
-https://victorzhou.com/blog/intro-to-cnns-part-1/
+En las **capas de reducción o pooling** se disminuye la cantidad de
+parámetros. Para ello, se obtiene el promedio o el máximo de una serie
+de regiones, reduciendo así el tamaño del mapa de características. En
+función de si se obtiene el promedio o el máximo de las regiones,
+estas capas son de **Max Pooling** o de **Average Pooling**. La figura
+\ref{maxpool} representa este proceso.
+
+![Representación del proceso de Max Pooling con un filtro de 2x2 sobre
+una imagen de 4x4. Elaboración propia
 \label{maxpool}](source/figures/maxpool.jpeg){width=80%}
 
 
 Al final de todas estas capas tenemos las **Fully Connected Layers**,
-redes tradicionales que, a partir de los parámetros extraídos por las
-capas convolucionales y de pooling, realizan las clasificaciones o
-regresiones finales.
+capas como las de las redes tradicionales que, a partir de los
+parámetros extraídos por las capas convolucionales y de pooling,
+realizan las clasificaciones o regresiones finales.
 
 La figura \ref{conv} representa todo este proceso en un ejemplo de
 reconocimiento de dígitos en imágenes. En ella podemos ver la salida
-de los filtros de las dos capas convolucionales.
+de los filtros de las dos capas convolucionales que tiene la
+arquitectura del ejemplo.
 
 ![Representación de los mapas de activación de una red convolucional
 con 2 capas convolucionales y 3 fully-connected. Cada capa
@@ -388,53 +392,57 @@ http://scs.ryerson.ca/~aharley/vis/conv/flat.html
 \label{conv}](source/figures/conv.png){width=100%}
 
 
-El funcionamiento del algoritmo de backpropagation en las redes
-convolucionales practicamente igual que en las no convolucionales, por
-lo que no supone ninguna dificultad teórica añadida para el
+El funcionamiento del algoritmo de **backpropagation** en las redes
+convolucionales es practicamente igual que en las no convolucionales,
+por lo que no supone demasiada dificultad teórica añadida para el
 entrenamiento. La red será capaz de encontrar, durante el
-entrenamiento, los parámetros que permitan extraer las características
-adecuadas para predecir correctamente nuestra clase objetivo.
+entrenamiento, los pesos de los filtros que permitan extraer las
+características adecuadas para predecir correctamente nuestra clase
+objetivo.
 
-Una de las principales ventajas de las redes neuronales
-convolucionales con respecto a otras aproximaciones al problema es que
-las CNN poseen un cierto grado de **invarianza a la distorsión y al
-desplazamiento**. Esto permite que podamos usar este tipo de redes sin
-apenas pre-procesamiento de las imágenes.
 
-Las redes convolucionales explotan la propiedad de que sus principales
-características no son más que composiciones de otras características
-más simples. En una imágen, por ejemplo, mediante la composición de
-varias líneas simples, damos lugar a motivos que, de nuevo mediante
-composición dará lugar a las formas de los objetos. La detección de
+Las redes convolucionales explotan la propiedad de que, los patrones
+que detectan, no son más que composiciones de otros patrones más
+simples. En una imágen, por ejemplo, mediante la composición de varias
+líneas simples damos lugar a motivos que, de nuevo mediante
+composición, dará lugar a las formas de los objetos. La detección de
 cada uno de estos niveles de abstracción corresponderá a unas capas
 concretas de nuestra red convolucional, siendo las primeras capas las
 que detectarán características más simples como líneas, bordes o
 colores y las últimas capas las que detectarán elementos compuestos
-mucho más complejos.
+mucho más complejos. Esto es conocido como la **jerarquía de las
+capas**.
 
 Existe una gran cantidad de arquitecturas de redes convolucionales,
 que han demostrado ser eficaces en diversos campos. Ejemplos de ellas
 pueden ser las siguientes:
 
 - **LeNet**: Fue, en 1998, una de las primeras arquitecturas de
-  CNN. \ref{lecun1998gradient}. Su propósito era, principalente, el
-  reconocimiento de dígitos en imágenes. Era una capa pequeña con 7
+  CNNs [@lecun1998gradient]. Su propósito era, principalente, el
+  reconocimiento de dígitos en imágenes. Era una red pequeña con 7
   capas, siendo dos de ellas convolucionales, otras dos de tipo
   pooling y el resto fully-connected.
-- **Alexnet**: Fue la ganadora en 2012 del concurso ILSVRC 2014
-  \ref{@krizhevsky2012imagenet}, con una arquitectura similar a LeNet
-  pero más profunda, con cerca de 60 millones de parámetros.
-- **VGGNet**: Fue presentada en 2014, y aún sigue siendo la
-  arquitectura preferida por la comunidad para la extracción de
-  características de imágenes. Se caracteriza por ser una arquitectura
-  muy uniforme que usa únicamente filtros de 3x3. Sin embargo, era muy
-  costosa de entrenar, puediendo llegar a tener hasta 140 millones de
-  parámetros.
-- **ResNet**: Presentada un año después a la VGGNet se caracteriza por
-  tener saltos entre capas y la salida de la **capa i** puede ser la
-  entrada de la **capa i+2**.
+- **Alexnet**: Fue la ganadora en 2012 del concurso ILSVRC
+  [@krizhevsky2012imagenet], con una arquitectura similar a LeNet pero
+  más profunda, con cerca de 60 millones de parámetros y haciendo uso,
+  entre otra novedades, de la función de activación ReLU.
+- **VGGNet**: Fue presentada en 2014 [@simonyan2014very], y aún sigue
+  siendo la arquitectura preferida por la comunidad para la extracción
+  de características de imágenes. Fue la primera arquitectura de CNNs
+  realmente profunda (19 capas). Se caracteriza por ser una
+  arquitectura muy uniforme que usa únicamente filtros de 3x3. Sin
+  embargo, era muy costosa de entrenar, puediendo llegar a tener hasta
+  140 millones de parámetros.
+- **ResNet**: Presentada un año después a la VGGNet [@he2016deep], se
+  caracteriza por tener saltos entre capas. La salida de la **capa i**
+  puede ser la entrada de la **capa i+2**.
+- **Inception**: La primera versión de esta arquitectura (Google Net)
+  [@szegedy2015going] introdujo immportantes novedades entre las que
+  destacaba el uso de varios filtros de distintos tamaños en el mismo
+  nivel, cuyas salidas serían concatenadas. El objetivo era crear
+  redes *más anchas* en vez de *más profundas*.
 
-## Evaluación de sistemas de Deep Learning
+## Evaluación de sistemas de Machine Learning
 <!--
     Comienzo: 189 Mayo
     Fin V1:
@@ -443,28 +451,28 @@ pueden ser las siguientes:
 -->
 
 Un paso tan importante como el modelado, en un proyecto de análisis de
-datos, es la evaluación de los resultados. Es de vital importancia
+datos, es la evaluación de los resultados. Es de gran importancia
 establecer medidas que nos permitan saber cómo se está comportando
-nuestro modelo.
+nuestro modelo. En la literatura existe una gran cantidad de métricas
+aunque en este caso nos centraremos en algunas de las más comunes en
+problemas de este tipo.
 
-En la literatura, existen una extensa cantidad de métricas, aunque en
-este caso nos centraremos en algunas de las más comunes en problemas
-de este tipo.
-
-
-El problema que se está analizando en este trabajo es un **problema
-binario**, es decir se trata de predecir una clase con sólo dos
-posibles valores, verdadero o falso. Más concretamente, únicamente
-trataremos de detectar si la persona tiene o no la enfermedad. Cuando,
-en un problema de este tipo, comparamos la predicción realizada por un
-modelo, con el *ground truth* (es decir, la clase que realmente
-correspondería a esa instancia), pueden darse 4 posibles casos:
+El problema analizado en este trabajo es un problema de
+**clasificación**, es decir la variable objetivo (la que predecimos)
+solo puede tomar un conjunto de valores discretos. Además, como
+veremos más adelante, lo que inicialmente era un problema con tres
+posibles clases (RD/DMAE/Sano) se ha descompuesto en **tres problemas
+binarios** (RD/Sano) (DMAE/Sano)/ Se trata de predecir una clase con
+sólo dos posibles valores. Cuando en un problema de este tipo
+comparamos la predicción realizada por un modelo con el *ground truth*
+(es decir, la clase que realmente correspondería a esa instancia),
+pueden darse 4 posibles casos:
 
 - **Verdadero Positivo (o True Positive, TP)**: El sistema predice que
   el paciente **SÍ** tiene la enfermedad y acierta.
 - **Verdadero Negativo (o True Negative, TN)**: El sistema predice que
   el paciente **NO** tiene la enfermedad y acierta.
-- **Falso Negativo (o False Negative, FN)**: EL sistema predice,
+- **Falso Negativo (o False Negative, FN)**: El sistema predice,
   erróneamente, que el paciente **NO** tiene la enfermedad cuando en
   realidad sí que la tiene.
 - **Falso Positivo (o False Positive, FP)**: El sistema predice,
@@ -476,17 +484,41 @@ A partir de la cantidad de predicciones de cada uno de estos posibles
 4 tipos se pueden definir una serie de medidas muy comunes en
 problemas de este tipo.
 
-La **sensitividad**...
-La **sensibilidad**
+La **sensibilidad** mide la proporción de los pacientes que **Sí**
+tienen la enfermedad que nuestro clasificador ha sido capaz de
+detectar (ecuación \ref{eq:sensibilidad})
+
+\begin{equation} \label{eq:sensibilidad}
+ \frac{TP}{TP+FN}
+\end{equation}
+
+La **Especificidad**, en cambio, mide proporción de los pacientes que
+**No** tienen la enfermedad que nuestro clasificador ha sido capaz de
+detectar (ecuacion \ref{eq:especificidad})
+
+\begin{equation} \label{eq:especificidad}
+ \frac{TN}{TN+FP}
+\end{equation}
+
+En función del campo de aplicación de los modelos, unas métricas toman
+más importancia que otras. Incluso es común tener **umbrales de
+actuación** en nuestros modelos que nos permitan elegir el punto de
+equilibrio deseado entre sensibilidad y especificidad. Un modelo que
+trata de predecir la presencia de una enfermedad siempre tratará de
+enfocarse más en obtener una buena **sensibilidad** antes de centrarse
+en la **especificidad**. El coste de predecir erróneamente que un
+paciente tiene una enfermedad, es menor al de no haber detectado la
+enfermedad en un paciente que sí que la tenía.
 
 ## Transfer Learning
 La mayoría de métodos de Machine Learning asumen que los datos de
 entrenamiento y los de test vienen de la misma distribución y espacio
-funcional. [@pan2009survey]. Por ello, cuando esta distribución
-cambia, debemos volver a entrenear nuestros modelos desde 0,
-obteniendo datos totalmente nuevos. El Transfer Learning, sin
-embargo, nos permite tener distribuciones distintas en entrenamiento y
-test, mediante la transferencia de conocimiento entre modelos.
+funcional [@pan2009survey]. Por ello, cuando esta distribución cambia,
+debemos volver a entrenear nuestros modelos desde 0, obteniendo datos
+totalmente nuevos. El Transfer Learning, sin embargo, mediante la
+transferencia de conocimiento entre modelos, permite transferir
+información de un modelo entrenado previamente a un modelo nuevo que
+está siendo entrenado.
 
 El Transfer Learning es una técnica de Machine Learning que permite
 utilizar un modelo desarollado para una tarea específica como punto de
@@ -500,33 +532,28 @@ hacia la AGI ^[Artificial General Intelligence: Aquella inteligencia
 artificial que puede realizar con éxito cualquier tarea intelectual de
 cualquier ser humano].
 
-Aunque el Deep Learning es usado en diversidad de tareas como
-Procesamiento del Lenguaje Natural o tratamiento de audio, en este
-capítulo se analizará su uso en Visión por Computador, que es el caso
-adecuado a nuestro problema.
-
 ### Transfer Learning con imágenes
-En la práctica, muy poca gente entrena redes convolucionales desde 0.
-Existen 2 principales motivos:
+En la práctica, cada vez menos gente entrena redes convolucionales
+desde 0.  Existen 2 principales motivos:
 
 - En determinados ámbitos, no siempre existen datasets con una gran
   cantidad de imágenes, suficiente para entrenar una red desde 0.
 - Aún existiendo dicho dataset, el tiempo necesario para su completo
   entrenamiento puede ser de días, semanas o incluso meses dependiendo
-  del equipo usado.
+  del equipo usado, la cantidad de datos y la complejidad de la red.
 
 Existen tres principales estrategias a la hora de realizar Transfer
 Learning:
 
 - **Red convolucional como extractor de características**: Como se ha
-  analizado anteriormente una red convolucional puede ser vista como
-  una herramienta para extraer características de las imágenes, que
-  posteriormente serán usadas por capas totalmente conectadas (o por
+  analizado anteriormente, una red convolucional puede ser vista como
+  una herramienta para extraer características de las imágenes que
+  posteriormente serán usadas por capas *fully conencted* (o por
   cualquier otro tipo de clasificador) para realizar la
   clasificación. Conociendo esto, podemos utilizar la red
   convolucional entrenada para un conjunto de imágenes, en otro
   conjunto de imágenes distinto, siendo el clasificador final el único
-  que tendrá que reentrenarse.
+  que tendrá que ser reentrenado.
 - **Fine-tunning de la red convolucional** Como se ha analizado
   anteriormente, las capas iniciales de las redes convolucionales se
   encargan de detectar características más generales y patrones
@@ -552,14 +579,14 @@ escenarios ^[http://cs231n.github.io/transfer-learning/]:
 
 - **El nuevo dataset es pequeño pero similar al original**: Al ser un
   dataset muy pequeño, modificar las capas convolucionales de nuestro
-  modelo original puede dar lugar a overfitting. Por lo tanto, y
+  modelo original puede dar lugar a sobreajuste. Por lo tanto, y
   puesto que las imágenes de ambos datasets son similares, la
   estrategia adecuada será utilizar la red convolucional como
   extractor de características y entrenar únicamente el clasificador
   final.
 - **El nuevo dataset es grande y similar al original**: En este caso,
   como tenemos más imágenes podremos realizar fine-tunning de la red
-  sin miedo a caer en overfitting.
+  sin miedo a caer en sobreajuste.
 - **El nuevo dataset es pequeño y muy diferente al original**: De
   nuevo, al tener un dataset pequeño, descartaremos entrenar la red
   convolucional. En este caso, lo que haremos es entrenar solo un
@@ -577,25 +604,25 @@ escenarios ^[http://cs231n.github.io/transfer-learning/]:
 con una enfermedad, en lugar de ser tomada por una sola persona, fuera
 tomada por un conjunto de los principales expertos del mundo de esa
 enfermedad? Esa es la pregunta que se hacen multitud de investigadores
-[@rajkomar2019machine]. Estos concluyen que las tratamientos recetados
-serán los más efectivos, y no, los más conocidos por la persona que
-los prescribe. Además, se evitaría el error humano. Por desgracia, un
-sistema de este tipo sería inviable, debido principalmente a la falta
-de expertos, que no darían abasto para diagnosticar a millones de
-pacientes cada día. Sin embargo, el Machine Learning nos promete un
-sistema similar a este, pero realmente viable y escalable. Con la
-capacidad de aplicar todas las lecciones recogidas de la experiencia
-colectiva en cada una de las decisiones, sin que esto genere una gran
-carga de trabajo para unos pocos expertos.
+[@rajkomar2019machine]. Estos concluyen que los tratamientos recetados
+de esta forma, y no los más conocidos por una única persona que los
+prescribe, serían los más efectivos. Además, se evitaría el error
+humano. Por desgracia, un sistema de este tipo sería inviable debido
+principalmente a la falta de expertos, que no darían abasto para
+diagnosticar a millones de pacientes cada día. Sin embargo, el Machine
+Learning nos promete un sistema similar a este pero realmente viable y
+escalable, con la capacidad de aplicar todas las lecciones recogidas
+de la experiencia colectiva en cada una de las decisiones, sin que
+esto genere una gran carga de trabajo para unos pocos expertos.
 
-Hace ya 50 años se ponía de manifiesto la necesidad de "aumentar, o
-incluso remplazar las funciones intelectuales de los médicos"
-[@schwartz1970medicine]. Además, la implementación de los Historiales
-Clínicos Electrónicos en diversidad de sistemas de salud, proporciona
-una ingente cantidad de datos que podrían ser de gran utilidad para la
-creación de modelos de Machine Learning de todo tipo. ^[Aunque no hay
-que olvidar las limitaciones derivadas de la privacidad y la
-protección de datos]
+Hace ya 50 años se ponía de manifiesto la necesidad de *"aumentar, o
+incluso remplazar las funciones intelectuales de los médicos"*
+[@schwartz1970medicine]. Además, la implementación de los
+**Historiales Clínicos Electrónicos** en diversidad de sistemas de
+salud, proporciona una ingente cantidad de datos que podrían ser de
+gran utilidad para la creación de modelos de Machine Learning de todo
+tipo. ^[Aunque no hay que olvidar las limitaciones derivadas de la
+privacidad y la protección de datos]
 
 El uso de herramientas estadísticas en medicina no es ninguna
 novedad. Desde antes de la irrupción de las técnicas más novedosas de
@@ -627,9 +654,9 @@ y obtenían conclusiones a partir de una serie de reglas que
 previamente habían tenido que ser definidas por especialistas. Sin
 embargo, con sistemas basados en Machine Learning, **estas reglas son
 inferidas a partir de datos históricos**. Una de las principales
-características del Machine Learning que le hace destacar sobre otros
+características del Machine Learning, que le hace destacar sobre otros
 métodos tradicionales, es su capacidad de manejar enormes cantidades
-de predictores y encontrar complicados patrones entre ellos.
+de predictores y encontrar complicados patrones en ellos.
 
 Además, debido a la gran cantidad de información no estructurada
 existente (imágenes, señales, textos, etc) en medicina, como era de
@@ -638,9 +665,13 @@ los datos "hablen por sí mismos". Sin embargo, en todo momento tenemos
 que tener presente que nuestras evaluaciones pueden ser demasiado
 optimistas o que el sobreajuste puede hacer que nuestros modelos dejen
 de funcionar al ponerlos en producción. Tener una Inteligencia
-Artificial explicable de la que no solo obtengamos predicciones, sino
+Artificial explicable, de la que no solo obtengamos predicciones sino
 el por qué de las mismas, es algo que hará más fácil la entrada de
 estos algoritmos en el día a día de los médicos.
+
+A continuación se detallarán los ámbitos, dentro del campo de la
+medicina en la que el Aprendizaje Automático puede realizar
+importantes contribuciones.
 
 ### Pronóstico
 El Machine Learning nos puede ayudar, mediante la búsqueda de
@@ -650,30 +681,30 @@ Machine Learning son capaces de identificar a los pacientes que están
 en riesgo de tener que ser transferidos a las unidades de cuidados
 intensivos. [@escobar2016piloting]. Además, diversos estudios sugieren
 que se pueden crear eficaces modelos de pronóstico médico a partir de
-la información en bruto de historiales [rajkomar2018scalable] e
+la información en bruto de historiales [@rajkomar2018scalable] e
 imágenes médicas [@de2018clinically].
 
 La estandarización de los historiales médicos electrónicos sería de
 gran ayuda para la implantación de estos sistemas permitiendo, además,
 la agregación de datos. Formatos como el **Fast Healthcare
-Interoperability Resources (FHIR)** [@mandel2016smart] en los últimos
-años con este propósito.
+Interoperability Resources (FHIR)** [@mandel2016smart] han nacido en
+los últimos años con este propósito.
 
 ### Diagnóstico
-Segeun concluye la Academia Nacional de Ciencias de EEUU,
-prácticamente todos los pacientes serán diagnosticados de forma
-errónea al menos una vez en su vida [@ball2015improving].  Diversos
-estudios han encontrado problema sistemáticos en los servicios de
-salud de todo el mundo. Hay evidencias de que, en los sistemas en los
-que los servicios de diagnóstico y tratamiento los realiza una misma
-organización, obteniendo mayores ingresos la compañía mediante la
-prescripción de drogas y la solicitud de nuevas pruebas médicas, la
-tendencia a hacerlo aumenta. [@currie2014addressing].
+Según concluye la Academia Nacional de Ciencias de EEUU, prácticamente
+todos los pacientes serán diagnosticados de forma errónea al menos una
+vez en su vida [@ball2015improving].  Diversos estudios han encontrado
+problema sistemáticos en los servicios de salud de todo el mundo. Hay
+evidencias de que, en los sistemas en los que los servicios de
+diagnóstico y tratamiento los realiza una misma organización,
+obteniendo mayores ingresos la compañía mediante la prescripción de
+medicamentos y la solicitud de nuevas pruebas médicas, la tendencia a
+hacerlo aumenta considerablemente [@currie2014addressing].
 
 Los datos históricos pueden ser de gran ayuda para la identificación
 de posibles patologías durante las visitas clínicas. Los modelos
-podrían sugerir nuevas pruebas a los médicos en base a los datos
-recogidos en tiempo real [@slack1966computer].
+podrían, incluso, sugerir nuevas pruebas a los médicos en base a los
+datos recogidos en tiempo real [@slack1966computer].
 
 ### Tratamiento
 La aproximación más directa al problema del tratamiento mediante
@@ -689,14 +720,17 @@ analizados en profundiad por expertos para entrenar los modelos
 
 
 ### Retos clave
-Uno de los principales retos en la creación de modelos de Machine
-Learning para medicina es la **falta de datos de calidad**. Este tipo de
-modelos, sobretodo los de Deep Learning, funcionan mejor cuanto mayor
-es la cantidad de datos de los que disponen. Sin embargo, en el campo
-de la medicina no existen tanta disponibilidad de los mismos como sí
-que existe en otros ámbitos. Una de las principales causas de esa
-escasez ese la inviolable privacidad de los datos, que a menudo impide
-la creación de grandes datasets. [@rajkomar2019machine]
+Uno de los principales retos en la creación de modelos de Aprendizaje
+Automático para medicina es la **falta de datos de calidad**. Este
+tipo de modelos, sobretodo los de Deep Learning, funcionan mejor
+cuanto mayor es la cantidad de datos de los que disponen para su
+entrenamiento. Sin embargo, en el campo de la medicina no existe tanta
+disponibilidad de los mismos como sí que existe en otros ámbitos. Una
+de las principales causas de esa escasez es la inviolable privacidad
+de los datos, que a menudo impide la creación de grandes datasets y
+únicamente permite crear conjuntos de datos lo suficientemente
+agregados como para que no pueda obtenerse datos de una persona en
+concreto. [@rajkomar2019machine]
 
 Otro de los retos es el **sesgo** existente en los datos. Toda actividad
 humana está influenciada por un sesgo, ya sea consciente o
@@ -708,32 +742,32 @@ sesgados.
 
 La **interpretabilidad** de los modelos es también clave. Los médicos
 deben conocer el grado de veracidad y las limitaciones de estas
-técnicas, para poder incorporarlas como una herramienta más. La
-sobre-confianza en estos sistemas puede conllevar una disminución de
-la alerta de los médicos que puede tener consecuencias letales. Que
-los modelos proporcionen, junto con sus predicciones, un grado de
+técnicas para poder incorporarlas como una herramienta más. La
+sobreconfianza en estos sistemas puede conllevar una disminución de la
+alerta de los médicos que puede tener consecuencias letales. Que los
+modelos proporcionen, junto con sus predicciones, un grado de
 confiabilidad es un buen principio, pero no basta. De hecho, en
-ocasiones estis intervalos de fiabilidad pueden ser interpretados de
+ocasiones estos intervalos de fiabilidad pueden ser interpretados de
 forma incorrecta [@jiang2018trust]. Es necesario crear modelos que
 sean capaces de explicar el por qué de sus predicciones. De hecho,
 esto era uno de los requisitos que indicó la Unión Europea en su
 **Guia ética para una Inteligencia Artificial fiable**
-[^https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai]. Esto
-pude suponer un problema en técnicas de Deep Learning, que siempre han
-sido tachadas de ser **cajas negras**. Sin embargo, en los últimos
-años se han realizado diferentes estudios que demuestran que los
-modelos de Deep Learning pueden ser interpretables con las
-herramientas adecuadas. [@cruz2013deep] [@zhang2018visual]
-[@lipton2016mythos].
+^[https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai]. La
+necesidad de interpretabilidad de los resultados pude suponer un
+problema en técnicas de Deep Learning, que siempre han sido tachadas
+de ser **cajas negras**. Sin embargo, en los últimos años se han
+realizado diferentes estudios que demuestran que los modelos de Deep
+Learning pueden ser interpretables con las herramientas
+adecuadas. [@cruz2013deep] [@zhang2018visual] [@lipton2016mythos].
 
 ## Correlación no implica causalidad
 Aunque sea un mantra repetido hasta la saciedad en la literatura, esta
 advertencia merece una apartado propio en un trabajo de estas
 características, pues es algo a tener en cuenta y que implica tener
-mucha cautela al obtener conclusiones mediante este tipo de métodos.
-
-En muchas ocasiones creemos, de forma errónea, que existe una relación
-de causa y efecto entre dos variables que están correlacionadas.
+mucha cautela al obtener conclusiones mediante este tipo de
+métodos. En muchas ocasiones creemos, de forma errónea, que existe una
+relación de causa y efecto entre dos variables que están
+correlacionadas, cuando esto no siempre es cierto.
 
 
 La correlación entre dos variables, puede ser debida a una tercera
@@ -746,31 +780,41 @@ esto, por tanto a causa de esto") sigue siendo estando muy presente en
 los medios de comunicación y en las **pseudociencias**.
 
 Si alguna vez el lector divisa a un sujeto disfrazado de pirata, no lo
-tome por loco. Ese sujeto podría ser un seguidor de **Bobby Henderson**,
-creador de la iglesia pastafari que, cansado de argumentos de los
-creacionistas basados en esta falacia, realizó un estudio en el que se
-podía apreciar una clara correlación entre la temperatura global y el
-descenso del número de piratas. Es común, desde entonces, que los
-seguidores de Henderson se disfracen de piratas para recordarlo.
+tome por loco. Ese sujeto podría ser un seguidor de **Bobby
+Henderson**, creador de la iglesia pastafari que, cansado de
+argumentos de los creacionistas basados en esta falacia, realizó un
+estudio (figura \ref{piratas}) en el que demostraba una clara
+correlación entre la temperatura global y el descenso del número de
+piratas (un claro ejemplo de la existencia de una variable oculta, el
+tiempo). Es común, desde entonces, que los seguidores de Henderson se
+disfracen de piratas para recordarlo.
 
 
-<!-- TODO: Imagen de la grafica de piratas y temperatura
-    https://jdcdn-wabisabiinvestme.netdna-ssl.com/wp-content/uploads/2016/06/1-1-768x483.jpg-->
+![Correlación entre el aumento de la temperatura media global y el
+descenso del número de piratas. Fuente:
+https://www.jotdown.es/2016/06/correlacion-no-implica-causalidad/
+\label{piratas}](source/figures/piratas.jpg){width=90%}
 
-Otro ejemplo, muy popular, es la singular correlación entre el número
-de ahogados en piscinas en Estados Unidos y el número de apariciones
-en películas de Nicholas Cage.
 
-<!-- TODO: Imagen y explicación de
-http://www.tylervigen.com/spurious-correlations-->
+Otro ejemplo curioso es la singular correlación entre el número de
+ahogados en piscinas en Estados Unidos y el número de apariciones en
+películas de Nicholas Cage (figura \ref{cage}), en este caso una clara
+correlación espúrea.
+
+![Correlación entre el número de ahogados en piscinas de Estados
+Unidos y el número de apariciones en películas de Nicholas Cage.
+Fuente: http://www.tylervigen.com/spurious-correlations
+\label{cage}](source/figures/cage.pdf){width=100%}
+
 
 Sin embargo, lejos de quedar en una mera anécdota como las anteriores,
 es extremadamente preocupante que existan familias en todo el mundo
 que estén decidiendo no vacunar a sus hijos debido a una aparente
-correlación en un estudio de 2010 entre el número de casos de autismo
-y las vacunaciones.
+correlación, en un estudio de 2010, entre el número de casos de
+autismo y las vacunaciones.
 
 Por lo tanto, es necesaria una gran cautela antes de obtener
 conclusiones de los sistemas de Machine Learning. Además, no estaría
 de más, aunque no serán objeto de análisis en este trabajo, tener
-presentes el Sesgo del Superviviente y la Paradoja de Simpson).
+presentes el Sesgo del Superviviente ^[https://es.wikipedia.org/wiki/Sesgo_del_superviviente] y la Paradoja
+de Simpson ^[https://es.wikipedia.org/wiki/Paradoja_de_Simpson]).
