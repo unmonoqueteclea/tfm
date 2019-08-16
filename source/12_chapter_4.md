@@ -256,7 +256,7 @@ que este modelo sea para muchos investigadores el **modelo de
 referencia** en detección de Retinopatía Diabética.
 
 También se han realizado investigaciones con pasos previos de
-extracción de características usando técnicas como **Bag Of Visual
+bextracción de características usando técnicas como **Bag Of Visual
 Words** [@costa2017convolutional] o extracción del fondo de las
 imágenes mediante **Modelos Gaussianos Mixtos** [@mansour2018deep]
 
@@ -264,6 +264,7 @@ Otras técnicas, como la de **Data Augmentation** consistente en crear
 nuevas imágenes a partir de transformaciones sobre las imágenes
 originales, han demostrado también ser eficaces
 [@pratt2016convolutional]. Además del Data Augmentation, otra técnica
+
 que también ha sido usada para solventar el problema de la falta de
 imágenes ha sido el **Transfer Learning**. Esta técnica ha sido
 aplicada utilizando, como base para nuestros modelos, otros modelos
