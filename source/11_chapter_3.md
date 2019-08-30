@@ -29,18 +29,18 @@ también, por ejemplo, el Aprendizaje No Supervisado, que permite
 encontrar patrones en los datos aunque no exista una variable objetivo
 a predecir]
 
-El principal inconveniente del Machine Learning con respecto al
-aprendizaje humano es, a la vez, su principal ventaja: la necesidad de
-grandes cantidades de datos para su correcto funcionamiento. Si se
-alimentan con una cantidad suficiente de datos, los algoritmos de
-Machine Learning podrán encontrar patrones que, para los humanos,
-serían prácticamente imposible de detectar. El cerebro humano es una
-máquina bastante compleja y sofisticada de encontrar patrones. Sin
-embargo, tiene grandes dificultades en realizar el análisis de datos
-con alta dimensionalidad. Un modelo de Machine Learning podrá
-analizar, en segundos, más pacientes de los que verá un médico en toda
-su vida. Además, la cantidad de predictores distintos que manejará
-sería totalmente inviable para un humano.
+Uno de los principales inconvenientes del Machine Learning con
+respecto al aprendizaje humano es, a la vez, una de sus principales
+ventaja: la **necesidad de grandes cantidades de datos para su
+correcto funcionamiento**. Si se alimentan con una cantidad suficiente
+de datos, los algoritmos de Machine Learning podrán encontrar patrones
+que, para los humanos, serían prácticamente imposible de detectar. El
+cerebro humano es una máquina bastante compleja y sofisticada de
+encontrar patrones. Sin embargo, tiene grandes dificultades en
+realizar el análisis de datos con alta dimensionalidad. Un modelo de
+Machine Learning podrá analizar, en segundos, más pacientes de los que
+verá un médico en toda su vida. Además, la cantidad de predictores
+distintos que manejará sería totalmente inviable para un humano.
 
 En la figura \ref{interes-ml} vemos como, a pesar de existir desde los
 años 60, el interés de la población en el Machine Learning ha
@@ -62,7 +62,7 @@ procesos. Existen 3 principales motivos en este crecimiento:
   aportar valor de no existir ingentes cantidades de datos, tanto
   estructurados como no estructurados, en los que poder encontrar
   patrones. Con el creciente uso de servicios online y la expansión
-  del IoT o Internet de las cosas se están generando mayor cantidad de
+  del IoT o Internet de las Cosas se están generando mayor cantidad de
   datos cada día que nunca antes se había generado. Según Forbes, el
   90% de los datos existentes en 2018 en todo el mundo, se generaron
   entre 2016
@@ -80,7 +80,7 @@ actualmente existe mucha confusión en el uso de estos términos. Aunque
 comparten características, no tienen el mismo significado. En este
 apartado se detallarán las similitudes y diferencias entre todos ellos
 para evitar el lenguaje inexacto usado habitualmente, principalmente,
-en medios de comunicación.
+en publicidad y medios de comunicación.
 
 Comenzaremos por el **Big Data**, pues es el término más vago y
 confuso. Cuando hablamos de Big Data nos referimos al análisis de
@@ -98,7 +98,7 @@ confusión. Llamamos **Inteligencia Artificial** a un conjunto de
 técnicas que tratan de que los ordenadores imiten, de alguna forma, el
 comportamiento humano.
 
-![El Machine Learning es un campo dentro de la Inteligencia
+![El Machine Learning es un campo perteneciente a la Inteligencia
 Artificial. El Deep Learning es un campo dentro del Machine
 Learning. Elaboración propia
 \label{ia-ml}](source/figures/ia-ml.png){width=100%}
@@ -132,7 +132,7 @@ de los algoritmos de Aprendizaje Automático tratarán de ajustar una
 serie de parámetros (o pesos) intentando minimizar esta función. Un
 claro ejemplo de algoritmos con este comportamiento son las conocidas
 como **redes neuronales**, de las que explicaremos su funcionamiento
-en el siguiente capítulo.
+en el siguiente apartado.
 
 Precisamente las redes neuronales, son las que dan lugar al **Deep
 Learning**. Cuando añadimos más complejidad a las redes neuronales
@@ -181,23 +181,23 @@ activación ReLU. Elaboración propia
 
 La figura \ref{single-neuron} representa las operaciones realizadas
 por una sola neurona durante la predicción. Estas mismas operaciones
-son realizadas en todas las neuronas de nuestra red. Cada neurona
-combina sus entradas con un conjunto de coeficientes o pesos. Las
-entradas $x_1,x_2,x_3$ y los pesos $w_1,w_2,w_3$ son números reales,
-que pueden ser positivos o negativos. ^[Aunque no se haya
-representado, también existe un término adicional, *b* (término de
-sesgo), que no está multiplicado por ningún peso y se suma a z] El
-nombre de **peso** se debe a que la función de estos, al multiplicarse
-por los valores de las entradas es definir la importancia de cada una
-de ellas. En cada una de las neuronas, los resultados de todos estos
-productos se suman (ecuacion \ref{eq:train1}) y se pasa el valor
-obtenido a lo que se conoce como **función de activación**(ecuacion
-\ref{eq:train2}) , que añade un comportamiento no-lineal al proceso
-que permite modelar funciones curvas o no triviales. Actualmente, la
-función de activación más utilizada es la **ReLU** (Rectified Linear
-Unit) ^[Otras funciones de activación usadas comúnmente son
-**softmax**, **tangente hiperbólica** o la **función sigmoide**] cuya
-fórmula podemos ver en la ecuación \ref{eq:relu}.
+son realizadas en todas las neuronas de la red. Cada neurona combina
+sus entradas con un conjunto de coeficientes o pesos. Las entradas
+$x_1,x_2,x_3$ y los pesos $w_1,w_2,w_3$ son números reales, que pueden
+ser positivos o negativos. ^[Aunque no se haya representado, también
+existe un término adicional, *b* (término de sesgo), que no está
+multiplicado por ningún peso y se suma a z] El nombre de **peso** se
+debe a que la función de estos, al multiplicarse por los valores de
+las entradas es definir la importancia de cada una de ellas. En cada
+una de las neuronas, los resultados de todos estos productos se suman
+(ecuacion \ref{eq:train1}) y se pasa el valor obtenido a lo que se
+conoce como **función de activación**  (ecuacion \ref{eq:train2}) , que
+añade un comportamiento no-lineal al proceso que permite modelar
+funciones curvas o no triviales. Actualmente, la función de activación
+más utilizada es la **ReLU** (Rectified Linear Unit) ^[Otras funciones
+de activación usadas comúnmente son **softmax**, **tangente
+hiperbólica** o la **función sigmoide**] cuya fórmula podemos ver en
+la ecuación \ref{eq:relu}.
 
 \begin{equation} \label{eq:relu}
 f(z)=max(z,0)
@@ -231,17 +231,17 @@ de coste $L(X,y)$ podría ser simplemente la de la ecuación
 Para ajustar el vector de pesos se suele calcular el vector de
 gradiente. Este vector indica, para cada peso, cómo se modificaría el
 error si ese peso se aumentara ligeramente. Es decir, nos proporciona
-la pendiente de la función de coste. El vector de pesos es entonces
-ajustado en el sentido opuesto al vector de gradiente (ecuación
-\ref{eq:train5}), bucando así **minimizar el error**. El valor
-$\alpha$ representa lo que conocemos como **learning rate** o **factor
-de aprendizaje** y se encarga de controlar la velocidad a la que la
-red neuronal aprende. Es muy importante la elección correcta de este
-parámetro pues, un valor demasiado bajo supondrá que la red tarde
-muchas iteraciones en encontrar el mínimo de la función de coste. Sin
-embaro, un valor demasiado alto puede suponer que la red no sea capaz
-de converger y encontrar este mínimo. Este proceso completo es lo que
-conocemos como **descenso de gradiente**.
+la pendiente de la función de coste (o función de pérdidas). El vector
+de pesos es entonces ajustado en el sentido opuesto al vector de
+gradiente (ecuación \ref{eq:train5}), bucando así **minimizar el
+error**. El valor $\alpha$ representa lo que conocemos como **learning
+rate** o **factor de aprendizaje** y se encarga de controlar la
+velocidad a la que la red neuronal aprende. Es muy importante la
+elección correcta de este parámetro pues, un valor demasiado bajo
+supondrá que la red tarde muchas iteraciones en encontrar el mínimo de
+la función de coste. Sin embaro, un valor demasiado alto puede suponer
+que la red no sea capaz de converger y encontrar este mínimo. Este
+proceso completo es lo que conocemos como **descenso de gradiente**.
 
 \begin{equation} \label{eq:train5}
  w_{ij} =  w_{ij} - \alpha\frac{\partial L(X,y)}{\partial w_{ij}}
@@ -260,12 +260,13 @@ comenzaron a desarrollar su verdadero potencial gracias al algoritmo
 de **backpropagation**, que permitió que se añadieran nuevas capas
 intermedias a las redes neuronales, conocidas como **capas
 ocultas**. La técnica de backpropagation no es más que una aplicación
-de la regla de la cadena de las derivadas. En la ecuación
-\ref{eq:train6} podemos ver un ejemplo de como aplicar la regla de la
-cadena de las derivadas para obtener la derivada de la función de
-coste en función de los pesos. De la misma forma, podríamos aplicar
-la regla de la cadena para obtener la derivada de la función de
-coste en función de los pesos de varias capas atrás.
+de la regla de la cadena de las derivadas que permite propagar el
+error calculado al final de la red a todas las capas de ésta. En la
+ecuación \ref{eq:train6} podemos ver un ejemplo de como aplicar la
+regla de la cadena de las derivadas para obtener la derivada de la
+función de coste en función de los pesos. De la misma forma, podríamos
+aplicar la regla de la cadena para obtener la derivada de la función
+de coste en función de los pesos de varias capas atrás.
 
 \begin{equation} \label{eq:train6}
  \frac{\partial L(X,y)}{\partial  w_{ij}} =  \frac{\partial L(X,y)}{\partial out(X)} \frac{\partial out(X)}{\partial  w_{ij}}
@@ -304,8 +305,7 @@ La capacidad de las redes neuronales de encontrar patrones complejos
 en datasets con una gran cantidad de dimensiones las convierte en
 candidatas perfectas para tareas como la clasificación de imágenes o
 el reconocimiento de voz. Sin embargo, estos clasificadores necesitan
-un trabajo manual previo de extracción de características, siendo este
-incluso más necesario cuando las entradas de los clasificadores son
+un trabajo manual previo de extracción de características de las
 señales (imágenes, audios, etc).
 
 La aparición de las **Redes Neuronales Convolucionales (CNN por sus
@@ -450,10 +450,10 @@ pueden ser las siguientes:
     Webs:
 -->
 
-Un paso tan importante como el modelado, en un proyecto de análisis de
-datos, es la evaluación de los resultados. Es de gran importancia
+Un paso tan importante como el modelado en un proyecto de análisis de
+datos es la evaluación de los resultados. Es de gran importancia
 establecer medidas que nos permitan saber cómo se está comportando
-nuestro modelo. En la literatura existe una gran cantidad de métricas
+nuestro modelo. En la literatura existe una gran cantidad de métricas,
 aunque en este caso nos centraremos en algunas de las más comunes en
 problemas de este tipo.
 
@@ -461,12 +461,12 @@ El problema analizado en este trabajo es un problema de
 **clasificación**, es decir la variable objetivo (la que predecimos)
 solo puede tomar un conjunto de valores discretos. Además, como
 veremos más adelante, lo que inicialmente era un problema con tres
-posibles clases (RD/DMAE/Sano) se ha descompuesto en **tres problemas
-binarios** (RD/Sano) (DMAE/Sano)/ Se trata de predecir una clase con
-sólo dos posibles valores. Cuando en un problema de este tipo
-comparamos la predicción realizada por un modelo con el *ground truth*
-(es decir, la clase que realmente correspondería a esa instancia),
-pueden darse 4 posibles casos:
+posibles clases (RD/DMAE/Sano) también puede descomponerse en **dos
+problemas de clasificación binaria** (RD/Sano) (DMAE/Sano). Se trata
+de predecir una clase con sólo dos posibles valores. Cuando en un
+problema de este tipo comparamos la predicción realizada por un modelo
+con el *ground truth* (es decir, la clase que realmente correspondería
+a esa instancia), pueden darse 4 posibles casos:
 
 - **Verdadero Positivo (o True Positive, TP)**: El sistema predice que
   el paciente **SÍ** tiene la enfermedad y acierta.
@@ -484,7 +484,16 @@ A partir de la cantidad de predicciones de cada uno de estos posibles
 4 tipos se pueden definir una serie de medidas muy comunes en
 problemas de este tipo.
 
-La **sensibilidad** mide la proporción de los pacientes que **Sí**
+La métrica más común, conocida como **Accuracy** o **Exactitud**, mide
+el porcentaje de aciertos del sistema (ecuacion \ref{accuracy}). Esta
+métrica carece de utilidad cuando tenemos conjuntos de datos
+desbalanceados.
+
+\begin{equation} \label{eq:accuracy}
+ \frac{TP+TN}{TP+TN+FN+FP}
+\end{equation}
+
+La **Sensibilidad** mide la proporción de los pacientes que **Sí**
 tienen la enfermedad que nuestro clasificador ha sido capaz de
 detectar (ecuación \ref{eq:sensibilidad})
 
@@ -515,7 +524,7 @@ La mayoría de métodos de Machine Learning asumen que los datos de
 entrenamiento y los de test vienen de la misma distribución y espacio
 funcional [@pan2009survey]. Por ello, cuando esta distribución cambia,
 debemos volver a entrenear nuestros modelos desde 0, obteniendo datos
-totalmente nuevos. El Transfer Learning, sin embargo, mediante la
+totalmente nuevos. El **Transfer Learning**, sin embargo, mediante la
 transferencia de conocimiento entre modelos, permite transferir
 información de un modelo entrenado previamente a un modelo nuevo que
 está siendo entrenado.
@@ -533,8 +542,8 @@ artificial que puede realizar con éxito cualquier tarea intelectual de
 cualquier ser humano].
 
 ### Transfer Learning con imágenes
-En la práctica, cada vez menos gente entrena redes convolucionales
-desde 0.  Existen 2 principales motivos:
+En la práctica, cada vez es menos común el entrenamiento de redes
+convolucionales desde 0.  Existen 2 principales motivos:
 
 - En determinados ámbitos, no siempre existen datasets con una gran
   cantidad de imágenes, suficiente para entrenar una red desde 0.
@@ -551,7 +560,7 @@ Learning:
   posteriormente serán usadas por capas *fully conencted* (o por
   cualquier otro tipo de clasificador) para realizar la
   clasificación. Conociendo esto, podemos utilizar la red
-  convolucional entrenada para un conjunto de imágenes, en otro
+  convolucional entrenada para un conjunto de imágenes en otro
   conjunto de imágenes distinto, siendo el clasificador final el único
   que tendrá que ser reentrenado.
 - **Fine-tunning de la red convolucional** Como se ha analizado
@@ -597,6 +606,36 @@ escenarios ^[http://cs231n.github.io/transfer-learning/]:
   caso entrenaremos la red convolucional al completo. Sin embargo,
   será de gran utilidad comenzar nuestro entrenamiento a partir de un
   modelo pre-entrenado.
+
+## Explicabilidad las redes convolucionales
+Para la introducción de las técnicas basadas en Deep Learning en
+diversos sectores profesionales (siendo la medicina uno de ellos), tan
+importante como la exactitud de las predicciones, es la existencia de
+técnicas que permitan explicar el por qué de esas predicciones o, al
+menos, dar un valor de confianza para cada una.  Aunque las redes
+neuronales sean generalmente consideradas como **cajas negras**, en
+los últimos años han aparecido nuevas técnicas que permiten entender
+los factores que han llevado al clasificador a tomar una u otra
+decisión.  Concretamente, durante este trabajo, se hará uso de una
+técnica para la interpretación de redes neuronales convolucionales
+conocida como **Mapas de Atención**, técnica basada en
+**Gradient-weighted Class Activation Mapping (Grad-CAM)**
+[@selvaraju2017grad].  Gracias a estos mapas podemos conocer cuáles
+son las zonas de una imagen que más han influido en una
+predicción. Para ello, esta técnica usa los gradientes específicos de
+cada clase que fluyen hasta la última capa convolucional para producir
+un mapa de calor con las zonas de interés para la detección de esa
+clase (figura \ref{gradcam}). Esta técnica no requiere modificar la
+arquitectura de la red ni volver a entrenarla.
+
+![Mapas de calor generados por Grad-Cam para distintas clases de
+Imagenet. Fuente: https://github.com/raghakot/keras-vis
+\label{gradcam}](source/figures/grad-cam.png){width=100%}
+
+Además, esta técnica permite obtener la localización aproximada en la
+imagen de los objetos detectados, aunque durante el
+entrenamiento no se haya utilizado ningún tipo de información de
+localización.
 
 
 ## Aplicaciones médicas del Machine Learning
@@ -676,7 +715,7 @@ importantes contribuciones.
 ### Pronóstico
 El Machine Learning nos puede ayudar, mediante la búsqueda de
 patrones, en la predicción de la evolución de un enfermo. En varios
-sistemas de salud existen ya implantados sistemas que, mediante
+servicios de salud existen ya implantados sistemas que, mediante
 Machine Learning son capaces de identificar a los pacientes que están
 en riesgo de tener que ser transferidos a las unidades de cuidados
 intensivos. [@escobar2016piloting]. Además, diversos estudios sugieren
@@ -722,7 +761,7 @@ analizados en profundiad por expertos para entrenar los modelos
 ### Retos clave
 Uno de los principales retos en la creación de modelos de Aprendizaje
 Automático para medicina es la **falta de datos de calidad**. Este
-tipo de modelos, sobretodo los de Deep Learning, funcionan mejor
+tipo de modelos, sobre todo los de Deep Learning, funcionan mejor
 cuanto mayor es la cantidad de datos de los que disponen para su
 entrenamiento. Sin embargo, en el campo de la medicina no existe tanta
 disponibilidad de los mismos como sí que existe en otros ámbitos. Una
@@ -762,7 +801,7 @@ adecuadas. [@cruz2013deep] [@zhang2018visual] [@lipton2016mythos].
 
 ## Correlación no implica causalidad
 Aunque sea un mantra repetido hasta la saciedad en la literatura, esta
-advertencia merece una apartado propio en un trabajo de estas
+advertencia merece un apartado propio en un trabajo de estas
 características, pues es algo a tener en cuenta y que implica tener
 mucha cautela al obtener conclusiones mediante este tipo de
 métodos. En muchas ocasiones creemos, de forma errónea, que existe una
@@ -770,7 +809,7 @@ relación de causa y efecto entre dos variables que están
 correlacionadas, cuando esto no siempre es cierto.
 
 
-La correlación entre dos variables, puede ser debida a una tercera
+La correlación entre dos variables puede ser debida a una tercera
 **variable oculta** que no tenemos por qué conocer o simplemente puede
 ser lo que conocemos como **correlación espúrea**, es decir, mera
 casualidad (que no causalidad).

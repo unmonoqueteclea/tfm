@@ -9,7 +9,7 @@ exterior [@zhu2001eye], la realidad es que su funcionamiento y
 estructura es considerablemente más complicado que el de una simple
 ventana de cristal. Dada su extrema perfección, incluso Charles Darwin
 reconoció tener grandes dificultades para explicar los ojos únicamente
-mediante variación y selección.[@darwin2004origin]
+mediante variación y selección. [@darwin2004origin]
 
 ## Anatomía y fisiología ocular
 <!-- Comienzo: 14 Mayo
@@ -36,10 +36,11 @@ especies animales, es capaz de realizar un proceso completo que
 comienza con la detección de la luz y finaliza con unos impulsos
 electroquímicos viajando a través de las neuronas. Durante ese
 proceso, los ojos tienen que captar la luz, regular la intensidad
-mediante un diafragma y, mediante un sistema de lentes (cristalino)
+mediante un diafragma y, mediante un sistema de lentes (cristalino),
 enfocarla en único punto que se encargará de realizar la
-transformación en impulsos eléctricos.  Este punto, que será objeto de
-estudio durante este trabajo, es conocido como la **retina**.
+transformación en impulsos eléctricos.  Este punto donde convergen
+todos los rayos de luz, que será objeto de estudio durante este
+trabajo, es conocido como **retina**.
 
 La anatomía y fisiología ocular (figura \ref{ojohumano}) es similar en
 la mayoría de los vertebrados.  El globo ocular, que contiene el resto
@@ -59,16 +60,15 @@ La pared del globo ocular la forman 3 capas conocidas como (desde la
 más interna a la más externa): **retina**, **coroides** y
 **esclerótica**. Cuando la luz llega al ojo, el primer elemento con el
 que tiene contacto es la **córnea**, que pertenece a la capa
-esclerótica.  Esta se encarga de refractar la luz, haciéndola
-converger dentro del ojo. La cornea protege al resto del ojo de polvo,
-gérmenes y cualquier tipo de sustancia dañina. Además, también filtra
-los rayos ultravioleta procedentes de la luz solar
-[@zhu2001eye]. Debido a su índice de refracción (mayor que el del
-aire), la córnea también provocará que se desvíen los rayos de luz que
-lleguen a ella permitiendo, así, que converjan en el centro del
-ojo. La mínima dispersión que se producen en los rayos de luz, que nos
-permite obtener una imagen clara y definida, está asegurada por la
-uniformidad espacial de sus células [@oyster1999human].
+esclerótica. Debido a su índice de refracción (mayor que el del aire),
+la córnea provocará que se desvíen los rayos de luz que lleguen a ella
+permitiendo, así, que converjan en el centro del ojo. La cornea
+protege al resto del ojo de polvo, gérmenes y cualquier tipo de
+sustancia dañina. Además, también filtra los rayos ultravioleta
+procedentes de la luz solar [@zhu2001eye]. La mínima dispersión que se
+produce en los rayos de luz, que nos permite obtener una imagen clara
+y definida, está asegurada por la uniformidad espacial de sus células
+[@oyster1999human].
 
 Posteriormente, es el **iris** quien se encargará de contraer o
 expandir la **pupila**, lo que permitirá regular la cantidad de luz
@@ -102,8 +102,8 @@ será capaz de procesar y comprender la imagen recibida.
 La palabra **retina** procede del latín mediaval **rete** o **retis**
 (red). Toma ese nombre debido a la gran red de vasos sanguíneos que la
 forman. Utilizando términos de ingeniería, la retina es el transductor
-en el proceso de visión. Es la capa de tejido sensible a la luz,
-situada en el fondo del ojo, sin la cual todo el proceso detallado
+en el proceso de visión. Es la capa de tejido sensible a la luz
+situada en el fondo del ojo sin la cual todo el proceso detallado
 anteriormente carecería por completo de sentido, puesto que el cerebro
 no recibiría la información captada por los ojos. Su color, rojo, es
 debido a la inmensa cantidad de vasos sanguíneos que existen detrás de
@@ -122,16 +122,16 @@ elementos (figura \ref{retina}):
   concretamente, el cociente entre su diámetro y el del disco óptico
   es un buen indicador para la detección de la enfermedad conocida
   como glaucoma.
-- **Arterias y venas**: Encargadas de proveer de oxígeno y nutrientes
-  a la retina. La arteria central de la retina entra en el ojo a
-  través del nervio óptico y se separa en dos ramas, que a su vez se
-  separarán formando una extensa red de capilares. Muchas de las
-  enfermedades de la vista afectan a estos vasos sanguíneos,
+- **Arterias y venas**: Son las encargadas de proveer de oxígeno y
+  nutrientes a la retina. La arteria central de la retina entra en el
+  ojo a través del nervio óptico y se separa en dos ramas, que a su
+  vez se separarán formando una extensa red de capilares. Muchas de
+  las enfermedades de la vista afectan a estos vasos sanguíneos,
   bloqueándolas o haciéndolas más frágiles.
-- **Mácula**: Esta pequeña área, con gran pigmentación, se encuentra
-  en el centro de nuestra retina. La mácula tiene un diámetro
-  aproximado de 5 mm. Es la encargada tanto la visión central como de
-  la visión en detalle y en movimiento.
+- **Mácula**: Esta pequeña área con gran pigmentación se encuentra en
+  el centro de nuestra retina. La mácula tiene un diámetro aproximado
+  de 5 mm. Es la encargada tanto la visión central como de la visión
+  en detalle y en movimiento.
 - **Fóvea**: Es una hendidura en el centro de la mácula, con un
   diámetro aproximado de 1.0 mm que permite enfocar los rayos que
   llegan a la retina.
@@ -214,7 +214,7 @@ permiten proyectar la estructura 3D de la retina en un plano 2D. Para
 captarlas, utilizamos un tipo especial de cámaras que cuentan con un
 microscopio de baja potencia con una cámara adherida, permitiendo una
 factor de magnificación de 2.5x. Los rayos de luz viajan desde la
-retina a la cámara atravasando la pupila. El sensor de la cámara es un
+retina a la cámara atravesando la pupila. El sensor de la cámara es un
 sensor RGB similar al de otros tipos de cámaras.
 
 ### Retinopatía Diabética
@@ -296,9 +296,9 @@ descritas anteriormente.
 \label{lesiones}](source/figures/dr-example.png){width=70%}
 
 
-Además, como hemos visto anteriormente, en la DR Proliferativa se da
-la neovascularización, aparición de nuevos vasos sanguíneos en la
-retina (figura \ref{vascular}).
+Además, como hemos visto anteriormente, en la DR Proliferativa se
+produce la neovascularización, aparición de nuevos vasos sanguíneos en
+la retina (figura \ref{vascular}).
 
 ![Ejemplo de retina en la que se ha producido neovascularización
 \label{vascular}](source/figures/vascular.png){width=70%}
@@ -434,11 +434,11 @@ invasivas. En función de la patología que se intente diagnosticar,
 estas imágenes es†án centradas en la mácula o en el disco óptico. La
 figura \ref{retina} analizada anteriormente para ver las partes de la
 retina, es un ejemplo de las imágenes que proporcionan este tipo de
-cámaras, con tamaños de hasta 16 megapíxeles. Es por ello, por lo que
-es el sistema más utilizado en los centros de atención primaria y en
-el que enfocaremos nuestro estudio. Sin embargo, cabe destacar que, en
-ocasiones, éstas no son suficientes, y tendrán que ser combinadas con
-otros tipos de sistemas.
+cámaras, con tamaños de hasta 16 megapíxeles. Es por ello por lo que
+la fotografía de fondo de ojo es el sistema más utilizado en los
+centros de atención primaria y en el que enfocaremos nuestro
+estudio. Sin embargo, cabe destacar que en ocasiones éstas no son
+suficientes, y tendrán que ser combinadas con otros tipos de sistemas.
 
 El diagnóstico de la Retinopatía Diabética es tradicionalmente
 realizado por oftalmólogos que inspeccionan las imágenes de fondo de
@@ -451,13 +451,13 @@ en zonas rurales o países no desarrollados donde no es posible el
 acceso a este tipo de profesionales. El 75% de los pacientes de
 Retinopatía Diabética viven en áreas donde no existen especialistas ni
 infraestructura para la detección y tratamiento de la enfermedad
-[@guariguata2014global]. Por ello, diversidad de herramientas para el
-análisis automático de retina (ARIA) están siendo desarrolladas
+[@guariguata2014global]. Por ello, diversidad de **herramientas para
+el análisis automático de retina (ARIA)** están siendo desarrolladas
 actualmente. En este tipo de herramientas nos centraremos durante el
-desarrollo de este trabajo. Estas llevarán el diagnóstico a sitios
+desarrollo de este trabajo. Éstas llevarán el diagnóstico a sitios
 donde no sería posible de otra forma, además de reducir costes y
 reducir el tiempo necesario para los diagnósticos en los lugares donde
-ya se realizaba de forma manual.
+ya se realizaba de forma manual por un profesional.
 
 Además, según se ha puesto de manifiesto en previos estudios, los
 profesionales difieren en numerosas ocasiones en el diagnóstico de los
@@ -476,15 +476,14 @@ para la detección de la RD y la DMAE.
 Con la entrada del conocido como Deep Learning, y concretamente en
 este caso las Redes Neuronales Convolucionales (CNN) este proceso
 inicial de extracción de características ha podido ser automatizado,
-mejorando la calidad de las evaluaciones notablemente. Las fases de
+mejorando la calidad de los sistemas notablemente. Las fases de
 extracción de carácterísticas y de predicción se unifican. Las
 características extraídas poseen un poder mucho mayor de predicción,
 puesto que toda la red ha sido entrenada para ello.
 
-Sin embargo, dada la naturaleza del problema, la falta de
-estandarización y la escasa cantidad de imágenes etiquetadas, ha
-provocado que estos sistemas tuvieran serias dificultades para su
-aplicación general.
+Sin embargo, la naturaleza del problema, la falta de estandarización y
+la escasa cantidad de imágenes etiquetadas, ha provocado que estos
+sistemas tuvieran serias dificultades para su aplicación general.
 
 Esta aproximación al problema del diagnóstico de la RD y DMAE plantea
 una serie de preguntas. ¿Cómo se incorporaría un sistema de este tipo
@@ -494,4 +493,4 @@ un sistema centralizado de diagnóstico con imágenes de fondo de ojo?
 ¿Podrían utilizarse en este sistema centralizado técnicas ARIA
 combinadas con las opiniones de expertos? No hay una respuesta para
 todas estas preguntas y las ventajas e inconvenientes de cada una de
-ellas, se desarrollarán en capítulos posteriores.
+ellas se desarrollarán en capítulos posteriores.

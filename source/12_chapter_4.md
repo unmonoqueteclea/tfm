@@ -194,7 +194,7 @@ entre sano/enfermo y los que tratan también de detectar grados de
 afectación de la enfermedad. Dentro del primer grupo encontramos
 métodos como el **Razonamiento Basado en Casos** en el que, de forma
 similar al algoritmo **K-Nearest Neighbors**, simplemente se medía el
-grado de parecido entre el histograma de la imágen de fonde de ojo a
+grado de parecido entre el histograma de la imágen de fondo de ojo a
 predecir y cada uno de los histogramas de las imágenes del conjunto de
 datos de entrenamiento [@hijazi2010retinal]. También encontramos
 métodos basados en los algoritmos **Naive Bayes** o **SVM**
@@ -256,31 +256,31 @@ que este modelo sea para muchos investigadores el **modelo de
 referencia** en detección de Retinopatía Diabética.
 
 También se han realizado investigaciones con pasos previos de
-bextracción de características usando técnicas como **Bag Of Visual
+extracción de características usando técnicas como **Bag Of Visual
 Words** [@costa2017convolutional] o extracción del fondo de las
 imágenes mediante **Modelos Gaussianos Mixtos** [@mansour2018deep]
 
 Otras técnicas, como la de **Data Augmentation** consistente en crear
 nuevas imágenes a partir de transformaciones sobre las imágenes
 originales, han demostrado también ser eficaces
-[@pratt2016convolutional]. Además del Data Augmentation, otra técnica
+[@pratt2016convolutional].
 
-que también ha sido usada para solventar el problema de la falta de
-imágenes ha sido el **Transfer Learning**. Esta técnica ha sido
-aplicada utilizando, como base para nuestros modelos, otros modelos
-que habían sido previamente entrenados en otros datasets con todo tipo
-de imágenes [@maninis2016deep] [@li2017convolutional] o con datasets
-específicos de imágenes de fondo de ojo [@gondal2017weakly]. De ambas
-formas ha demostrado ser de gran utilidad, especialmente en los casos
-en los que el conjunto de imágenes de entrenamiento era demasiado
-reducido como para poder entrenar una arquitectura compleja desde
-cero.
+Además del Data Augmentation, otra técnica que también ha sido usada
+para solventar el problema de la falta de imágenes ha sido el
+**Transfer Learning**. Esta técnica ha sido aplicada utilizando, como
+base para nuestros modelos, otros modelos que habían sido previamente
+entrenados en otros datasets con todo tipo de imágenes
+[@maninis2016deep] [@li2017convolutional] o con datasets específicos
+de imágenes de fondo de ojo [@gondal2017weakly]. De ambas formas ha
+demostrado ser de gran utilidad, especialmente en los casos en los que
+el conjunto de imágenes de entrenamiento era demasiado reducido como
+para poder entrenar una arquitectura compleja desde cero.
 
 
 
 ### Detección de DMAE mediante Deep Learning
 De la misma forma que con la Retinopatía Diabética, los métodos de
-detección de DMAE basados en Deep Learninf han permitido saltar la
+detección de DMAE basados en Deep Learning han permitido saltar la
 etapa de extracción de características, delegándola en el propio
 clasificador. Prácticamente la totalidad de los modelos de Deep
 Learning de este tipo han hecho uso de **Redes Neuronales

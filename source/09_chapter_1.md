@@ -49,7 +49,7 @@ h. \label{ref_a_figure}](source/figures/example_figure.pdf){ width=100% }
 
 # Introducción {#intro}
 
-En este capítulo inicial se presentará el contexto y la
+Durante este capítulo inicial se presentará el contexto y la
 motivación principal detrás de este trabajo, los objetivos perseguidos
 y la estructura en la que será plasmada toda la información a lo largo
 del mismo.
@@ -89,7 +89,7 @@ que 191 millones de personas sufrirán retinopatía diabética en 2030
 los 10 años de la aparición de la diabetes, y del 90% a partir de los
 30 años [@mookiah2013computer].
 
-En la figura \ref{diabetes_dr}, se puede observar la previsión
+En la figura \ref{diabetes_dr} se puede observar la previsión
 esperada de crecimiento entre 2015 y 2040, tanto en el número de casos
 de diabetes, como en el de casos de diabetes que dan lugar a RD
 ^[Datos de
@@ -106,7 +106,7 @@ nivel mundial. Gráfico de elaboración propia
 La diabetes supone, aproximadamente, el 11.6% del presupuesto total de
 salud de la mayoría de países [@zhang2009economic]. Además, el coste
 de los pacientes con RD supera notablemente al de los pacientes sin
-dicha patología, incrementándose con la gravedad de la RD
+dicha patología, incrementándose éste con la gravedad de la RD
 [@zhang2017direct].
 
 Es importante destacar el hecho de que casi el 75% de las personas que
@@ -114,7 +114,7 @@ sufren Retinopatía Diabética pertencen a países en vías de desarrollo
 [@mansour2017evolutionary], donde no existen los medios adecuados para
 su detección temprana ni su tratamiento.
 
-Por otro lado, La **Degeneración Macular Asociada a la Edad (DMAE)**
+Por otro lado, la **Degeneración Macular Asociada a la Edad (DMAE)**
 es la más común de las enfermedades que afectan a la retina. Esta
 patología, de tipo degenerativo, es la **mayor causa de ceguera en
 países desarrollados**, dándose en un 9% de la población mundial
@@ -124,7 +124,7 @@ tiempo. [@pascolini2012global]
 
 El rápido crecimiento de estas enfermedades hace insostenible el
 sistema actual basado únicamente en la revisión de expertos. Es
-necesario introducir en las clínicas, sistemas de detección automática
+necesario introducir en las clínicas sistemas de detección automática
 a partir de imágenes digitales que permitirían agilizar el trabajo de
 los médicos o incluso permitir el diagnóstico en zonas donde ni
 siquiera existen ese tipo de expertos. Aunque existen diferentes
@@ -159,14 +159,14 @@ específicos que se detallan a continuación:
 
 - Estudio de la anatomía y fisiología del ojo humano, enfocándose en
   las causas y los efectos de las enfermedades analizadas.
-- Análisis y comparación de todas las aproximaciones a la detección
-  automática de ambas patologías realizadas hasta la fecha, tanto las
-  basadas en Machine Learning como en Deep Learning.
+- Análisis y comparación de las principales aproximaciones a la
+  detección automática de ambas patologías realizadas hasta la fecha,
+  tanto las basadas en Machine Learning como en Deep Learning.
 - Evaluación de diversas topologías de redes neuronales
   convolucionales en la detección de ambas patologías
-- Interpretación de las redes entrenadas, tratando de comprender qué
-  factores le han ayudado a predecir, en cada caso, la existencia o
-  ausencia de la enfermedad.
+- Interpretación de las redes convolucionales, tratando de comprender
+  qué factores le han ayudado a predecir, en cada caso, la existencia
+  o ausencia de la enfermedad.
 
 
 ## Principales contribuciones
@@ -186,18 +186,19 @@ El presente documento está dividido en los siguientes 7 capítulos:
    ofrecer una visión general del funcionamiento y características
    de los sistemas de Machine Learning, durante estas páginas se han
    mostrado ejemplos de las aplicaciones médicas de los mismos.
-4. **[Estado del arte en la detección de RD y DMAE](#arte)**: Han sido
-   analizadas las aproximaciones para la detección de RD y DMAE que
-   habían realizado diversos investigadores hasta el momento.
+4. **[Estado del arte en la detección de RD y DMAE](#arte)**: Se han
+   analizado las principales aproximaciones para la detección de RD y
+   DMAE que habían sido publicadas hasta el momento.
 5. **[Diseño de sistema para la clasificación automática de RD y
    DMAE](#sistema)**: En este capítulo se ha mostrado el sistema
    propuesto para la detección de RD y DMAE. También se han detallado
    las características de todos los conjuntos de imágenes utilizados
-   para el entrenamiento del sistema.
+   para el entrenamiento del sistema y el sistema adicional para la
+   interpretacción de las predicciones.
 6. **[Resultados y evaluación del sistema](#resultados)**: Este
    capítulo detalla las evaluaciones realizadas al sistema presentado
    en el capítulo anterior.
 7. **[Conclusiones](#conclusiones)**: Para finalizar, se han analizado
    las aportaciones realizadas por esta investigación, su
    aplicabilidad en el mundo real y las posibles líneas de
-   investigación futuras que se abren.
+   investigación futuras que se abren en este momento.
