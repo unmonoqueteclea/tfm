@@ -39,18 +39,19 @@ que nuestro conjunto de imágenes de entrenamiento es muy limitado, es
 común que los modelos basados en Machine Learning nos ofrezcan mejores
 resultados que los basados en Deep Learning. Además, la
 interpretabilidad de los modelos finales y sus predicciones es mayor
-en Machine Learning que en Deep Learning.
+en los modelos de Machine Learning que en los de Deep Learning.
 
 
 ### Detección de RD mediante Machine Learning
 Este tipo técnicas se basan en la búsqueda, en las imágenes, de cada
 una de las lesiones que caracterizan la Retinopatía Diabética. Las
 lesiones que caracterizan la RD, como se ha analizado anteriormente,
-son: **exudados**, **microaneurismas** y **hemorragias**. A partir de
-estas características, obtenidas principalmente mediante técnicas de
-procesamiento digital de imágen, y gracias al uso de **clasificadores
-basados en Machine Learning** es posible detectar la enfermedad, e
-incluso, estimar su gravedad.
+son: **exudados**, **microaneurismas** y **hemorragias**. En el caso
+de la PDR, es posible encontrar también **neovascularización**. A
+partir de características obtenidas principalmente mediante técnicas
+de procesamiento digital de imágen y gracias al uso de
+**clasificadores basados en Machine Learning** es posible detectar la
+enfermedad, e incluso, estimar su gravedad.
 
 Muchos de estos modelos comienzan por la obtención de imágenes
 binarias que representaran los **vasos sanguíneos** presentes en la
@@ -79,7 +80,7 @@ mayor en los estadios más graves de la enfermedad. Su detección se
 realiza habitualmente junto con la detección de los vasos sanguíneos.
 
 La presencia de **exudados** es el síntoma más característico de
-RD. Para la detección de estos es común comenzar por la eliminación de
+RD. Para la detección de éstos es común comenzar por la eliminación de
 los vasos sanguíneos y el disco óptico de las imágenes. Una vez
 eliminados este elementos, es posible detectar los exudados mediante
 una secuencia de algoritmos de procesamiento de imágen
@@ -193,7 +194,7 @@ algoritmos en dos grupos: los que simplemente tratan de diferenciar
 entre sano/enfermo y los que tratan también de detectar grados de
 afectación de la enfermedad. Dentro del primer grupo encontramos
 métodos como el **Razonamiento Basado en Casos** en el que, de forma
-similar al algoritmo **K-Nearest Neighbors**, simplemente se medía el
+similar al algoritmo **K-Nearest Neighbors**, simplemente se mide el
 grado de parecido entre el histograma de la imágen de fondo de ojo a
 predecir y cada uno de los histogramas de las imágenes del conjunto de
 datos de entrenamiento [@hijazi2010retinal]. También encontramos
@@ -232,15 +233,15 @@ interesa analizar, pues es la metodología que utilizaremos en la
 creación de nuestro modelo. Además, la gran ventaja de este tipo de
 modelos es que no necesita un dataset con anotaciones de la
 localización de las lesiones para ser entrenados. Simplemente
-necesitamos un conjunto de datos con etiquetas de **enfermo/sano**.
+necesitamos un conjunto de datos con etiquetas de **sano/enfermo**.
 
 Prácticamente todos los modelos de este tipo han sido **Redes
 Neuronales Convolucionales**. La arquitectura **Inception** ha
 demostrado ser muy efectiva en la detección de la RD proliferativa.
 [@gulshan2016development]. En este caso, se trataba de una
 clasificación binaria donde sólo existían dos posibles salidas
-(enfermo/no enfermo). Sin embargo, muchos otros investigadores han
-tratado de detectar diferentes niveles de gravedad [@colas2016deep]
+(enfermo/sano). Sin embargo, muchos otros investigadores han tratado
+de detectar diferentes niveles de gravedad [@colas2016deep]
 [@quellec2017deep] [@costa2017convolutional]. Además, agunos de estos
 modelos son capaces de detectar también las lesiones concretas que
 aparecen en cada imagen [@quellec2017deep] [@colas2016deep]
@@ -251,8 +252,8 @@ la arquitectura **AlexNet** [@mansour2018deep], o **ResNet**
 la red una capa convolucional adicional que permitía observar e
 interpretar el proceso de aprendizaje de la red, solventando así el
 problema de interpretabilidad que a menudo tienen este tipo de
-modelos. La gran interpretabilidad, junto con una alta eficacia hacen
-que este modelo sea para muchos investigadores el **modelo de
+modelos. La gran interpretabilidad, junto con una alta **accuracy**
+hacen que este modelo sea para muchos investigadores el **modelo de
 referencia** en detección de Retinopatía Diabética.
 
 También se han realizado investigaciones con pasos previos de
@@ -272,9 +273,9 @@ base para nuestros modelos, otros modelos que habían sido previamente
 entrenados en otros datasets con todo tipo de imágenes
 [@maninis2016deep] [@li2017convolutional] o con datasets específicos
 de imágenes de fondo de ojo [@gondal2017weakly]. De ambas formas ha
-demostrado ser de gran utilidad, especialmente en los casos en los que
-el conjunto de imágenes de entrenamiento era demasiado reducido como
-para poder entrenar una arquitectura compleja desde cero.
+demostrado ser de utilidad, especialmente en los casos en los que el
+conjunto de imágenes de entrenamiento era demasiado reducido como para
+poder entrenar una arquitectura compleja desde cero.
 
 
 

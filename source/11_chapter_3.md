@@ -7,10 +7,10 @@
 
 Tradicionalmente, el trabajo de los ingenieros de software ha
 consistido en dar a las computadoras una serie de reglas explícitas de
-cómo tienen que procesar la información y cómo tiene que tomar
-decisiones. Sin embargo, la complejidad del campo de la medicina es
-tal que sería prácticamente imposible capturar toda la información
-relevante mediante una serie de reglas definidas de forma explícita
+cómo tienen que procesar la información para tomar decisiones. Sin
+embargo, la complejidad del campo de la medicina es tal que sería
+prácticamente imposible capturar toda la información relevante
+mediante una serie de reglas definidas de forma explícita
 [@schwartz1986artificial].
 
 El **Machine Learning** es la rama de la Intelicia Artificial que ha
@@ -56,7 +56,7 @@ procesos. Existen 3 principales motivos en este crecimiento:
   en muchas compañías existen desde hace varias décadas.
 - **Mayor capacidad de computación**: Sin duda, este ha sido un factor
   clave en el crecimiento de estas técnicas. Además, la entrada al
-  mercado de las tarjetas gráficas o GPUs, ha permitido paralelizar los
+  mercado de las tarjetas gráficas o GPUs ha permitido paralelizar los
   procesos consiguiendo ejecuciones cientos de veces más rápidas.
 - **Mayor cantidad de datos**: Todos estos algoritmos no podrían
   aportar valor de no existir ingentes cantidades de datos, tanto
@@ -99,7 +99,7 @@ técnicas que tratan de que los ordenadores imiten, de alguna forma, el
 comportamiento humano.
 
 ![El Machine Learning es un campo perteneciente a la Inteligencia
-Artificial. El Deep Learning es un campo dentro del Machine
+Artificial. El Deep Learning, a su vez, es un campo dentro del Machine
 Learning. Elaboración propia
 \label{ia-ml}](source/figures/ia-ml.png){width=100%}
 
@@ -166,9 +166,8 @@ Una red neuronal consiste en un conjunto de nodos, conocidos como
 **neuronas**, conectados entre si para transmitirse señales. Estas
 neuronas suelen estar dispuestas en una serie de **capas**, en las
 que, comúnmente, cada neurona de una capa está conectado a todas las
-neuronas de las capas anteriores. De esta forma la salida de unas
-neuronas, pasa a ser la entrada de otras (figura
-\ref{neural-network}).
+neuronas de las capas anteriores. De esta forma, la salida de unas
+neuronas pasa a ser la entrada de otras (figura \ref{neural-network}).
 
 ![Representación de una red neuronal con dos capas ocultas. Cada uno
 de los círculos representa una neurona. Elaboración propia
@@ -274,29 +273,32 @@ de coste en función de los pesos de varias capas atrás.
 
 Gracias a la técnica de backpropagation, podemos propagar el error a
 lo largo de las capas, para calcular en cada una el vector de
-gradiente y actualizar con él los pesos.
+gradiente y actualizar con él los pesos. El backpropagation ha
+permitido, por lo tanto, añadir **nuevas capas intermedias** a las
+redes.
 
-Estas nuevas capas intermedias añadidas a las redes neuronales
-permiten encontrar patrones más complejos, y dieron lugar a lo que
-conocemos como **Deep Learning**. Si no tuviéramos capas ocultas,
-nuestras redes únicamente encontrarían relaciones directas entre las
-entradas y las salidas. Sin embargo, las capas ocultas nos permiten
-modelar de forma mucho más acertada el mundo real, donde las salidas
-dependen de las interacciones y combinaciones entre las distintas
-entradas. Estrictamente hablando, nos referimos a Deep Learning cuando
-tenemos una red con más de una capa oculta. El Deep Learning permite
-crear modelos computacionales compuestos de múltiples capas de
-procesamiento que son capaces de aprender representaciones de los
-datos con múltiples capas de abstracción [@lecun2015deep]. En las
-redes profundas, cada capa de neuronas se entrena, automáticamente, en
-un conjunto de características distinto, en base a la salida de la
-capa anterior. A medida que avanzamos a través de la red, las
-características que las neuronas son capaces de detectar son más
-complejas, ya que agregan y recombinan características de capas
-anteriores. Esta propiedad, conocidad como **jerarquía de
-características** hace posible que este tipo de redes sean capaces de
+Estas capas intermedias permiten encontrar patrones más complejos, y
+dieron lugar a lo que conocemos como **Deep Learning**. Si no
+tuviéramos **capas ocultas**, nuestras redes únicamente encontrarían
+relaciones directas entre las entradas y las salidas. Sin embargo, las
+capas ocultas nos permiten modelar de forma mucho más acertada el
+mundo real, donde las salidas dependen de las interacciones y
+combinaciones entre las distintas entradas. Estrictamente hablando,
+nos referimos a Deep Learning cuando tenemos una red con más de una
+capa oculta. El Deep Learning permite crear modelos computacionales
+compuestos de múltiples capas de procesamiento que son capaces de
+aprender representaciones de los datos con **múltiples capas de
+abstracción** [@lecun2015deep].
+
+En las redes profundas, cada capa de neuronas se entrena,
+automáticamente, en un conjunto de características distinto, en base a
+la salida de la capa anterior. A medida que avanzamos a través de la
+red, las características que las neuronas son capaces de detectar son
+más complejas, ya que agregan y recombinan características de capas
+anteriores. Esta propiedad, conocida como **jerarquía de
+características**, hace posible que este tipo de redes sean capaces de
 tratar datasets de muy alta dimensionalidad. Las redes neuronales
-profundas realizan, por lo tanto, **extracción automática de
+profundas realizan por lo tanto **extracción automática de
 características** sin la necesidad de la intervención de un humano
 [@lecun2015deep].
 
@@ -305,16 +307,16 @@ La capacidad de las redes neuronales de encontrar patrones complejos
 en datasets con una gran cantidad de dimensiones las convierte en
 candidatas perfectas para tareas como la clasificación de imágenes o
 el reconocimiento de voz. Sin embargo, estos clasificadores necesitan
-un trabajo manual previo de extracción de características de las
-señales (imágenes, audios, etc).
+un trabajo manual previo de extracción de características cuando
+tratan con señales (imágenes, audios, etc).
 
 La aparición de las **Redes Neuronales Convolucionales (CNN por sus
 siglas en inglés)** permitió eliminar la extracción de características
 y delegarla en el propio algoritmo de backpropagation. De esta forma,
 es posible usar como entradas de nuestro modelo los *datos en bruto*
-(píxeles de las imágenes). Un momento clave para las redes
-convolucionales fue en 2012, en el **ImageNet Large Scale Visual
-Recognition Challenge (ILSVRC)**
+(píxeles de las imágenes o muestras de audio). Un momento clave para
+las redes convolucionales fue en 2012, en el **ImageNet Large Scale
+Visual Recognition Challenge (ILSVRC)**
 ^[http://image-net.org/challenges/LSVRC/] cuando una solución novedosa
 basada en CNNs [@krizhevsky2012imagenet] obtuvo, de forma holgada, la
 primera posición en la competición.
@@ -324,13 +326,13 @@ organización de la corteza visual del cerebro humano. En él, existen
 neuronas individuales que responden a estímulos en una región
 delimitada del campo visual. Este tipo de redes son muy similares a
 las redes neuronales tradicionales analizadas anteriormente. De la
-misma forma que estas, las CNN también están compuestas de neuronas
-dispuestas en capas y se trata de minimizar una función de coste
-mediante el ajuste de una serie de pesos. Sin embargo, las CNN, al
-asumir que tendrán imágenes como entradas, pueden realizar tareas más
+misma forma que éstas, las CNN también están compuestas de neuronas
+dispuestas en capas y se busca minimizar una función de coste mediante
+el ajuste de una serie de pesos. Sin embargo, las CNN, al asumir que
+tendrán imágenes como entradas, pueden realizar tareas más
 especializadas que evitarán la carga computacional que supondría
-simplemente tratar cada píxel de la imagen como un input más de una
-red neuronal convencional.
+tratar cada píxel de la imagen como un input más de una red neuronal
+convencional.
 
 Una de las principales ventajas de las redes neuronales
 convolucionales con respecto a otras aproximaciones al problema es que
@@ -365,10 +367,11 @@ https://victorzhou.com/blog/intro-to-cnns-part-1/
 
 En las **capas de reducción o pooling** se disminuye la cantidad de
 parámetros. Para ello, se obtiene el promedio o el máximo de una serie
-de regiones, reduciendo así el tamaño del mapa de características. En
-función de si se obtiene el promedio o el máximo de las regiones,
-estas capas son de **Max Pooling** o de **Average Pooling**. La figura
-\ref{maxpool} representa este proceso.
+de regiones, reduciendo así el tamaño del mapa de características y
+contribuyendo a evitar el overfitting.. En función de si se obtiene el
+promedio o el máximo de las regiones, estas capas son de **Max
+Pooling** o de **Average Pooling**. La figura \ref{maxpool} representa
+este proceso.
 
 ![Representación del proceso de Max Pooling con un filtro de 2x2 sobre
 una imagen de 4x4. Elaboración propia
@@ -485,7 +488,7 @@ A partir de la cantidad de predicciones de cada uno de estos posibles
 problemas de este tipo.
 
 La métrica más común, conocida como **Accuracy** o **Exactitud**, mide
-el porcentaje de aciertos del sistema (ecuacion \ref{accuracy}). Esta
+el porcentaje de aciertos del sistema (ecuacion \ref{eq:accuracy}). Esta
 métrica carece de utilidad cuando tenemos conjuntos de datos
 desbalanceados.
 
@@ -527,7 +530,7 @@ debemos volver a entrenear nuestros modelos desde 0, obteniendo datos
 totalmente nuevos. El **Transfer Learning**, sin embargo, mediante la
 transferencia de conocimiento entre modelos, permite transferir
 información de un modelo entrenado previamente a un modelo nuevo que
-está siendo entrenado.
+está siendo entrenado en otro conjunto de datos distinto.
 
 El Transfer Learning es una técnica de Machine Learning que permite
 utilizar un modelo desarollado para una tarea específica como punto de
@@ -546,10 +549,12 @@ En la práctica, cada vez es menos común el entrenamiento de redes
 convolucionales desde 0.  Existen 2 principales motivos:
 
 - En determinados ámbitos, no siempre existen datasets con una gran
-  cantidad de imágenes, suficiente para entrenar una red desde 0.
+  cantidad de imágenes, suficiente para entrenar una red convolucional
+  desde 0.
 - Aún existiendo dicho dataset, el tiempo necesario para su completo
   entrenamiento puede ser de días, semanas o incluso meses dependiendo
-  del equipo usado, la cantidad de datos y la complejidad de la red.
+  del equipo usado, la cantidad de datos y la complejidad de la
+  arquitectura de la red.
 
 Existen tres principales estrategias a la hora de realizar Transfer
 Learning:
@@ -569,13 +574,13 @@ Learning:
   simples, que van siendo más complicados a medida que avanzamos hacia
   capas posteriores. Por lo tanto, es común que estas primeras capas
   tengan siempre contenidos similares incluso en modelos entrenados
-  con diferentes conjuntos de imágenes. Por lo tanto, podrán ser
+  con diferentes conjuntos de imágenes. Estas capas podrán ser
   reaprovechadas, con lo que únicamente tendremos que reentrenar las
   últimas capas y el clasificador final.
 - **Modelos pre-entrenados**: Este tercer caso supone el
   reentrenamiento total de la red, sin embargo, partiendo de unos
   pesos que han sido previamente entrenados en otro conjunto de
-  imágenes. De esta forma conseguimos que el número de iteraciones
+  imágenes. De esta forma se consigue que el número de iteraciones
   necesarias hasta llegar al nivel de exactitud requerido sea menor.
 
 Los criterios para decidir qué estrategia de Transfer Learning usar en
@@ -583,13 +588,14 @@ cada caso dependen principalmente de las diferencias de contenido y
 tamaño entre las imágenes de nuestro dataset y las del dataset
 original (con el que se entrenó el modelo que vamos a reutilizar)
 
-Es común usar las siguientes reglas como guía en función de 4 posibles
-escenarios ^[http://cs231n.github.io/transfer-learning/]:
+Es común usar las siguientes **rules of thumb** como guía en función
+de 4 posibles escenarios:
+^[http://cs231n.github.io/transfer-learning/]
 
-- **El nuevo dataset es pequeño pero similar al original**: Al ser un
-  dataset muy pequeño, modificar las capas convolucionales de nuestro
-  modelo original puede dar lugar a sobreajuste. Por lo tanto, y
-  puesto que las imágenes de ambos datasets son similares, la
+- **El nuevo dataset es pequeño pero similar al original**: Al
+  tratarse de un dataset pequeño, modificar las capas convolucionales
+  de nuestro modelo original puede dar lugar a **sobreajuste**. Por lo
+  tanto, y puesto que las imágenes de ambos datasets son similares, la
   estrategia adecuada será utilizar la red convolucional como
   extractor de características y entrenar únicamente el clasificador
   final.
@@ -599,25 +605,25 @@ escenarios ^[http://cs231n.github.io/transfer-learning/]:
 - **El nuevo dataset es pequeño y muy diferente al original**: De
   nuevo, al tener un dataset pequeño, descartaremos entrenar la red
   convolucional. En este caso, lo que haremos es entrenar solo un
-  clasificador. Y además, al ser las imágenes distintas a las del
+  clasificador. Además, al ser las imágenes distintas a las del
   dataset original, no podremos aprovechar las últimas capas de la red
   convolucional que serán eliminadas.
 - **El nuevo dataset es grande y muy diferente al original**: En este
   caso entrenaremos la red convolucional al completo. Sin embargo,
-  será de gran utilidad comenzar nuestro entrenamiento a partir de un
+  será de utilidad comenzar nuestro entrenamiento a partir de un
   modelo pre-entrenado.
 
 ## Explicabilidad las redes convolucionales
-Para la introducción de las técnicas basadas en Deep Learning en
-diversos sectores profesionales (siendo la medicina uno de ellos), tan
+Para la introducción de técnicas basadas en Deep Learning en diversos
+sectores profesionales (siendo la medicina uno de ellos), tan
 importante como la exactitud de las predicciones, es la existencia de
-técnicas que permitan explicar el por qué de esas predicciones o, al
-menos, dar un valor de confianza para cada una.  Aunque las redes
-neuronales sean generalmente consideradas como **cajas negras**, en
-los últimos años han aparecido nuevas técnicas que permiten entender
-los factores que han llevado al clasificador a tomar una u otra
-decisión.  Concretamente, durante este trabajo, se hará uso de una
-técnica para la interpretación de redes neuronales convolucionales
+técnicas que permitan **explicar el por qué de esas predicciones** o,
+al menos, dar un valor de **confianza** para cada una.  Aunque las
+redes neuronales sean generalmente consideradas como **cajas negras**,
+en los últimos años han aparecido nuevas técnicas que permiten
+entender los factores que han llevado al clasificador a tomar una u
+otra decisión.  Concretamente, durante este trabajo, se hará uso de
+una técnica para la interpretación de redes neuronales convolucionales
 conocida como **Mapas de Atención**, técnica basada en
 **Gradient-weighted Class Activation Mapping (Grad-CAM)**
 [@selvaraju2017grad].  Gracias a estos mapas podemos conocer cuáles
@@ -628,14 +634,13 @@ un mapa de calor con las zonas de interés para la detección de esa
 clase (figura \ref{gradcam}). Esta técnica no requiere modificar la
 arquitectura de la red ni volver a entrenarla.
 
-![Mapas de calor generados por Grad-Cam para distintas clases de
+![Mapas de atención generados por Grad-Cam para distintas clases de
 Imagenet. Fuente: https://github.com/raghakot/keras-vis
 \label{gradcam}](source/figures/grad-cam.png){width=100%}
 
-Además, esta técnica permite obtener la localización aproximada en la
-imagen de los objetos detectados, aunque durante el
-entrenamiento no se haya utilizado ningún tipo de información de
-localización.
+Además, esta técnica permite obtener la localización aproximada de los
+objetos detectados en la imagen, aunque durante el entrenamiento no se
+haya utilizado ningún tipo de información de localización.
 
 
 ## Aplicaciones médicas del Machine Learning
@@ -645,13 +650,13 @@ tomada por un conjunto de los principales expertos del mundo de esa
 enfermedad? Esa es la pregunta que se hacen multitud de investigadores
 [@rajkomar2019machine]. Estos concluyen que los tratamientos recetados
 de esta forma, y no los más conocidos por una única persona que los
-prescribe, serían los más efectivos. Además, se evitaría el error
-humano. Por desgracia, un sistema de este tipo sería inviable debido
+prescribe, serían los más efectivos. Además, se evitaría el **error
+humano**. Por desgracia, un sistema de este tipo sería inviable debido
 principalmente a la falta de expertos, que no darían abasto para
 diagnosticar a millones de pacientes cada día. Sin embargo, el Machine
 Learning nos promete un sistema similar a este pero realmente viable y
-escalable, con la capacidad de aplicar todas las lecciones recogidas
-de la experiencia colectiva en cada una de las decisiones, sin que
+escalable, con la capacidad de **aplicar todas las lecciones recogidas
+de la experiencia colectiva** en cada una de las decisiones, sin que
 esto genere una gran carga de trabajo para unos pocos expertos.
 
 Hace ya 50 años se ponía de manifiesto la necesidad de *"aumentar, o
@@ -692,21 +697,27 @@ simplemente se limitaban a pedir una serie de datos sobre el paciente,
 y obtenían conclusiones a partir de una serie de reglas que
 previamente habían tenido que ser definidas por especialistas. Sin
 embargo, con sistemas basados en Machine Learning, **estas reglas son
-inferidas a partir de datos históricos**. Una de las principales
-características del Machine Learning, que le hace destacar sobre otros
-métodos tradicionales, es su capacidad de manejar enormes cantidades
-de predictores y encontrar complicados patrones en ellos.
+automáticamente inferidas a partir de datos históricos** (figura
+\ref{tradicional}). Una de las principales características del Machine
+Learning, que le hace destacar sobre otros métodos tradicionales, es
+su capacidad de manejar enormes cantidades de predictores y encontrar
+complicados patrones en ellos.
+
+![Diferencias ente Software tradicional y Machine
+learning. Elaboración propia. Inspirado por @fchollet
+\label{tradicional}](source/figures/tradicional.png){width=85%}
+
 
 Además, debido a la gran cantidad de información no estructurada
 existente (imágenes, señales, textos, etc) en medicina, como era de
-esperar, el **Deep Learning** juego un papel esencial, permitiendo que
-los datos "hablen por sí mismos". Sin embargo, en todo momento tenemos
-que tener presente que nuestras evaluaciones pueden ser demasiado
-optimistas o que el sobreajuste puede hacer que nuestros modelos dejen
-de funcionar al ponerlos en producción. Tener una Inteligencia
-Artificial explicable, de la que no solo obtengamos predicciones sino
-el por qué de las mismas, es algo que hará más fácil la entrada de
-estos algoritmos en el día a día de los médicos.
+esperar, el **Deep Learning** puede jugar un papel esencial,
+permitiendo que los datos *hablen por sí mismos*. Sin embargo, en todo
+momento tenemos que tener presente que nuestras evaluaciones pueden
+ser demasiado optimistas o que el sobreajuste puede hacer que nuestros
+modelos dejen de funcionar al ponerlos en producción. Tener una
+Inteligencia Artificial explicable, de la que no solo obtengamos
+predicciones sino el por qué de las mismas, es algo que hará más fácil
+la entrada de estos algoritmos en el día a día de los médicos.
 
 A continuación se detallarán los ámbitos, dentro del campo de la
 medicina en la que el Aprendizaje Automático puede realizar
@@ -741,9 +752,11 @@ medicamentos y la solicitud de nuevas pruebas médicas, la tendencia a
 hacerlo aumenta considerablemente [@currie2014addressing].
 
 Los datos históricos pueden ser de gran ayuda para la identificación
-de posibles patologías durante las visitas clínicas. Los modelos
-podrían, incluso, sugerir nuevas pruebas a los médicos en base a los
-datos recogidos en tiempo real [@slack1966computer].
+de posibles patologías durante las visitas clínicas, encontrando
+patrones complejos y ayudando a eliminar posibles errores y sesgos
+humanos. Los modelos podrían, incluso, sugerir nuevas pruebas a los
+médicos en base a los datos recogidos en tiempo real
+[@slack1966computer].
 
 ### Tratamiento
 La aproximación más directa al problema del tratamiento mediante
@@ -765,15 +778,15 @@ tipo de modelos, sobre todo los de Deep Learning, funcionan mejor
 cuanto mayor es la cantidad de datos de los que disponen para su
 entrenamiento. Sin embargo, en el campo de la medicina no existe tanta
 disponibilidad de los mismos como sí que existe en otros ámbitos. Una
-de las principales causas de esa escasez es la inviolable privacidad
-de los datos, que a menudo impide la creación de grandes datasets y
-únicamente permite crear conjuntos de datos lo suficientemente
-agregados como para que no pueda obtenerse datos de una persona en
-concreto. [@rajkomar2019machine]
+de las principales causas de esa escasez es la inviolable
+**privacidad** de los datos de los pacientes, que a menudo impide la
+creación de grandes datasets y únicamente permite crear conjuntos de
+datos lo suficientemente agregados como para que no pueda obtenerse
+datos de una persona en concreto. [@rajkomar2019machine]
 
 Otro de los retos es el **sesgo** existente en los datos. Toda actividad
 humana está influenciada por un sesgo, ya sea consciente o
-inconsciente. La máxima **Entrada basura / Salida basura** de la
+inconsciente. La máxima **Entrada basura/Salida basura** de la
 analítica de datos está presente también en este campo. De nada
 servirá contar con potentes modelos capaces de aprender complicados
 patrones, si luego esos patrones los encontrará en datos erróneos o
@@ -838,7 +851,8 @@ https://www.jotdown.es/2016/06/correlacion-no-implica-causalidad/
 Otro ejemplo curioso es la singular correlación entre el número de
 ahogados en piscinas en Estados Unidos y el número de apariciones en
 películas de Nicholas Cage (figura \ref{cage}), en este caso una clara
-correlación espúrea.
+correlación espúrea. Si se torturan los datos durnate el tiempo
+suficiente, éstos confesarán lo que deseemos.
 
 ![Correlación entre el número de ahogados en piscinas de Estados
 Unidos y el número de apariciones en películas de Nicholas Cage.

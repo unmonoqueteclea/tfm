@@ -170,7 +170,22 @@ específicos que se detallan a continuación:
 
 
 ## Principales contribuciones
-<!-- TODO: Cuando termine todo -->
+Las principales contribuciones de este trabajo giran en torno a dos
+características: la **robustez** y la **interpretabilidad**.
+
+- En busca de la **robustez** se han utilizado más de 39000 imágenes
+  procedentes de 13 datasets distintos para el entrenamiento de los
+  modelos. La combinación de las predicciones de varios clasificadores
+  en las predicciones finales de cada sistema también ha contribuido a
+  compensar el overfitting o underfitting que pueda tener algún modelo
+  en concreto.
+
+- Para conseguir **interpretabilidad** se ha diseñado un **Sistema de
+  Predicción e Interpretación** que ha proporcionado los valores de
+  confianza de las predicciones, las predicciones de cada clasificador
+  por separado, las predicciones combinadas, y los mapas de
+  activación.
+
 
 ## Estructura
 El presente documento está dividido en los siguientes 7 capítulos:
@@ -186,16 +201,17 @@ El presente documento está dividido en los siguientes 7 capítulos:
    ofrecer una visión general del funcionamiento y características
    de los sistemas de Machine Learning, durante estas páginas se han
    mostrado ejemplos de las aplicaciones médicas de los mismos.
-4. **[Estado del arte en la detección de RD y DMAE](#arte)**: Se han
+4. **[Estado del arte en detección de RD y DMAE](#arte)**: Se han
    analizado las principales aproximaciones para la detección de RD y
-   DMAE que habían sido publicadas hasta el momento.
-5. **[Diseño de sistema para la clasificación automática de RD y
-   DMAE](#sistema)**: En este capítulo se ha mostrado el sistema
-   propuesto para la detección de RD y DMAE. También se han detallado
-   las características de todos los conjuntos de imágenes utilizados
-   para el entrenamiento del sistema y el sistema adicional para la
-   interpretacción de las predicciones.
-6. **[Resultados y evaluación del sistema](#resultados)**: Este
+   DMAE, tanto de Machine Learning como de Deep Learning, que habían
+   sido publicadas hasta el momento.
+5. **[Diseño de Sistema de Detección de RD y DMAE](#sistema)**: En
+   este capítulo se ha mostrado el sistema propuesto para la detección
+   de RD y DMAE. También se han detallado las características de todos
+   los conjuntos de imágenes utilizados para el entrenamiento del
+   sistema y el sistema adicional para la interpretacción de las
+   predicciones.
+6. **[Análisis de los resultados obtenidos](#resultados)**: Este
    capítulo detalla las evaluaciones realizadas al sistema presentado
    en el capítulo anterior.
 7. **[Conclusiones](#conclusiones)**: Para finalizar, se han analizado

@@ -49,8 +49,8 @@ es un líquido compuesto en un 99% por agua. El constante flujo de este
 líquido en el ojo permite regular la presión ocular, de forma que las
 propiedades del ojo puedan mantenerse constantes. Además, también
 permite aportar nutrientes y oxígeno a la parte anterior del ojo y
-eliminar deshechos de esta zona del ojo, a la que los capilares no son
-capaces de llegar [@zhu2001eye].
+eliminar deshechos de esta zona a la que los capilares no son capaces
+de llegar [@zhu2001eye].
 
 
 ![Estructura del ojo humano. Fuente: Wikipedia
@@ -151,22 +151,22 @@ las del cerebro, apoyando la afirmación común de que el sistema visual
 es una extensión del sistema nervioso cetral [@zhu2001eye].
 
 Estos receptores contienen unos productos químicos conocidos como
-fotopigmentos. Los fotopigmentos tienen la propiedad de descomponerse
-ante la exposición a la luz, excitando en el proceso a las fibras
-nerviosas que salen del ojo.
+**fotopigmentos**. Los fotopigmentos tienen la propiedad de
+descomponerse ante la exposición a la luz, excitando en el proceso a
+las fibras nerviosas que salen del ojo.
 
-Los bastones son estructuras cilíndricas y alargadas que son
+Los **bastones** son estructuras cilíndricas y alargadas
 extremedamente sensibles a los cambios de intensidad de de la luz. Sin
 embargo, no son capaces de percibir información sobre el color. De
-esto se encargan los conos, que son células más pequeñas y finas
+esto se encargan los **conos**, que son células más pequeñas y finas
 capaces de de percibir el color y de capturar detalles más finos.
 
-En los conos encontramos tres tipos distintos de fotopigmentos que
+En los **conos** encontramos tres tipos distintos de fotopigmentos que
 responden a diferentes longitudes de onda distinta de la luz. Esto da
-lugar a los conocidos como 3 colores primarios de la luz: rojo, azul,
-y verde.
+lugar a los conocidos como colores primarios de la luz: rojo, azul, y
+verde.
 
-En la fóvea central, los únicos fotoreceptores existentes son los
+En la **fóvea central**, los únicos fotoreceptores existentes son los
 conos, encargados de la visión en detalle y visión en color. Según nos
 alejamos de la fóvea y nos dirigimos hacia la parte más periférica de
 la retina, los bastones empiezan a ser predominantes. Estos son
@@ -182,7 +182,7 @@ ganglionares**, un tipo de neuronas en la superficie interna de la
 retina en las que se produce una diferencia de potencial que se
 transmite a través de su largo axón hasta el tálamo, hipotálamo y
 mesencéfalo del cerebro. Ya en el cerebro, esta información es
-procesada e interpretada por el córtex visual.
+procesada e interpretada por el **córtex visual**.
 
 ## Principales patologías de la retina
 <!-- 1 día
@@ -205,17 +205,18 @@ asociada a la edad. Fuente: American Academy of Ophtalmology (www.aao.org)
 \label{enfermedades}](source/figures/vision.png){width=100%}
 
 Aún siendo de naturaleza distinta y provocando distintos efectos,
-ambas patologías tienen algo en común: la mayoría de casos de ceguera
-provocados por ellas hubieran podido ser evitados con una detección y
-tratamiento de las mismas en los primeros estadios. La detección de
-estas, como veremos más adelante, pasa comúnmente por el análisis de
-la retina mediante imágenes de fondo de ojo. Este tipo de imágenes
-permiten proyectar la estructura 3D de la retina en un plano 2D. Para
-captarlas, utilizamos un tipo especial de cámaras que cuentan con un
-microscopio de baja potencia con una cámara adherida, permitiendo una
-factor de magnificación de 2.5x. Los rayos de luz viajan desde la
-retina a la cámara atravesando la pupila. El sensor de la cámara es un
-sensor RGB similar al de otros tipos de cámaras.
+ambas patologías tienen algo en común: **la mayoría de casos de
+ceguera provocados por ellas hubieran podido ser evitados con una
+detección y tratamiento de las mismas en los primeros estadios**. La
+detección de estas, como veremos más adelante, pasa comúnmente por el
+análisis de la retina mediante imágenes de fondo de ojo. Este tipo de
+imágenes permiten proyectar la estructura 3D de la retina en un plano
+2D. Para captarlas utilizamos cámaras de fondo de ojo, un tipo
+especial de cámaras que cuentan con un microscopio de baja potencia
+con una cámara adherida, permitiendo una factor de magnificación de
+2.5x. Los rayos de luz viajan desde la retina a la cámara atravesando
+la pupila. El sensor de la cámara es un sensor RGB similar al de otros
+tipos de cámaras.
 
 ### Retinopatía Diabética
 <!-- 1 día
@@ -224,7 +225,7 @@ sensor RGB similar al de otros tipos de cámaras.
     Papers útiles: (P1)
 -->
 
-Las personas que sufren de diabetes, presentan altos niveles de azucar
+Las personas que sufren de diabetes presentan altos niveles de azucar
 en sangre debido a la incapacidad de su páncreas de generar suficiente
 insulina para distribuir el azucar (Diabetes Tipo I) o a la
 incapacidad del organismo de asimilar correctamente la insulina
@@ -377,7 +378,7 @@ Si es detectada a tiempo, la DMAE puede ser retardada y mitigada
 mediante vitaminas y minerales.
 
 El principal signo de DMAE en las imágenes de fondo de ojo es la
-apaición de las **drusas**, depósitos amarillos localizados bajo la
+aparición de las **drusas**, depósitos amarillos localizados bajo la
 retina, procedentes de la acumulación de minerales. En función del
 número y tamaño de drusas, podemos definir tres estadios en la
 enfermedad:
@@ -431,11 +432,11 @@ puede ser realizada con sistemas relativamente baratos y fáciles de
 manejar y de transportar. Además, las cámaras de fondo de ojo pueden
 capturar la información de la retina mediante técnicas no
 invasivas. En función de la patología que se intente diagnosticar,
-estas imágenes es†án centradas en la mácula o en el disco óptico. La
-figura \ref{retina} analizada anteriormente para ver las partes de la
-retina, es un ejemplo de las imágenes que proporcionan este tipo de
-cámaras, con tamaños de hasta 16 megapíxeles. Es por ello por lo que
-la fotografía de fondo de ojo es el sistema más utilizado en los
+estas imágenes están centradas en la mácula o en el disco óptico. La
+figura \ref{retina} analizada anteriormente para explicar las partes
+de la retina, es un ejemplo de las imágenes que proporcionan este tipo
+de cámaras, con tamaños de hasta 16 megapíxeles. Es por ello por lo
+que la fotografía de fondo de ojo es el sistema más utilizado en los
 centros de atención primaria y en el que enfocaremos nuestro
 estudio. Sin embargo, cabe destacar que en ocasiones éstas no son
 suficientes, y tendrán que ser combinadas con otros tipos de sistemas.
@@ -465,32 +466,34 @@ diferentes estados de este tipo de patologías, debido a que existe un
 cierto grado de subjetividad [@sellahewa2014grader]
 [@ruamviboonsuk2005screening].
 
-Las técnicas de ARIA se basaron en los últimos años en la extracción
-de manual de caráctrísticas de las imágenes de fondo de ojo, que
-posteriormente se le pasarían a un clasificador de Machine
-Learning. Era, por lo tanto, un proceso con dos fases claramente
-diferenciadas, y que requería de conocimiento experto para la
+Las técnicas ARIA se basaron en los últimos años en la **extracción de
+manual de caráctrísticas** de las imágenes de fondo de ojo, que
+posteriormente se le pasarían a un **clasificador de Machine
+Learning**. Era, por lo tanto, un proceso con dos fases claramente
+diferenciadas: **extracción de características** y
+**clasificación**. Este proceso requería conocimiento experto para la
 definición de las características que nos fueran de mayor utilidad
 para la detección de la RD y la DMAE.
 
-Con la entrada del conocido como Deep Learning, y concretamente en
-este caso las Redes Neuronales Convolucionales (CNN) este proceso
-inicial de extracción de características ha podido ser automatizado,
-mejorando la calidad de los sistemas notablemente. Las fases de
-extracción de carácterísticas y de predicción se unifican. Las
-características extraídas poseen un poder mucho mayor de predicción,
-puesto que toda la red ha sido entrenada para ello.
+Con la entrada del **Deep Learning**, y concretamente las **Redes
+Neuronales Convolucionales (CNN)** este proceso inicial de extracción
+de características ha podido ser automatizado, mejorando la calidad de
+los sistemas notablemente. Las fases de extracción de carácterísticas
+y de predicción se unifican. Las características extraídas poseen un
+poder mucho mayor de predicción, puesto que toda la red ha sido
+entrenada para ello.
 
-Sin embargo, la naturaleza del problema, la falta de estandarización y
-la escasa cantidad de imágenes etiquetadas, ha provocado que estos
-sistemas tuvieran serias dificultades para su aplicación general.
+Sin embargo, la naturaleza del problema, la **falta de
+estandarización** y la **escasa cantidad de imágenes etiquetadas**, ha
+provocado que estos sistemas tuvieran serias dificultades para su
+aplicación general.
 
 Esta aproximación al problema del diagnóstico de la RD y DMAE plantea
 una serie de preguntas. ¿Cómo se incorporaría un sistema de este tipo
 en las consultas? ¿Se introduciría el software en las propias cámaras
-que captan la imagen de la retina? ¿Sería posible crear en los paises
+que captan la imagen de la retina? ¿Sería posible crear en los países
 un sistema centralizado de diagnóstico con imágenes de fondo de ojo?
 ¿Podrían utilizarse en este sistema centralizado técnicas ARIA
 combinadas con las opiniones de expertos? No hay una respuesta para
-todas estas preguntas y las ventajas e inconvenientes de cada una de
+todas estas preguntas y las ventajas e inconvenientes de algunas de
 ellas se desarrollarán en capítulos posteriores.

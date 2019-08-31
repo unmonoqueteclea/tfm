@@ -1,7 +1,7 @@
 \vspace*{\fill}
 \noindent
 \textit{
-Dedicado a Fran, porque pronto *despertarás* y serán tus ojos los que lean esta dedicatoria
+Dedicado a Fran, porque aún tenemos que hablar de muchas cosas, compañero del alma.
 }
 \vspace*{\fill}
 \pagenumbering{gobble}
