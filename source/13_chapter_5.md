@@ -6,7 +6,7 @@ se hayan realizado **3 aproximaciones distintas al problema**, todas
 ellas basadas en Deep Learning, y únicamente obteniendo resultados
 útiles de 2 de ellas.
 
-Durante este capítulo se analizarán estas 3 aproximaciones. Este
+Durante este capítulo se analizarán estas aproximaciones. Este
 análisis no se limitará a una simple descripción del clasificador
 utilizado, sino que se detallarán los principales aspectos de
 cualquier proyecto de este tipo: los **datos** usados, su limpieza y
@@ -86,8 +86,8 @@ en gran medida la forma de trabajar con él, es el gran **desbalanceo**
 existente entre las clases. La clase predominante, las imágenes de
 retinas sanas, contiene **más del 70%** del total de imágenes. Por el
 contrario la clase minoritaria, las imágenes de retinas con DMAE,
-únicamente contiene 281 imágenes, **menos del 1%**. Este gran
-desbalanceo nos obligará a aplicar diversas técnicas que permitan
+únicamente contiene 281 imágenes, **menos del 1% del total**. Este
+gran desbalanceo nos obligará a aplicar diversas técnicas que permitan
 compensarlo como la **asignación de pesos distintos a las instancias
 de cada clase** en el cálculo de la función de coste o el
 **submuestreo de los datasets**.
@@ -117,6 +117,8 @@ varían en gran medida entre los distintos datasets. Sin embargo, si se
 pretende crear un clasificador robusto que sea capaz de trabajar en
 todo tipo de condiciones, utilizar esta elevada cantidad de
 conjuntos de imágenes será de gran ayuda.
+
+\newpage
 
 ---------------------------------------------------------------------------------------------------------
         Dataset                                 Origen                      Tamaño       Formato
@@ -252,9 +254,11 @@ proceso. Las transformaciones elegidas y sus parámetros han sido
 escogidas de tal forma que den lugar a imágenes *coherentes* como las
 que se podrían obtener con cualquier cámara de fondo de ojo.
 
+\newpage
+
 ## Diseño del sistema 1: Gran clasificador
 A continuación se presentarán las características de los sistemas de
-clasificación realizados. Estos sistemas tenían como propósito la
+clasificación realizados. Estos sistemas tenían como finalidad la
 **detección de imágenes de retinas sanas, enfermas de RD o enfermas de
 DMAE**.  Sin embargo, en ningún momento ha sido objetivo de este
 trabajo la detección de los diferentes niveles de gravedad de ambas
@@ -266,8 +270,8 @@ continuación son totalmente independientes.
 El primer sistema realizado (figura \ref{des1}) se trata de una **CNN
 basada en la arquitectura VGG16** que trata de distinguir, de una sola
 vez, entre los 3 tipos de imágenes (RD, DMAE, Sanas). A la salida de
-la última capa convolucional se han añadido 3 capas de tipo **Fully
-Connected** con 2048, 1024 y 512 neuronas. Entre ellas, para evitar el
+la última capa convolucional se han añadido 3 capas de tipo **fully
+connected** con 2048, 1024 y 512 neuronas. Entre ellas, para evitar el
 overfitting se han intercalado capas de tipo **Dropout**. Por último,
 la capa de salida cuenta con 3 neuronas (una por cada clase) y hace
 uso de la función de activación **softmax**. Para entrenar esta red se
@@ -278,15 +282,16 @@ anteriormente.
 \label{des1}](source/figures/design1_ar.png){width=100%}
 
 El gran desbalanceo existente entre las clases, como se presentaba en
-la tabla \ref{datasets1} ha supuesto que este diseño no fuera capaz de
-detectar correctamente las 3 clases que componen nuestro problema y,
-por lo tanto, **ha sido desechado**.
+la tabla \ref{datasets1}, ha supuesto que este diseño no fuera capaz
+de detectar correctamente las 3 clases que componen nuestro problema
+y, por lo tanto, **ha sido desechado**.
 
 
-## Diseño del sistema 2: Clasificador multietapa
+## Diseño del sistema 2: Clasificador Multietapa
 Los resultados del primer sistema ponen de manifiesto la necesidad de
 aplicar técnicas que traten el problema del desbalanceo. Por ello, el
-segundo sistema consta de **dos clasificadores binarios en cascada**:
+segundo sistema consta de **dos clasificadores binarios en cascada**
+(figura \ref{design2}):
 
    - El primer clasificador diferencia entre **retinas sanas y retinas
      enfermas** (sin distinguir entre Retinopatía Diabética o
@@ -301,16 +306,15 @@ propia \label{design2}](source/figures/design2.png){width=100%}
 
 Gracias a este sistema basado en dos etapas se obtiene un desbalanceo
 entre clases, en cada una de las etapas, inferior al del conjunto
-original de imágenes. En la figura \ref{design2} podemos ver un
-diagrama de este sistema. El primer clasificador **hace uso del
-conjunto completo de imágenes** para el entrenamiento pero, como se ha
+original de imágenes. El primer clasificador **hace uso del conjunto
+completo de imágenes** para el entrenamiento pero, como se ha
 comentado, **únicamente es capaz de distinguir entre dos posibles
 casos, retinas sanas y retinas enfermas**. En la tabla \ref{c1s2}
-vemos la distribución de las imágenes del clasificador en los
-conjuntos de entrenamiento, validación y test.
+vemos la distribución de las imágenes de este primer clasificador en
+los conjuntos de entrenamiento, validación y test.
 
 ---------------------------------------------------------------------------
-Conjunto         Clase            Total          Total(%)
+Conjunto         Clase            Total        Total (%)
 -------    -----------     ------------   --------------
 train             sana            17610            70.34
 
@@ -326,22 +330,22 @@ test           enferma             2280            29.14
 
 ---------------------------------------------------------------------------
 
-Table: Distribución de las imágenes del clasificador Sanas/Enfermas
-del sistema 2. \label{c1s2}
+Table: Distribución de las imágenes del clasificador Sano/Enfermo del
+sistema 2. \label{c1s2}
 
-Para tratar el **desbalanceo** existente en esta primera etapa, se ha
-hecho uso de una técnica basada en aplicar durante el entrenamiento a
-las instancias de la clase minoritaria (en este caso, la clase
-**enferma**) un peso que compense, en la función de coste, el
-desbalanceo.
+Para tratar el **desbalanceo** existente en esta **primera etapa**, se
+ha hecho uso de una técnica basada en aplicar durante el entrenamiento
+a las instancias de la clase minoritaria (en este caso, la clase
+**enferma**) un peso que compense el desbalanceo en la función de
+coste.
 
 
-Para el segundo clasificador la aproximación ha sido distinta. Si se
-hubiera usado el conjunto de imágenes completo, el desbalanceo hubiera
-sido demasiado grande, imposible de abordar incluso por la técnica
-utilizada anteriormente. En este caso, se ha hecho uso de la técnica
-conocida como **subsampling o submuestreo**. Para evitar tener una
-cantidad de imágenes de RD muy superior a la de DMAE se han
+Para el **segundo clasificador** la aproximación ha sido distinta. Si
+se hubiera usado el conjunto de imágenes completo, el desbalanceo
+hubiera sido demasiado grande, imposible de abordar incluso por la
+técnica utilizada anteriormente. En este caso, se ha hecho uso de la
+técnica conocida como **subsampling o submuestreo**. Para evitar tener
+una cantidad de imágenes de RD muy superior a la de DMAE se han
 seleccionado, de forma aleatoria, un conjunto de imágenes de RD que
 serán las utilizadas para el entrenamiento. De esta forma, se
 entrenará el clasificador con la misma cantidad de imágenes de DR que
@@ -355,7 +359,7 @@ el caso del sistema inicial)
 En la figura \ref{des2} podemos ver la arquitectura utilizada en los
 clasificadores de ambos subsistemas. Como se puede comprobar, es
 prácticamente igual a la del sistema 1, pero en este caso se elimina
-una de las capas **Fully Connected**. El clasificador sano/enfermo
+una de las capas **fully connected**. El clasificador sano/enfermo
 únicamente ha hecho uso de la arquitectura **VGG16**, mientras que el
 clasificador RD/DMAE ha hecho uso de las 3 arquitecturas de la imagen:
 **VGG16, Resnet50 e InceptionV3**. Puesto que ahora la salida de la
@@ -384,14 +388,13 @@ número de parámetros de la red *congelados*:
 
 Como se detallará en el siguiente capítulo, la ejecución de varios
 entrenamientos alterando hiperparámetros como el *learning rate* o el
-*batch size* ha permitido obtener los valores óptimos de estos.
+*batch size* ha permitido obtener los valores óptimos para éstos.
 
-## Diseño del sistema 3: Ensemble de clasificadores
-Siguiendo la filosofía del segundo clasificador del sistema anterior,
-un tercer sistema ha sido realizado. Este tercer sistema permite
-detectar los 3 posibles casos (RD, DMAE, y Sana) en una sola etapa a
-partir de la combiación de las predicciones de 3 clasificadores
-entrenados con diferentes subconjuntos de imágenes. De esta forma, al
+## Diseño del sistema 3: Ensemble de Clasificadores
+El tercer sistema diseñado permite detectar los 3 posibles casos (RD,
+DMAE, y Sana) en una sola etapa a partir de la combinación de las
+predicciones de 3 clasificadores entrenados con diferentes
+subconjuntos de imágenes (figura \ref{design3}). De esta forma, al
 igual que en el caso anterior conseguimos entrenar modelos con la
 misma cantidad de imágenes en cada clase.
 
@@ -407,24 +410,26 @@ de capas hasta llegar a obtener la mejor evaluación posible con el
 dataset de validación.
 
 La arquitectura utilizada ha sido la misma que la de la figura
-\ref{des2} (aunque , en este caso, con 3 neuronas en la capa de
-salida), entrenándose también con las mismas 3 arquitecturas: VGG16,
-Resnet50 e InceptionV3.
+\ref{des2} (aunque, en este caso, con 3 neuronas en la última capa,
+una por cada posible clase de salida), entrenándose con las mismas 3
+arquitecturas: VGG16, Resnet50 e InceptionV3.
 
 
 
 ## Diseño del Sistema de Predicción e Interpretación
 Para hacer accesible el uso de los sistemas de predicción se ha
-diseñado un pequeño software que abstrae la complejidad, permitiendo a
-los especialistas hacer uso de estos modelos simplemente seleccionando
-las imágenes del paciente que se desea analizar. Para ello, se ha
-hecho uso de las Jupyter Notebook explicadas anteriormente.
+diseñado un pequeño software que abstrae la complejidad de todo el
+proceso, permitiendo a los especialistas hacer uso de estos modelos
+simplemente seleccionando las imágenes del paciente que se desea
+analizar. Para ello, se ha hecho uso de las Jupyter Notebook
+explicadas anteriormente.
 
 Mediante este programa, el usuario puede elegir el sistema que quiere
-utilizar en cada caso, el clasificador en 2 etapas, o el ensemble de
-clasificadores. Una vez seleccionada la imagen, el programa devolverá
-sus predicciones, el grado de confianza y un mapa de calor procedente
-de la aplicación del algoritmmo Grad-Cam.
+utilizar en cada caso: el Clasificador Multietapa, o el Ensemble de
+Clasificadores. Una vez seleccionada la imagen de fondo de ojo a
+analizar, el programa devolverá sus predicciones, el grado de
+confianza y un mapa de calor procedente de la aplicación del
+algoritmmo **Grad-Cam**.
 
-En el capítulo \ref{resultados}, podremos ver los resultados de
+En el capítulo \ref{resultados}, se analizarán los resultados de
 diversas ejecuciones del programa.

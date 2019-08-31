@@ -35,8 +35,8 @@ datos tan desbalanceado** y habrá que buscar soluciones alternativas.
 
 ## Evaluación del Sistema 2: Clasificador Multietapa
 El segundo sistema consta de 2 etapas: la clasificación
-**Sano/Enfermo** y la clasificación **RD/DMAE**. A continuación, se
-analizarán ambas etapas.
+**Sano/Enfermo** y la clasificación **RD/DMAE**. Ambas etapas serán
+analizadas a continuación.
 
 
 ### Etapa 1: Clasificador Sano/Enfermo
@@ -48,10 +48,10 @@ Puesto que ha sido utilizada la técnica de **Transfer Learning**, se
 han realizado varias ejecuciones descongelando, progresivamente cada
 uno de los bloques convolucionales de la arquitectura utilizada,
 **VGG16**. Esta arquitectura posee 5 bloques convolucionales con
-**capas de Pooling** en cada uno de estos bloques.
+**capas de pooling** en cada uno de estos bloques.
 
-Inicialmente se han realizado varios entrenamientos del bloque **Fully
-Connected** para testear los posibles **batch size** y **learning
+Inicialmente se han realizado varios entrenamientos del bloque **fully
+connected** para testear los posibles **batch size** y **learning
 rate**. En la tabla \ref{batch} podemos ver los resultados obtenidos
 para distintos **batch sizes**.  Las evaluaciones de la tabla son las
 del dataset de validación para el mejor epoch ^[el que tiene menores
@@ -95,7 +95,7 @@ problema. Para ello se ha utilizado un **batch size de 64**.
 ---------------------------------------------------------------------------
 
 Table: Resultados del entrenamiento para distintos learning
-rate. Evaluados con el dataset de validación \label{lr}
+rate. Modelos evaluados con el dataset de validación \label{lr}
 
 Como se ha podido comprobar, utilizar un **learning rate** demasiado
 alto provoca que el descenso de gradiente quede *atrapado* en mínimos
@@ -133,13 +133,13 @@ validación \label{training}
 
 
 Como podemos ver en la tabla \ref{training}, **los mejores resultados
-se han obtenido al entrenar todos los bloques convolucionales menos el
-primero**, obteniendo una *accuracy* de casi el 80%. Será este, por lo
-tanto, el clasificador que se usará en el Sistema de Predicción e
-Interpretación en esta segunda etapa del Clasificador Multietapa. Cabe
-destacar que, a partir del entrenamiento del bloque 4, hemos tenido
-que disminuir el learning rate para evitar caer en mínimos locales y
-asegurar la convergencia.
+se han obtenido al entrenar los bloques convolucionales 2,3,4 y 5**,
+obteniendo una *accuracy* de casi el 80%. Será este, por lo tanto, el
+clasificador que se usará en el **Sistema de Predicción e
+Interpretación** en esta segunda etapa del Clasificador
+Multietapa. Cabe destacar que, a partir del entrenamiento del bloque
+4, hemos tenido que disminuir el learning rate para evitar caer en
+mínimos locales y asegurar la convergencia.
 
 Debido a la gran carga computacional que ha supuesto entrenar este
 modelo (cada entrenamiento ha durado una media de 72 horas),
@@ -152,9 +152,9 @@ epoch 45**. A partir de ese momento, la red empieza a sufrir de
 **overfitting** y las pérdidas con el dataset de validación aumentarán
 mientras que las del dataset de entrenamiento continuarán
 descendiendo. Esto es un claro indicador de que la red está comenzando
-a **memorizar** el dataset de entrenamiento en vez de detectar
-patrones. Por lo tanto, nos quedaremos con el estado de la red en ese
-epoch 45.
+a **memorizar** el dataset de entrenamiento en vez de detectar y
+aprender patrones. Por lo tanto, nos quedaremos con el estado de la
+red en ese epoch 45.
 
 ![Pérdidas para el dataset de validación del entrenamiento de los
 bloques 2,3,4 y 5 (y FC) del clasificador Sano/Enfermo. Se ha aplicado
@@ -183,11 +183,11 @@ una retina sana
 
 ### Etapa 2: Clasificador RD/DMAE
 La tabla \ref{training2} muestra los resultados del entrenamiento de
-la arquitectura VGG16 para la segunda etapa del **Sistema
-Multietapa**. La función de este clasificador era diferenciar, de
-entre las imágenes de retinas detectadas como enfermas en la etapa 1,
-cuáles son de Retinopatía Diabética y cuáles de Degeneración Macular
-Asociada a la Edad.
+la arquitectura **VGG16** para la **segunda etapa** del **Sistema
+Multietapa**. La función de este clasificador es diferenciar, de entre
+las imágenes de retinas detectadas como enfermas en la etapa 1, cuáles
+sufren Retinopatía Diabética y cuáles Degeneración Macular Asociada a
+la Edad.
 
 
 ---------------------------------------------------------------------------
@@ -207,7 +207,8 @@ train blocks       LR      accuracy      loss
 ---------------------------------------------------------------------------
 
 Table: Resultados del entrenamiento de la segunda etapa del Sistema
-Multietapa. Evaluados con el dataset de validación \label{training2}
+Multietapa. Modelos evaluados con el dataset de validación
+\label{training2}
 
 Además, como vemos en la tabla \ref{training3}, también se han
 entrenado otras arquitecturas. En este caso se han entrenado todos los
@@ -218,20 +219,13 @@ Arquitectura       LR      accuracy      loss
 ----------------  ----     --------    --------
  InceptionV3      1e-5      0.9167       0.263
  Resnet50         1e-5      0.9744      0.0816
- Xception         1e-5      FALTA
 ---------------------------------------------------------------------------
 
 Table: Resultados del entrenamiento de la segunda etapa del Sistema
-Multietapa. Evaluados con el dataset de validación \label{training3}
+Multietapa. Modelos evaluados con el dataset de validación
+\label{training3}
 
-Como vemos, los resultados en esta segunda etapa son mucho más
-satisfactorios que los de la primera, obteniéndose la máxima
-**accuracy** (97.4%) con la arquitectura Resnet50, que será la
-utilizada para el **Sistema de Predicción e Interpretación**.
-
-En las figuras \ref{dr1}, \ref{dr2} y \ref{dr3} podemos ver ejemplos
-de la respuesta proporcionada por esta etapa del sistema.
-
+\newpage
 
 ![Salida de la segunda etapa del Sistema Multietapa para una imagen de
 una retina enferma de RD
@@ -241,16 +235,24 @@ una retina enferma de RD
 una retina enferma de DMAE
 \label{dr2}](source/figures/dr2.png){width=80%}
 
+Como vemos, los resultados en esta segunda etapa son mucho más
+satisfactorios que los de la primera, obteniéndose la máxima
+**accuracy** (97.4%) con la arquitectura Resnet50, que será la
+utilizada para el **Sistema de Predicción e Interpretación**.
+
+En las figuras \ref{dr1} y \ref{dr2} podemos ver ejemplos de la
+respuesta proporcionada por esta etapa del sistema.
+
 
 \newpage
 ## Evaluación del Sistema 3: Ensemble de Clasificadores
 
-En este caso, se han probado 3 arquitecturas distintas: VGG16, ResNet
-e InceptionV3. Como se ha explicado anteriormente, cada una de estas tres
-arquitecturas ha sido entrenada con un subconjunto distinto de los
-datos. De esta forma obtenemos clasificadores no correlados que, al
-ser combinados, permiten obtener un rendimiento superior al de cada
-uno de ellos de forma individual.
+Para este sistema se han evaluado 3 arquitecturas distintas: **VGG16,
+ResNet e InceptionV3**. Como se ha explicado anteriormente, cada una
+de estas tres arquitecturas ha sido entrenada con un subconjunto
+distinto de los datos. De esta forma se han obtenido clasificadores no
+correlados que, al ser combinados, han permitido obtener un
+rendimiento superior al de cada uno de ellos de forma individual.
 
 Para la arquitectura VGG16, al utilizarse la técnica del **Transfer
 Learning**, se han evaluado diferentes versiones, congelando cada vez
@@ -260,15 +262,20 @@ distinto número de capas como vemos en la tabla \ref{training4}.
 train blocks       LR      accuracy      loss
 ----------------  ----     --------    --------
  FC               5e-5      0.6695      0.6676
+
  Bloque 5         5e-5      0.7458      0.6068
+
  Bloques 4,5      5e-6      0.7119      0.5878
+
  Bloques 3,4,5    5e-6      0.7119      0.5776
+
  Bloques 2,3,4,5  5e-6      0.7797      0.5456
+
  Todos            5e-6      0.7458      0.5973
 ---------------------------------------------------------------------------
 
-Table: Resultados del entrenamiento para distintos learning
-rage. Evaluados con el dataset de validación \label{training4}
+Table: Resultados del entrenamiento del sistema 3. Modelos evaluados
+con el dataset de validación \label{training4}
 
 Como se puede comprobar, el mejor resultado lo obtenemos de nuevo
 dejando congelado el primer bloque convolucional y entrenando el resto
@@ -283,14 +290,65 @@ Arquitectura       LR      accuracy      loss
 ----------------  ----     --------    --------
  InceptionV3      1e-5
  Resnet50         1e-5
- Xception         1e-5
 ---------------------------------------------------------------------------
 
-Table: Resultados del entrenamiento de la segunda etapa del Sistema
-Multietapa. Evaluados con el dataset de validación \label{training5}
+Table: Resultados del entrenamiento con diferentes arquitecturas del
+sistema 3. Modelos evaluados con el dataset de validación
+\label{training5}
 
+El **ensemble** final usado en el **Sistema de Predicción e
+Interpretación** ha combinado las predicciones de la las dos redes de
+la table \ref{training5} y la red que ha entrenado los bloques 2, 3, 4
+y 5 de la table \ref{training4}.
+
+
+En las figuras \ref{s31}, \ref{s32} y \ref{s33} podemos ver ejemplos
+de la respuesta proporcionada por este tercer sistema.
+
+\newpage ![Salida del sistema 3 para una imagen de una retina enferma
+de RD \label{s31}](source/figures/s31.png){width=80%}
+
+![Salida del sistema 3 para una imagen de una retina enferma de DMAE
+\label{s32}](source/figures/s32.png){width=80%}
+
+![Salida del sistema 3 para una imagen de una retina sana
+\label{s33}](source/figures/s33.png){width=80%}
+
+
+\newpage
 ## Sistema de Predicción e Interpretación
+El Sistema de Predicción e Interpretación permite usar todos los
+modelos explicados anteriormente únicamente seleccionando una imagen
+de un paciente.
 
-Los modelos de
+En las figuras \ref{pred1} y \ref{pred2} vemos el Sistema de
+Predicción devolviendo la predicción realizada por las dos etapas del
+Sistema 2 para la imagen de un paciente con Degeneración
+Macular. Previamente, el usuario ha tenido que añadir la imagen de
+fondo de ojo a una carpeta y haber seleccionado el nombre del fichero
+en el selector de la parte superior. ^[Aunque el nombre del fichero
+contenga la palabra AMD (Age-Related Macular Degeneration, en ningún
+momento el sistema ha utilizado esa información para realizar su
+predicción.] En los mapas de atención que devuelve el sistema vemos
+como los modelos han basado su predicción en la presencia de
+**drusas**.
+
+![Respuesta del Sistema de Predicción a la imagen de una retina con
+DMAE. Etapa primera del Sistema Multietapa
+\label{pred1}](source/figures/pred1.png){width=100%}
+
+![Respuesta del Sistema de Predicción a la imagen de una retina con
+DMAE. Etapa segunda del Sistema Multietapa
+\label{pred2}](source/figures/pred2.png){width=100%}
+
+
+
+
+UNA DE DR
+
+UNA DE SISTEMA 3 HEALTHY
+
+UNA DE SISTEMA 3 DR
+
 
 HABLAR DEL PROBLEMA DE LAS IMAGENES DE KAGGLE
