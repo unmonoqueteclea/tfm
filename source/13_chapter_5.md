@@ -19,7 +19,7 @@ Una de las principales contribuciones de esta investigación ha sido
 precisamente la **extensa cantidad de conjuntos distintos de
 imágenes** utilizados en la creación de los modelos. Para entrenar el
 modelo se han seleccionado imágenes de prácticamente todos los
-datasets utilizados por los modelos del capítulo \ref{arte}. En total
+datasets utilizados por los sistemas del capítulo \ref{arte}. En total
 han sido utilizados **13 conjuntos de imágenes**, con un total de
 **39118 imágenes** ^[Sin embargo, como se verá durante este capítulo,
 algunos de los clasificadores que se han entrenado no han utilizado el
@@ -35,7 +35,7 @@ muy superior al tamaño medio de los datasets de los modelos analizados
 en el capítulo \ref{arte}. Algunos de los modelos creados han
 utilizado grupos más reducidos de imágenes, seleccionadas
 aleatoriamente del conjunto de datos original. En la tabla
-\ref{datasets0} podemos ver la cantidad de imágenes de cada tipo
+\ref{datasets0} se muestra la cantidad de imágenes de cada tipo
 existentes en cada uno de los datasets utilizados.
 
 ---------------------------------------------------------------------------
@@ -111,12 +111,12 @@ datos utilizado \label{datasets1}
 
 Otra dificultad derivada del uso de 13 datasets distintos es que
 nuestro clasificador tendrá que tratar imágenes con características
-muy distintas, como vemos en la tabla \ref{datasets2}. Las condiciones
-en las que han sido tomadas, procesadas y almacenadas las imágenes
-varían en gran medida entre los distintos datasets. Sin embargo, si se
-pretende crear un clasificador robusto que sea capaz de trabajar en
-todo tipo de condiciones, utilizar esta elevada cantidad de
-conjuntos de imágenes será de gran ayuda.
+muy distintas, como se observa en la tabla \ref{datasets2}. Las
+condiciones en las que han sido tomadas, procesadas y almacenadas las
+imágenes varían en gran medida entre los distintos datasets. Sin
+embargo, si se pretende crear un clasificador robusto que sea capaz de
+trabajar en todo tipo de condiciones, utilizar esta elevada cantidad
+de conjuntos de imágenes será de gran ayuda.
 
 \newpage
 
@@ -170,15 +170,15 @@ Deep Learning.
 
 ## Recursos utilizados
 Respecto al **software** utilizado, la librería Open Source
-**Keras**^[https://keras.io/] ha sido la elegida para la programación
-de los clasificadores. Keras es una librería de Deep Learning de alto
-nivel en Python que permite realizar, de forma rápida, todo tipo de
-redes neuronales. Además, es capaz de trabajar sobre varios frameworks
-de más bajo nivel: Theano ^[https://github.com/Theano/Theano], CNTK
+**Keras**^[https://keras.io/] ha sido la elegida. Keras es una
+librería de Deep Learning de alto nivel en Python que permite
+realizar, de forma rápida, todo tipo de redes neuronales. Además, es
+capaz de trabajar sobre varios frameworks de más bajo nivel: Theano
+^[https://github.com/Theano/Theano], CNTK
 ^[https://github.com/Microsoft/cntk] o
 **Tensorflow**^[https://github.com/tensorflow/tensorflow]. Será éste
 último el framewok sobre el que crearemos nuestros modelos con Keras
-(figura \ref{keras}). Otra importante característica de Keras a tener
+(Figura \ref{keras}). Otra importante característica de Keras a tener
 en cuenta es que permite la ejecución tanto en CPU como en GPU, sin
 necesidad de modificar para ello el código.
 
@@ -189,7 +189,7 @@ Tensorflow. \label{keras}](source/figures/keras.jpeg){width=100%}
 
 
 También se ha hecho uso de las Jupyter Notebooks
-^[https://jupyter.org/] (figura \ref{jupyter}), entornos de trabajo
+^[https://jupyter.org/] (Figura \ref{jupyter}), entornos de trabajo
 que permiten la creación de documentos que combinen fragmentos de
 código con texto, imágenes e incluso elementos interacivos. Las
 Jupyter Notebooks han ayudado a mostrar de forma simple y ordenada al
@@ -258,7 +258,7 @@ que se podrían obtener con cualquier cámara de fondo de ojo.
 
 ## Diseño del sistema 1: Gran clasificador
 A continuación se presentarán las características de los sistemas de
-clasificación realizados. Estos sistemas tenían como finalidad la
+clasificación realizados. Estos sistemas tienen como finalidad la
 **detección de imágenes de retinas sanas, enfermas de RD o enfermas de
 DMAE**.  Sin embargo, en ningún momento ha sido objetivo de este
 trabajo la detección de los diferentes niveles de gravedad de ambas
@@ -267,16 +267,16 @@ de imágenes que proporcionen esta información para la fase de
 entrenamiento de los modelos. Los 3 sistemas presentados a
 continuación son totalmente independientes.
 
-El primer sistema realizado (figura \ref{des1}) se trata de una **CNN
-basada en la arquitectura VGG16** que trata de distinguir, de una sola
-vez, entre los 3 tipos de imágenes (RD, DMAE, Sanas). A la salida de
-la última capa convolucional se han añadido 3 capas de tipo **fully
-connected** con 2048, 1024 y 512 neuronas. Entre ellas, para evitar el
-overfitting se han intercalado capas de tipo **Dropout**. Por último,
-la capa de salida cuenta con 3 neuronas (una por cada clase) y hace
-uso de la función de activación **softmax**. Para entrenar esta red se
-han utilizado las 39118 imágenes de todos los datasets descritos
-anteriormente.
+El primer sistema realizado (Figura \ref{des1}) se trata de una **CNN
+basada en la arquitectura VGG16** [@simonyan2014very] que trata de
+distinguir, de una sola vez, entre los 3 tipos de imágenes (RD, DMAE,
+Sanas). A la salida de la última capa convolucional se han añadido 3
+capas de tipo **fully connected** con 2048, 1024 y 512 neuronas. Entre
+ellas, para evitar el *overfitting* se han intercalado capas de tipo
+**Dropout**. Por último, la capa de salida cuenta con 3 neuronas (una
+por cada clase) y hace uso de la función de activación
+**softmax**. Para entrenar esta red se han utilizado las 39118
+imágenes de todos los datasets descritos anteriormente.
 
 ![Arquitectura utilizada para el sistema 1. Elaboración propia
 \label{des1}](source/figures/design1_ar.png){width=100%}
@@ -291,7 +291,7 @@ y, por lo tanto, **ha sido desechado**.
 Los resultados del primer sistema ponen de manifiesto la necesidad de
 aplicar técnicas que traten el problema del desbalanceo. Por ello, el
 segundo sistema consta de **dos clasificadores binarios en cascada**
-(figura \ref{design2}):
+(Figura \ref{design2}):
 
    - El primer clasificador diferencia entre **retinas sanas y retinas
      enfermas** (sin distinguir entre Retinopatía Diabética o
@@ -339,13 +339,13 @@ a las instancias de la clase minoritaria (en este caso, la clase
 **enferma**) un peso que compense el desbalanceo en la función de
 coste.
 
-
-Para el **segundo clasificador** la aproximación ha sido distinta. Si
-se hubiera usado el conjunto de imágenes completo, el desbalanceo
-hubiera sido demasiado grande, imposible de abordar incluso por la
-técnica utilizada anteriormente. En este caso, se ha hecho uso de la
-técnica conocida como **subsampling o submuestreo**. Para evitar tener
-una cantidad de imágenes de RD muy superior a la de DMAE se han
+\newpage
+Para la **segunda etapa** la aproximación ha sido distinta. Si se
+hubiera usado el conjunto de imágenes completo, el desbalanceo hubiera
+sido demasiado grande, imposible de abordar incluso por la técnica
+utilizada anteriormente. En este caso, se ha hecho uso de la técnica
+conocida como **subsampling o submuestreo**. Para evitar tener una
+cantidad de imágenes de RD muy superior a la de DMAE se han
 seleccionado, de forma aleatoria, un conjunto de imágenes de RD que
 serán las utilizadas para el entrenamiento. De esta forma, se
 entrenará el clasificador con la misma cantidad de imágenes de DR que
@@ -354,16 +354,17 @@ de DMAE.
 Esta arquitectura basada en dos etapas nos ha permitido usar la
 totalidad de las imágenes para el entrenamiento sin necesidad de
 entrenar modelos con datasets extremadamente desbalanceados (como era
-el caso del sistema inicial)
+el caso del sistema inicial).
 
-En la figura \ref{des2} podemos ver la arquitectura utilizada en los
+En la Figura \ref{des2} podemos ver la arquitectura utilizada en los
 clasificadores de ambos subsistemas. Como se puede comprobar, es
 prácticamente igual a la del sistema 1, pero en este caso se elimina
 una de las capas **fully connected**. El clasificador sano/enfermo
 únicamente ha hecho uso de la arquitectura **VGG16**, mientras que el
 clasificador RD/DMAE ha hecho uso de las 3 arquitecturas de la imagen:
-**VGG16, Resnet50 e InceptionV3**. Puesto que ahora la salida de la
-red es binaria, se ha cambiado la función de activación softmax
+**VGG16** [@simonyan2014very], **Resnet50** [@he2016deep] e
+**InceptionV3** [@szegedy2016rethinking]. Puesto que ahora la salida
+de la red es binaria, se ha cambiado la función de activación softmax
 utilizada anteriormente en la última capa por la **función sigmoide**.
 
 ![Arquitectura utilizada para los clasificadores de ambos subsistemas
@@ -383,7 +384,8 @@ número de parámetros de la red *congelados*:
 - Entrenamiento de las capas fully-connected y los bloques
   convolucionales 3, 4 y 5: (Últimas 12 capas de la red convolucional)
 - Entrenamiento de las capas fully-connected y los bloques
-  convolucionales 2, 3, 4 y 5: (Últimas 15 capas de la red convolucional)
+  convolucionales 2, 3, 4 y 5: (Últimas 15 capas de la red
+  convolucional)
 - Entrenamiento de la red completa
 
 Como se detallará en el siguiente capítulo, la ejecución de varios
@@ -394,7 +396,7 @@ entrenamientos alterando hiperparámetros como el *learning rate* o el
 El tercer sistema diseñado permite detectar los 3 posibles casos (RD,
 DMAE, y Sana) en una sola etapa a partir de la combinación de las
 predicciones de 3 clasificadores entrenados con diferentes
-subconjuntos de imágenes (figura \ref{design3}). De esta forma, al
+subconjuntos de imágenes (Figura \ref{design3}). De esta forma, al
 igual que en el caso anterior conseguimos entrenar modelos con la
 misma cantidad de imágenes en cada clase.
 
@@ -409,7 +411,7 @@ aplicado **Transfer Learning** descongelando progresivamente bloques
 de capas hasta llegar a obtener la mejor evaluación posible con el
 dataset de validación.
 
-La arquitectura utilizada ha sido la misma que la de la figura
+La arquitectura utilizada ha sido la misma que la de la Figura
 \ref{des2} (aunque, en este caso, con 3 neuronas en la última capa,
 una por cada posible clase de salida), entrenándose con las mismas 3
 arquitecturas: VGG16, Resnet50 e InceptionV3.
@@ -431,5 +433,5 @@ analizar, el programa devolverá sus predicciones, el grado de
 confianza y un mapa de calor procedente de la aplicación del
 algoritmmo **Grad-Cam**.
 
-En el capítulo \ref{resultados}, se analizarán los resultados de
+En el capítulo \ref{resultados}, se analizan los resultados de
 diversas ejecuciones del programa.

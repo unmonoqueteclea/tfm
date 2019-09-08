@@ -1,5 +1,5 @@
-\newpage
-\pagenumbering{gobble}
+
+\newpage \pagenumbering{gobble}
 
 \tableofcontents
 

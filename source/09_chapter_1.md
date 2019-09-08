@@ -49,10 +49,10 @@ h. \label{ref_a_figure}](source/figures/example_figure.pdf){ width=100% }
 
 # Introducción {#intro}
 
-Durante este capítulo inicial se presentará el contexto y la
-motivación principal detrás de este trabajo, los objetivos perseguidos
-y la estructura en la que será plasmada toda la información a lo largo
-del mismo.
+Durante este capítulo inicial se presenta el contexto y la motivación
+principal detrás de este trabajo, los objetivos perseguidos y la
+estructura en la que se plasma toda esta información a lo largo del
+mismo.
 
 El presente documento pretende mostrar todas las tareas de
 investigación realizadas para la realización del **Trabajo Final de
@@ -83,13 +83,13 @@ La **Retinopatía Diabética (RD)** pertenece al grupo de las
 enfermedades vasculares, y se ha convertido en la **principal causa
 evitable de ceguera en todo el mundo**. Esta patología se da
 actualmente en el 35% de las personas con diabetes, enfermedad que
-afecta al 8.5% de la población mundial [@idf2017] [@IAPB]. Se estima
+afecta al 8.5% de la población mundial [@IAPB], [@idf2017] . Se estima
 que 191 millones de personas sufrirán retinopatía diabética en 2030
 [@zheng2012worldwide].  La incidencia de la RD es del 50% a partir de
 los 10 años de la aparición de la diabetes, y del 90% a partir de los
 30 años [@mookiah2013computer].
 
-En la figura \ref{diabetes_dr} se puede observar la previsión
+En la Figura \ref{diabetes_dr} se puede observar la previsión
 esperada de crecimiento entre 2015 y 2040, tanto en el número de casos
 de diabetes, como en el de casos de diabetes que dan lugar a RD
 ^[Datos de
@@ -131,7 +131,7 @@ siquiera existen ese tipo de expertos. Aunque existen diferentes
 métodos para el diagnóstico como la tomografía de coherencia óptica
 (TCO) o la angiografía, el método más utilizado actualmente se basa en
 el análisis de **imágenes de fondo de ojo** obtenidas mediante cámaras
-especializadas (figura \ref{eidon}). Este tipo de análisis se ha
+especializadas (Figura \ref{eidon}). Este tipo de análisis se ha
 impuesto al resto de métodos por la facilidad de uso de las cámaras y
 su menor coste.
 
@@ -149,7 +149,7 @@ Google que han permitido dar pasos de gigante en la lucha contra este
 tipo de
 patologías. ^[https://ai.googleblog.com/2018/12/improving-effectiveness-of-diabetic.html]
 
-## Objectivos
+## Objetivos
 
 El objetivo principal de esta investigación ha sido el **desarrollo de
 un sistema de detección automática de Retinopatía Diabética y
@@ -162,8 +162,8 @@ específicos que se detallan a continuación:
 - Análisis y comparación de las principales aproximaciones a la
   detección automática de ambas patologías realizadas hasta la fecha,
   tanto las basadas en Machine Learning como en Deep Learning.
-- Evaluación de diversas topologías de redes neuronales
-  convolucionales en la detección de ambas patologías
+- Diseño, desarrollo y evaluación de diversas topologías de redes
+  neuronales convolucionales en la detección de ambas patologías
 - Interpretación de las redes convolucionales, tratando de comprender
   qué factores le han ayudado a predecir, en cada caso, la existencia
   o ausencia de la enfermedad.
@@ -177,8 +177,8 @@ características: la **robustez** y la **interpretabilidad**.
   procedentes de 13 datasets distintos para el entrenamiento de los
   modelos. La combinación de las predicciones de varios clasificadores
   en las predicciones finales de cada sistema también ha contribuido a
-  compensar el overfitting o underfitting que pueda tener algún modelo
-  en concreto.
+  compensar el *overfitting* o *underfitting* que pueda tener algún
+  modelo en concreto.
 
 - Para conseguir **interpretabilidad** se ha diseñado un **Sistema de
   Predicción e Interpretación** que ha proporcionado los valores de
@@ -190,31 +190,30 @@ características: la **robustez** y la **interpretabilidad**.
 ## Estructura
 El presente documento está dividido en los siguientes 7 capítulos:
 
-1. **[Introducción](#intro)**: Este primer capítulo ha presentado el
+1. **[Introducción](#intro)**: Este primer capítulo se presenta el
    problema y la forma en la que éste será abordado en los sucesivos
    capítulos.
 2. **[El ojo y sus patologías](#ojo)**: Durante este segundo capítulo
-   se ha estudiado la anatomía y fisiología del ojo y se han analizado
-   las características principales las dos patologías que han motivado
+   se estudia la anatomía y fisiología del ojo y se analizan las
+   características principales las dos patologías que han motivado
    esta investigación: RD y DMAE.
 3. **[Machine Learning y aplicaciones médicas](#ml)**: Además de
-   ofrecer una visión general del funcionamiento y características
-   de los sistemas de Machine Learning, durante estas páginas se han
-   mostrado ejemplos de las aplicaciones médicas de los mismos.
-4. **[Estado del arte en detección de RD y DMAE](#arte)**: Se han
-   analizado las principales aproximaciones para la detección de RD y
-   DMAE, tanto de Machine Learning como de Deep Learning, que habían
-   sido publicadas hasta el momento.
+   ofrecer una visión general del funcionamiento y características de
+   los sistemas de Machine Learning, durante estas páginas se muestran
+   ejemplos de las aplicaciones médicas de los mismos.
+4. **[Estado del arte en detección de RD y DMAE](#arte)**: Se analizan
+   las principales aproximaciones para la detección de RD y DMAE,
+   tanto de Machine Learning como de Deep Learning, publicadas hasta
+   el momento.
 5. **[Diseño de Sistema de Detección de RD y DMAE](#sistema)**: En
-   este capítulo se ha mostrado el sistema propuesto para la detección
-   de RD y DMAE. También se han detallado las características de todos
-   los conjuntos de imágenes utilizados para el entrenamiento del
-   sistema y el sistema adicional para la interpretacción de las
-   predicciones.
+   este capítulo se muestra el sistema propuesto para la detección de
+   RD y DMAE. También se detallan las características de todos los
+   conjuntos de imágenes utilizados para el entrenamiento del sistema
+   y el sistema adicional para la interpretacción de las predicciones.
 6. **[Análisis de los resultados obtenidos](#resultados)**: Este
    capítulo detalla las evaluaciones realizadas al sistema presentado
    en el capítulo anterior.
-7. **[Conclusiones](#conclusiones)**: Para finalizar, se han analizado
-   las aportaciones realizadas por esta investigación, su
-   aplicabilidad en el mundo real y las posibles líneas de
-   investigación futuras que se abren en este momento.
+7. **[Conclusiones](#conclusiones)**: Para finalizar, se analizan las
+   aportaciones realizadas por esta investigación, su aplicabilidad en
+   el mundo real y las posibles líneas de investigación futuras que se
+   abren en este momento.

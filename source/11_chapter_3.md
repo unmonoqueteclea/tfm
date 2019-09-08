@@ -13,16 +13,16 @@ prácticamente imposible capturar toda la información relevante
 mediante una serie de reglas definidas de forma explícita
 [@schwartz1986artificial].
 
-El **Machine Learning** es la rama de la Intelicia Artificial que ha
-permitido crear **sistemas que aprendan de los datos sin necesidad de
-que se programen reglas específicas**. Esto ha supuesto una auténtica
-revolución en prácticamente cualquier sector profesional entre los
-que, por supuesto, se encuentra también la medicina. Estos sistemas
-buscan, de forma automática, **patrones** en los datos que les
-permitan predecir una variable objectivo en función de una serie de
-variables de entrada del sistema. De esta forma se crea un **modelo**
-que, idealmente, será capaz de generalizar y obtener la salida
-correcta para nuevas entradas nunca vistas. Esto se conoce como
+El **Machine Learning** es la rama de la Inteligencia Artificial que
+ha permitido crear **sistemas que aprendan de los datos sin necesidad
+de que se programen reglas específicas**. Esto ha supuesto una
+auténtica revolución en prácticamente cualquier sector profesional
+entre los que, por supuesto, se encuentra también la medicina. Estos
+sistemas buscan, de forma automática, **patrones** en los datos que
+les permitan predecir una variable objetivo en función de una serie
+de variables de entrada del sistema. De esta forma se crea un
+**modelo** que, idealmente, será capaz de generalizar y obtener la
+salida correcta para nuevas entradas nunca vistas. Esto se conoce como
 **Aprendizaje Supervisado** aunque es importante mencionar que no es
 la única forma de Machine Learning o Aprendizaje Automático. ^[Existe
 también, por ejemplo, el Aprendizaje No Supervisado, que permite
@@ -42,12 +42,20 @@ Machine Learning podrá analizar, en segundos, más pacientes de los que
 verá un médico en toda su vida. Además, la cantidad de predictores
 distintos que manejará sería totalmente inviable para un humano.
 
-En la figura \ref{interes-ml} vemos como, a pesar de existir desde los
+En la Figura \ref{interes-ml} vemos como, a pesar de existir desde los
 años 60, el interés de la población en el Machine Learning ha
 experimentado un gran ascenso en los últimos años. La democratización
 del Machine Learning ha comenzado y multitud de empresas han empezado
 a usar modelos predictivos de Aprendizaje Automático en sus
 procesos. Existen 3 principales motivos en este crecimiento:
+
+![Interés, a lo largo del tiempo y en todo el mundo, del término
+Machine Learning en el buscador Google. Datos de Enero de 2014 a Julio
+de 2019. Un valor de 100 indica la popularidad máxima de un término,
+mientras que 50 y 0 indican que un término es la mitad de popular en
+relación con el valor máximo o que no había suficientes datos del
+término, respectivamente. Fuente de los datos: Google Trends
+\label{interes-ml}](source/figures/interes-ml.png){width=100%}
 
 - **Nuevos algoritmos**: Principalmente en la rama del Deep Learning,
   en los últimos años se ha producido una serie de importantes
@@ -68,10 +76,7 @@ procesos. Existen 3 principales motivos en este crecimiento:
   entre 2016
   y 2017. ^[https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read/]
 
-![Interés, a lo largo del tiempo y en todo el mundo, del término
-Machine Learning en el buscador Google. Datos de Enero de 2014 a Julio
-de 2019. Fuente de los datos: Google Trends
-\label{interes-ml}](source/figures/interes-ml.png){width=100%}
+
 
 
 ## IA, Big Data,  Machine Learning y Deep Learning
@@ -93,7 +98,7 @@ profesionales técnicos y académicos.
 Por otro lado, los campos de la **Inteligencia Artificial (IA)**, el
 **Machine Learning** y el **Deep Learning** sí que están más
 claramente definidos aunque, el hecho de que cada uno de ellos sea un
-subcampo del anterior (figura \ref{ia-ml}), a menudo da lugar a
+subcampo del anterior (Figura \ref{ia-ml}), a menudo da lugar a
 confusión. Llamamos **Inteligencia Artificial** a un conjunto de
 técnicas que tratan de que los ordenadores imiten, de alguna forma, el
 comportamiento humano.
@@ -101,7 +106,7 @@ comportamiento humano.
 ![El Machine Learning es un campo perteneciente a la Inteligencia
 Artificial. El Deep Learning, a su vez, es un campo dentro del Machine
 Learning. Elaboración propia
-\label{ia-ml}](source/figures/ia-ml.png){width=100%}
+\label{ia-ml}](source/figures/ia-ml.png){width=80%}
 
 El **Machine Learning** es un subcampo dentro de la IA, que consiste
 en un conjunto de técnicas y herramientas, principalmente
@@ -149,7 +154,7 @@ imágenes [@krizhevsky2012imagenet], reconocimiento del habla
 partículas [@baldi2014searching] o reconstrucción de los circuitos
 cerebrales [@helmstaedter2013connectomic], entre muchas otras.
 
-Como vemos en la figura \ref{interes-ai} el término Big Data, que
+Como vemos en la Figura \ref{interes-ai} el término Big Data, que
 durante mucho tiempo estuvo en cabeza en popularidad, ha perdido
 fuerza en los últimos años mientras que Machine Learning y Deep
 Learning (en menor medida) siguen creciendo.
@@ -157,7 +162,10 @@ Learning (en menor medida) siguen creciendo.
 ![Interés, a lo largo del tiempo y en todo el mundo, de los término
 Machine Learning (en azul), Deep Learning (en rojo) y Big Data (en
 amarillo) en el buscador Google. Datos de Enero de 2014 a Julio
-de 2019. Fuente de los datos: Google Trends
+de 2019. Un valor de 100 indica la popularidad máxima de un término,
+mientras que 50 y 0 indican que un término es la mitad de popular en
+relación con el valor máximo o que no había suficientes datos del
+término, respectivamente. Fuente de los datos: Google Trends
 \label{interes-ai}](source/figures/interes-ai.png){width=80%}
 
 
@@ -165,9 +173,9 @@ de 2019. Fuente de los datos: Google Trends
 Una red neuronal consiste en un conjunto de nodos, conocidos como
 **neuronas**, conectados entre si para transmitirse señales. Estas
 neuronas suelen estar dispuestas en una serie de **capas**, en las
-que, comúnmente, cada neurona de una capa está conectado a todas las
+que, comúnmente, cada neurona de una capa está conectada a todas las
 neuronas de las capas anteriores. De esta forma, la salida de unas
-neuronas pasa a ser la entrada de otras (figura \ref{neural-network}).
+neuronas pasa a ser la entrada de otras (Figura \ref{neural-network}).
 
 ![Representación de una red neuronal con dos capas ocultas. Cada uno
 de los círculos representa una neurona. Elaboración propia
@@ -178,7 +186,7 @@ entradas tiene asociado un peso. La neurona utiliza la función de
 activación ReLU. Elaboración propia
 \label{single-neuron}](source/figures/single-neuron.png){width=90%}
 
-La figura \ref{single-neuron} representa las operaciones realizadas
+La Figura \ref{single-neuron} representa las operaciones realizadas
 por una sola neurona durante la predicción. Estas mismas operaciones
 son realizadas en todas las neuronas de la red. Cada neurona combina
 sus entradas con un conjunto de coeficientes o pesos. Las entradas
@@ -236,11 +244,12 @@ gradiente (ecuación \ref{eq:train5}), bucando así **minimizar el
 error**. El valor $\alpha$ representa lo que conocemos como **learning
 rate** o **factor de aprendizaje** y se encarga de controlar la
 velocidad a la que la red neuronal aprende. Es muy importante la
-elección correcta de este parámetro pues, un valor demasiado bajo
+elección correcta de este parámetro, pues, un valor demasiado bajo
 supondrá que la red tarde muchas iteraciones en encontrar el mínimo de
-la función de coste. Sin embaro, un valor demasiado alto puede suponer
-que la red no sea capaz de converger y encontrar este mínimo. Este
-proceso completo es lo que conocemos como **descenso de gradiente**.
+la función de coste. Sin embargo, un valor demasiado alto puede
+suponer que la red no sea capaz de converger y encontrar este
+mínimo. Este proceso completo es lo que conocemos como **descenso de
+gradiente**.
 
 \begin{equation} \label{eq:train5}
  w_{ij} =  w_{ij} - \alpha\frac{\partial L(X,y)}{\partial w_{ij}}
@@ -256,24 +265,25 @@ El origen de las redes neuronales es el **Perceptrón**, desarrollado
 en los años 60, que era una red simple de una sola capa de entrada y
 una capa de salida. Sin embargo, fue en los años 80 cuando estas
 comenzaron a desarrollar su verdadero potencial gracias al algoritmo
-de **backpropagation**, que permitió que se añadieran nuevas capas
+de *backpropagation*, que permitió que se añadieran nuevas capas
 intermedias a las redes neuronales, conocidas como **capas
-ocultas**. La técnica de backpropagation no es más que una aplicación
-de la regla de la cadena de las derivadas que permite propagar el
-error calculado al final de la red a todas las capas de ésta. En la
-ecuación \ref{eq:train6} podemos ver un ejemplo de como aplicar la
-regla de la cadena de las derivadas para obtener la derivada de la
-función de coste en función de los pesos. De la misma forma, podríamos
-aplicar la regla de la cadena para obtener la derivada de la función
-de coste en función de los pesos de varias capas atrás.
+ocultas**. La técnica de *backpropagation* no es más que una
+aplicación de la regla de la cadena de las derivadas que permite
+propagar el error calculado al final de la red a todas las capas de
+ésta. En la ecuación \ref{eq:train6} podemos ver un ejemplo de como
+aplicar la regla de la cadena de las derivadas para obtener la
+derivada de la función de coste en función de los pesos. De la misma
+forma, podríamos aplicar la regla de la cadena para obtener la
+derivada de la función de coste en función de los pesos de varias
+capas atrás.
 
 \begin{equation} \label{eq:train6}
  \frac{\partial L(X,y)}{\partial  w_{ij}} =  \frac{\partial L(X,y)}{\partial out(X)} \frac{\partial out(X)}{\partial  w_{ij}}
 \end{equation}
 
-Gracias a la técnica de backpropagation, podemos propagar el error a
+Gracias a la técnica de *backpropagation*, podemos propagar el error a
 lo largo de las capas, para calcular en cada una el vector de
-gradiente y actualizar con él los pesos. El backpropagation ha
+gradiente y actualizar con él los pesos. El *backpropagation* ha
 permitido, por lo tanto, añadir **nuevas capas intermedias** a las
 redes.
 
@@ -291,7 +301,7 @@ aprender representaciones de los datos con **múltiples capas de
 abstracción** [@lecun2015deep].
 
 En las redes profundas, cada capa de neuronas se entrena,
-automáticamente, en un conjunto de características distinto, en base a
+automáticamente, en un conjunto de características distinto en base a
 la salida de la capa anterior. A medida que avanzamos a través de la
 red, las características que las neuronas son capaces de detectar son
 más complejas, ya que agregan y recombinan características de capas
@@ -301,6 +311,13 @@ tratar datasets de muy alta dimensionalidad. Las redes neuronales
 profundas realizan por lo tanto **extracción automática de
 características** sin la necesidad de la intervención de un humano
 [@lecun2015deep].
+
+Otra técnica a destacar, que será usada en los sistemas diseñados, es
+la técnica del **dropout**. Esta técnica de regularización trata de
+evitar el sobreajuste de la red ignorando de forma aleatoria, durante
+el entrenamiento, la salida de algunas neuronas. De esta forma, se
+fuerza a la red neuronal a encontrar patrones más robustos, evitando
+así que aprenda el *ruido* de nuestro conjunto de datos.
 
 ### Redes neuronales convolucionales
 La capacidad de las redes neuronales de encontrar patrones complejos
@@ -312,11 +329,11 @@ tratan con señales (imágenes, audios, etc).
 
 La aparición de las **Redes Neuronales Convolucionales (CNN por sus
 siglas en inglés)** permitió eliminar la extracción de características
-y delegarla en el propio algoritmo de backpropagation. De esta forma,
-es posible usar como entradas de nuestro modelo los *datos en bruto*
-(píxeles de las imágenes o muestras de audio). Un momento clave para
-las redes convolucionales fue en 2012, en el **ImageNet Large Scale
-Visual Recognition Challenge (ILSVRC)**
+y delegarla en el propio algoritmo de *backpropagation*. De esta
+forma, es posible usar como entradas de nuestro modelo los *datos en
+bruto* (píxeles de las imágenes o muestras de audio). Un momento clave
+para las redes convolucionales fue en 2012, en el **ImageNet Large
+Scale Visual Recognition Challenge (ILSVRC)**
 ^[http://image-net.org/challenges/LSVRC/] cuando una solución novedosa
 basada en CNNs [@krizhevsky2012imagenet] obtuvo, de forma holgada, la
 primera posición en la competición.
@@ -340,12 +357,12 @@ las CNN poseen un cierto grado de **invarianza a la distorsión y al
 desplazamiento**. Esto permite que podamos usar este tipo de redes sin
 apenas pre-procesamiento de las imágenes.
 
-Las redes convolucionales constan de **capas convolucionales** y
-**capas de reducción (o pooling)** alternadas.
+Las CNN constan de **capas convolucionales** y **capas de reducción (o
+pooling)** alternadas.
 
 En las **capas de convolución** se aplican una serie de **filtros** a
 las imágenes (cuyos pesos son parámetros modificados durante el
-entrenamiento por el algoritmo de backpropagation). En ellas se
+entrenamiento por el algoritmo de *backpropagation*). En ellas se
 producen también las **transformaciones no lineales (ReLU)**. Cada uno
 de los filtros se desplazará sobre toda la imagen calculándose, en
 cada posición, el producto escalar entre la región de la imagen y los
@@ -357,7 +374,7 @@ filtro, es el que da nombre a estas capas. Estos filtros hacen de
 **detectores de características**. Precisamente el desplazamiento de
 ese filtro por toda la imagen es lo que nos permitirá detectar formas
 y patrones en cualquier posición de la imagen, consiguiendo así la
-deseada invarianza al desplazamiento. En la figura \ref{lena} podemos
+deseada invarianza al desplazamiento. En la Figura \ref{lena} podemos
 ver el efecto de la convolución sobre una imagen.
 
 ![Resultado de la convolución de una imagen con un filtro Sobel de 3x3
@@ -368,9 +385,9 @@ https://victorzhou.com/blog/intro-to-cnns-part-1/
 En las **capas de reducción o pooling** se disminuye la cantidad de
 parámetros. Para ello, se obtiene el promedio o el máximo de una serie
 de regiones, reduciendo así el tamaño del mapa de características y
-contribuyendo a evitar el overfitting.. En función de si se obtiene el
-promedio o el máximo de las regiones, estas capas son de **Max
-Pooling** o de **Average Pooling**. La figura \ref{maxpool} representa
+contribuyendo a evitar el *overfitting*. En función de si se obtiene
+el promedio o el máximo de las regiones, estas capas son de **Max
+Pooling** o de **Average Pooling**. La Figura \ref{maxpool} representa
 este proceso.
 
 ![Representación del proceso de Max Pooling con un filtro de 2x2 sobre
@@ -383,7 +400,7 @@ capas como las de las redes tradicionales que, a partir de los
 parámetros extraídos por las capas convolucionales y de pooling,
 realizan las clasificaciones o regresiones finales.
 
-La figura \ref{conv} representa todo este proceso en un ejemplo de
+La Figura \ref{conv} representa todo este proceso en un ejemplo de
 reconocimiento de dígitos en imágenes. En ella podemos ver la salida
 de los filtros de las dos capas convolucionales que tiene la
 arquitectura del ejemplo.
@@ -395,7 +412,7 @@ http://scs.ryerson.ca/~aharley/vis/conv/flat.html
 \label{conv}](source/figures/conv.png){width=100%}
 
 
-El funcionamiento del algoritmo de **backpropagation** en las redes
+El funcionamiento del algoritmo de *backpropagation* en las redes
 convolucionales es practicamente igual que en las no convolucionales,
 por lo que no supone demasiada dificultad teórica añadida para el
 entrenamiento. La red será capaz de encontrar, durante el
@@ -404,17 +421,16 @@ características adecuadas para predecir correctamente nuestra clase
 objetivo.
 
 
-Las redes convolucionales explotan la propiedad de que, los patrones
-que detectan, no son más que composiciones de otros patrones más
-simples. En una imágen, por ejemplo, mediante la composición de varias
-líneas simples damos lugar a motivos que, de nuevo mediante
-composición, dará lugar a las formas de los objetos. La detección de
-cada uno de estos niveles de abstracción corresponderá a unas capas
-concretas de nuestra red convolucional, siendo las primeras capas las
-que detectarán características más simples como líneas, bordes o
-colores y las últimas capas las que detectarán elementos compuestos
-mucho más complejos. Esto es conocido como la **jerarquía de las
-capas**.
+Las CNN explotan la propiedad de que, los patrones detectados, no son
+más que composiciones de otros patrones más simples. En una imágen,
+por ejemplo, mediante la composición de varias líneas simples damos
+lugar a motivos que, de nuevo mediante composición, dará lugar a las
+formas de los objetos. La detección de cada uno de estos niveles de
+abstracción corresponderá a unas capas concretas de nuestra red
+convolucional, siendo las primeras capas las que detectarán
+características más simples como líneas, bordes o colores y las
+últimas capas las que detectarán elementos compuestos mucho más
+complejos. Esto es conocido como la **jerarquía de las capas**.
 
 Existe una gran cantidad de arquitecturas de redes convolucionales,
 que han demostrado ser eficaces en diversos campos. Ejemplos de ellas
@@ -428,7 +444,7 @@ pueden ser las siguientes:
 - **Alexnet**: Fue la ganadora en 2012 del concurso ILSVRC
   [@krizhevsky2012imagenet], con una arquitectura similar a LeNet pero
   más profunda, con cerca de 60 millones de parámetros y haciendo uso,
-  entre otra novedades, de la función de activación ReLU.
+  entre otras novedades, de la función de activación ReLU.
 - **VGGNet**: Fue presentada en 2014 [@simonyan2014very], y aún sigue
   siendo la arquitectura preferida por la comunidad para la extracción
   de características de imágenes. Fue la primera arquitectura de CNNs
@@ -445,82 +461,7 @@ pueden ser las siguientes:
   nivel, cuyas salidas serían concatenadas. El objetivo era crear
   redes *más anchas* en vez de *más profundas*.
 
-## Evaluación de sistemas de Machine Learning
-<!--
-    Comienzo: 189 Mayo
-    Fin V1:
-    Papers útiles: (P2 pag 112)
-    Webs:
--->
 
-Un paso tan importante como el modelado en un proyecto de análisis de
-datos es la evaluación de los resultados. Es de gran importancia
-establecer medidas que nos permitan saber cómo se está comportando
-nuestro modelo. En la literatura existe una gran cantidad de métricas,
-aunque en este caso nos centraremos en algunas de las más comunes en
-problemas de este tipo.
-
-El problema analizado en este trabajo es un problema de
-**clasificación**, es decir la variable objetivo (la que predecimos)
-solo puede tomar un conjunto de valores discretos. Además, como
-veremos más adelante, lo que inicialmente era un problema con tres
-posibles clases (RD/DMAE/Sano) también puede descomponerse en **dos
-problemas de clasificación binaria** (RD/Sano) (DMAE/Sano). Se trata
-de predecir una clase con sólo dos posibles valores. Cuando en un
-problema de este tipo comparamos la predicción realizada por un modelo
-con el *ground truth* (es decir, la clase que realmente correspondería
-a esa instancia), pueden darse 4 posibles casos:
-
-- **Verdadero Positivo (o True Positive, TP)**: El sistema predice que
-  el paciente **SÍ** tiene la enfermedad y acierta.
-- **Verdadero Negativo (o True Negative, TN)**: El sistema predice que
-  el paciente **NO** tiene la enfermedad y acierta.
-- **Falso Negativo (o False Negative, FN)**: El sistema predice,
-  erróneamente, que el paciente **NO** tiene la enfermedad cuando en
-  realidad sí que la tiene.
-- **Falso Positivo (o False Positive, FP)**: El sistema predice,
-  erróneamente, que el paciente **SÍ** tiene la enfermedad cuando en
-  realidad no la tiene.
-
-
-A partir de la cantidad de predicciones de cada uno de estos posibles
-4 tipos se pueden definir una serie de medidas muy comunes en
-problemas de este tipo.
-
-La métrica más común, conocida como **Accuracy** o **Exactitud**, mide
-el porcentaje de aciertos del sistema (ecuacion \ref{eq:accuracy}). Esta
-métrica carece de utilidad cuando tenemos conjuntos de datos
-desbalanceados.
-
-\begin{equation} \label{eq:accuracy}
- \frac{TP+TN}{TP+TN+FN+FP}
-\end{equation}
-
-La **Sensibilidad** mide la proporción de los pacientes que **Sí**
-tienen la enfermedad que nuestro clasificador ha sido capaz de
-detectar (ecuación \ref{eq:sensibilidad})
-
-\begin{equation} \label{eq:sensibilidad}
- \frac{TP}{TP+FN}
-\end{equation}
-
-La **Especificidad**, en cambio, mide proporción de los pacientes que
-**No** tienen la enfermedad que nuestro clasificador ha sido capaz de
-detectar (ecuacion \ref{eq:especificidad})
-
-\begin{equation} \label{eq:especificidad}
- \frac{TN}{TN+FP}
-\end{equation}
-
-En función del campo de aplicación de los modelos, unas métricas toman
-más importancia que otras. Incluso es común tener **umbrales de
-actuación** en nuestros modelos que nos permitan elegir el punto de
-equilibrio deseado entre sensibilidad y especificidad. Un modelo que
-trata de predecir la presencia de una enfermedad siempre tratará de
-enfocarse más en obtener una buena **sensibilidad** antes de centrarse
-en la **especificidad**. El coste de predecir erróneamente que un
-paciente tiene una enfermedad, es menor al de no haber detectado la
-enfermedad en un paciente que sí que la tenía.
 
 ## Transfer Learning
 La mayoría de métodos de Machine Learning asumen que los datos de
@@ -546,11 +487,11 @@ cualquier ser humano].
 
 ### Transfer Learning con imágenes
 En la práctica, cada vez es menos común el entrenamiento de redes
-convolucionales desde 0.  Existen 2 principales motivos:
+convolucionales *from scratch*.  Existen 2 principales motivos:
 
 - En determinados ámbitos, no siempre existen datasets con una gran
   cantidad de imágenes, suficiente para entrenar una red convolucional
-  desde 0.
+  desde cero.
 - Aún existiendo dicho dataset, el tiempo necesario para su completo
   entrenamiento puede ser de días, semanas o incluso meses dependiendo
   del equipo usado, la cantidad de datos y la complejidad de la
@@ -562,13 +503,13 @@ Learning:
 - **Red convolucional como extractor de características**: Como se ha
   analizado anteriormente, una red convolucional puede ser vista como
   una herramienta para extraer características de las imágenes que
-  posteriormente serán usadas por capas *fully conencted* (o por
+  posteriormente serán usadas por capas *fully connected* (o por
   cualquier otro tipo de clasificador) para realizar la
   clasificación. Conociendo esto, podemos utilizar la red
   convolucional entrenada para un conjunto de imágenes en otro
   conjunto de imágenes distinto, siendo el clasificador final el único
   que tendrá que ser reentrenado.
-- **Fine-tunning de la red convolucional** Como se ha analizado
+- **Fine-tuning de la red convolucional** Como se ha analizado
   anteriormente, las capas iniciales de las redes convolucionales se
   encargan de detectar características más generales y patrones
   simples, que van siendo más complicados a medida que avanzamos hacia
@@ -588,9 +529,8 @@ cada caso dependen principalmente de las diferencias de contenido y
 tamaño entre las imágenes de nuestro dataset y las del dataset
 original (con el que se entrenó el modelo que vamos a reutilizar)
 
-Es común usar las siguientes **rules of thumb** como guía en función
-de 4 posibles escenarios:
-^[http://cs231n.github.io/transfer-learning/]
+Es común usar las siguientes *rules of thumb* como guía en función de
+4 posibles escenarios: ^[http://cs231n.github.io/transfer-learning/]
 
 - **El nuevo dataset es pequeño pero similar al original**: Al
   tratarse de un dataset pequeño, modificar las capas convolucionales
@@ -613,6 +553,7 @@ de 4 posibles escenarios:
   será de utilidad comenzar nuestro entrenamiento a partir de un
   modelo pre-entrenado.
 
+\newpage
 ## Explicabilidad las redes convolucionales
 Para la introducción de técnicas basadas en Deep Learning en diversos
 sectores profesionales (siendo la medicina uno de ellos), tan
@@ -631,16 +572,17 @@ son las zonas de una imagen que más han influido en una
 predicción. Para ello, esta técnica usa los gradientes específicos de
 cada clase que fluyen hasta la última capa convolucional para producir
 un mapa de calor con las zonas de interés para la detección de esa
-clase (figura \ref{gradcam}). Esta técnica no requiere modificar la
-arquitectura de la red ni volver a entrenarla.
+clase (Figura \ref{gradcam}).
 
 ![Mapas de atención generados por Grad-Cam para distintas clases de
 Imagenet. Fuente: https://github.com/raghakot/keras-vis
-\label{gradcam}](source/figures/grad-cam.png){width=100%}
+\label{gradcam}](source/figures/grad-cam.png){width=70%}
 
-Además, esta técnica permite obtener la localización aproximada de los
-objetos detectados en la imagen, aunque durante el entrenamiento no se
-haya utilizado ningún tipo de información de localización.
+
+Esta técnica no requiere modificar la arquitectura de la red ni volver
+a entrenarla. Además, permite obtener la localización aproximada de
+los objetos detectados en la imagen, aunque durante el entrenamiento
+no se haya utilizado ningún tipo de información de localización.
 
 
 ## Aplicaciones médicas del Machine Learning
@@ -697,29 +639,29 @@ simplemente se limitaban a pedir una serie de datos sobre el paciente,
 y obtenían conclusiones a partir de una serie de reglas que
 previamente habían tenido que ser definidas por especialistas. Sin
 embargo, con sistemas basados en Machine Learning, **estas reglas son
-automáticamente inferidas a partir de datos históricos** (figura
+automáticamente inferidas a partir de datos históricos** (Figura
 \ref{tradicional}). Una de las principales características del Machine
 Learning, que le hace destacar sobre otros métodos tradicionales, es
 su capacidad de manejar enormes cantidades de predictores y encontrar
 complicados patrones en ellos.
 
 ![Diferencias ente Software tradicional y Machine
-learning. Elaboración propia. Inspirado por @fchollet
+learning. Elaboración propia.
 \label{tradicional}](source/figures/tradicional.png){width=85%}
 
 
 Además, debido a la gran cantidad de información no estructurada
-existente (imágenes, señales, textos, etc) en medicina, como era de
+existente (imágenes, señales, textos, etc.) en medicina, como era de
 esperar, el **Deep Learning** puede jugar un papel esencial,
 permitiendo que los datos *hablen por sí mismos*. Sin embargo, en todo
 momento tenemos que tener presente que nuestras evaluaciones pueden
 ser demasiado optimistas o que el sobreajuste puede hacer que nuestros
 modelos dejen de funcionar al ponerlos en producción. Tener una
 Inteligencia Artificial explicable, de la que no solo obtengamos
-predicciones sino el por qué de las mismas, es algo que hará más fácil
-la entrada de estos algoritmos en el día a día de los médicos.
+predicciones sino el por qué de las mismas, es algo que facilitará la
+entrada de estos algoritmos en el día a día de los médicos.
 
-A continuación se detallarán los ámbitos, dentro del campo de la
+A continuación se detallarán los ámbitos dentro del campo de la
 medicina en la que el Aprendizaje Automático puede realizar
 importantes contribuciones.
 
@@ -727,7 +669,7 @@ importantes contribuciones.
 El Machine Learning nos puede ayudar, mediante la búsqueda de
 patrones, en la predicción de la evolución de un enfermo. En varios
 servicios de salud existen ya implantados sistemas que, mediante
-Machine Learning son capaces de identificar a los pacientes que están
+Machine Learning, son capaces de identificar a los pacientes que están
 en riesgo de tener que ser transferidos a las unidades de cuidados
 intensivos. [@escobar2016piloting]. Además, diversos estudios sugieren
 que se pueden crear eficaces modelos de pronóstico médico a partir de
@@ -744,9 +686,9 @@ los últimos años con este propósito.
 Según concluye la Academia Nacional de Ciencias de EEUU, prácticamente
 todos los pacientes serán diagnosticados de forma errónea al menos una
 vez en su vida [@ball2015improving].  Diversos estudios han encontrado
-problema sistemáticos en los servicios de salud de todo el mundo. Hay
+problemas sistemáticos en los servicios de salud de todo el mundo. Hay
 evidencias de que, en los sistemas en los que los servicios de
-diagnóstico y tratamiento los realiza una misma organización,
+diagnóstico y tratamiento los realiza una misma organización
 obteniendo mayores ingresos la compañía mediante la prescripción de
 medicamentos y la solicitud de nuevas pruebas médicas, la tendencia a
 hacerlo aumenta considerablemente [@currie2014addressing].
@@ -810,7 +752,7 @@ problema en técnicas de Deep Learning, que siempre han sido tachadas
 de ser **cajas negras**. Sin embargo, en los últimos años se han
 realizado diferentes estudios que demuestran que los modelos de Deep
 Learning pueden ser interpretables con las herramientas
-adecuadas. [@cruz2013deep] [@zhang2018visual] [@lipton2016mythos].
+adecuadas. [@cruz2013deep], [@lipton2016mythos], [@zhang2018visual].
 
 ## Correlación no implica causalidad
 Aunque sea un mantra repetido hasta la saciedad en la literatura, esta
@@ -835,7 +777,7 @@ Si alguna vez el lector divisa a un sujeto disfrazado de pirata, no lo
 tome por loco. Ese sujeto podría ser un seguidor de **Bobby
 Henderson**, creador de la iglesia pastafari que, cansado de
 argumentos de los creacionistas basados en esta falacia, realizó un
-estudio (figura \ref{piratas}) en el que demostraba una clara
+estudio (Figura \ref{piratas}) en el que demostraba una clara
 correlación entre la temperatura global y el descenso del número de
 piratas (un claro ejemplo de la existencia de una variable oculta, el
 tiempo). Es común, desde entonces, que los seguidores de Henderson se
@@ -850,8 +792,8 @@ https://www.jotdown.es/2016/06/correlacion-no-implica-causalidad/
 
 Otro ejemplo curioso es la singular correlación entre el número de
 ahogados en piscinas en Estados Unidos y el número de apariciones en
-películas de Nicholas Cage (figura \ref{cage}), en este caso una clara
-correlación espúrea. Si se torturan los datos durnate el tiempo
+películas de Nicholas Cage (Figura \ref{cage}), en este caso una clara
+correlación espúrea. Si se torturan los datos durante el tiempo
 suficiente, éstos confesarán lo que deseemos.
 
 ![Correlación entre el número de ahogados en piscinas de Estados

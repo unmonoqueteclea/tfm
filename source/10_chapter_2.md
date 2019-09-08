@@ -42,7 +42,7 @@ transformación en impulsos eléctricos.  Este punto donde convergen
 todos los rayos de luz, que será objeto de estudio durante este
 trabajo, es conocido como **retina**.
 
-La anatomía y fisiología ocular (figura \ref{ojohumano}) es similar en
+La anatomía y fisiología ocular (Figura \ref{ojohumano}) es similar en
 la mayoría de los vertebrados.  El globo ocular, que contiene el resto
 de elementos del sistema, es una esfera llena de **humor acuoso**, que
 es un líquido compuesto en un 99% por agua. El constante flujo de este
@@ -92,14 +92,8 @@ posteriormente viajarán por el nervio óptico hasta el cerebro, que
 será capaz de procesar y comprender la imagen recibida.
 
 ### La retina y su importancia
-<!-- 1 día
-     Comienzo: 15 Mayo
-     Fin V1: 18 Mayo
-     Papers útiles: (P0) (P7) (P8)
-     Webs:
--->
 
-La palabra **retina** procede del latín mediaval **rete** o **retis**
+La palabra **retina** procede del latín medieval **rete** o **retis**
 (red). Toma ese nombre debido a la gran red de vasos sanguíneos que la
 forman. Utilizando términos de ingeniería, la retina es el transductor
 en el proceso de visión. Es la capa de tejido sensible a la luz
@@ -110,7 +104,7 @@ debido a la inmensa cantidad de vasos sanguíneos que existen detrás de
 ella.
 
 A nivel macroscópico, la retina está formada por los siguientes
-elementos (figura \ref{retina}):
+elementos (Figura \ref{retina}):
 
 - **Papila o disco óptico**: Conocido como *punto ciego* debido a la
   ausencia de fotoreceptores, es el punto de entrada del nervio óptico
@@ -118,7 +112,7 @@ elementos (figura \ref{retina}):
   circular de color amarillo. A través del disco óptico entra al globo
   ocular la arteria central de la retina y sale la vena central de la
   retina. En el disco óptico encontramos también una excavación
-  fisiológica conocida como **cúpula**. Su tamaño, y más
+  fisiológica conocida como **cúpula** o **copa**. Su tamaño, y más
   concretamente, el cociente entre su diámetro y el del disco óptico
   es un buen indicador para la detección de la enfermedad conocida
   como glaucoma.
@@ -146,9 +140,9 @@ propia) \label{retina}](source/figures/sitnice.eps){width=90%}
 A nivel microscópico, la retina tiene una estructura compleja formada
 por varias capas de neuronas interconectadas. Existen dos tipos
 principales de fotoreceptores en la retina: los **conos** y los
-**bastones**. Las células de la retina presentan grandes similitudes con
-las del cerebro, apoyando la afirmación común de que el sistema visual
-es una extensión del sistema nervioso cetral [@zhu2001eye].
+**bastones**. Las células de la retina presentan grandes similitudes
+con las del cerebro, apoyando la afirmación común de que el sistema
+visual es una extensión del sistema nervioso central [@zhu2001eye].
 
 Estos receptores contienen unos productos químicos conocidos como
 **fotopigmentos**. Los fotopigmentos tienen la propiedad de
@@ -185,17 +179,12 @@ mesencéfalo del cerebro. Ya en el cerebro, esta información es
 procesada e interpretada por el **córtex visual**.
 
 ## Principales patologías de la retina
-<!-- 1 día
-    Comienzo: 18 Mayo
-    Fin V1:
-    Papers útiles:
--->
 
 Existen dos tipos principales de enfermedades que afectan a la retina:
 las enfermedades vasculares y las degenerativas. Durante este trabajo
 analizaremos dos de las más importantes: la **Retinopatía Diabética
 (RD)** y la **Degeneración Macular Asociada a la Edad (DMAE)**. En la
-figura \ref{enfermedades} podemos ver el efecto que tienen estas en la
+Figura \ref{enfermedades} podemos ver el efecto que tienen estas en la
 visión.
 
 ![Efectos en la visión de las enfermedades analizadas en este trabajo:
@@ -219,17 +208,12 @@ la pupila. El sensor de la cámara es un sensor RGB similar al de otros
 tipos de cámaras.
 
 ### Retinopatía Diabética
-<!-- 1 día
-    Comienzo:
-    Fin V1:
-    Papers útiles: (P1)
--->
 
-Las personas que sufren de diabetes presentan altos niveles de azucar
+Las personas que sufren de diabetes presentan altos niveles de azúcar
 en sangre debido a la incapacidad de su páncreas de generar suficiente
-insulina para distribuir el azucar (Diabetes Tipo I) o a la
+insulina para distribuir el azúcar (Diabetes Tipo I) o a la
 incapacidad del organismo de asimilar correctamente la insulina
-(Diabetes Tipo II). Estos altos niveles de azucar pueden producir
+(Diabetes Tipo II). Estos altos niveles de azúcar pueden producir
 daños en varios organismos presentes en nuestro cuerpo.
 
 La Retinopatía Diabética ocurre cuando, debido a la diabetes, se dañan
@@ -290,16 +274,16 @@ Las lesiones típicas derivadas de la Retinopatía Diabética son:
   de ojo debido a los puntos de sangrado en la retina. Suelen tener un
   tamaño de unos 125$\mu$m [@early1991grading].
 
-En la figura \ref{lesiones} podemos ver algunas de las lesiones
+En la Figura \ref{lesiones} se observan algunas de las lesiones
 descritas anteriormente.
 
 ![Lesiones típicas de la Retinopatía Diabética. Elaboración proia
 \label{lesiones}](source/figures/dr-example.png){width=70%}
 
 
-Además, como hemos visto anteriormente, en la DR Proliferativa se
+Además, como hemos visto anteriormente, en la RD Proliferativa se
 produce la neovascularización, aparición de nuevos vasos sanguíneos en
-la retina (figura \ref{vascular}).
+la retina (Figura \ref{vascular}).
 
 ![Ejemplo de retina en la que se ha producido neovascularización
 \label{vascular}](source/figures/vascular.png){width=70%}
@@ -352,15 +336,9 @@ las lesiones observadas \label{estadios_lesiones}
 Existen, incluso, estudios que han demostrado que los pacientes que
 padecen de Retinopatía Diabética Proliferativa, sufren más riesgo de
 tener ataques al corazón, amputaciones o nefropatía diabética
-[@acharya2009computer] [@klein1984wisconsin] [@cade2008diabetes].
+[@klein1984wisconsin], [@cade2008diabetes], [@acharya2009computer].
 
 ### Degeneración macular asociada a la edad
-<!-- 1 día
-    Comienzo: 18 Mayo
-    Fin V1:
-    Papers útiles:
--->
-
 
 La Degeneración Macular Asociada a la Edad (DMAE) afecta a la mácula
 provocando que, quien la sufre, comience a ver imágenes desenfocadas o
@@ -369,19 +347,20 @@ la mácula permite la visión central, y su degeneración afecta
 directamente al día a día del paciente incapacitándolo para hacer
 tareas comunes como pueden ser la lectura o la conducción.
 
-Aunque en sus primeros estadios la progresión de la enfermedad sea
-muy lenta y el paciente puede que únicamente perciba un ligero cambio
-en su visión, en fases avanzadas la DMAE puede provocar la pérdida
-total de la visión central.
-
-Si es detectada a tiempo, la DMAE puede ser retardada y mitigada
-mediante vitaminas y minerales.
+Aunque en sus primeros estadios la progresión de la enfermedad sea muy
+lenta y el paciente puede que únicamente perciba un ligero cambio en
+su visión, en fases avanzadas la DMAE puede provocar la pérdida total
+de la visión central. Si es detectada a tiempo, la DMAE puede ser
+retardada y mitigada mediante vitaminas y minerales.
 
 El principal signo de DMAE en las imágenes de fondo de ojo es la
 aparición de las **drusas**, depósitos amarillos localizados bajo la
-retina, procedentes de la acumulación de minerales. En función del
-número y tamaño de drusas, podemos definir tres estadios en la
-enfermedad:
+retina, procedentes de la acumulación de minerales. En la Figura
+\ref{drusen} se observa la forma de las drusas. En función del número
+y tamaño de drusas, podemos definir tres estadios en la enfermedad:
+
+![Retina con drusas a causa de DMAE
+\label{drusen}](source/figures/drusen.png){width=80%}
 
 - **Estadio inicial**: En este estadio existe un reducido número de
   drusas redondas y de pequeño tamaño (menos de 125 $\mu$m). Además,
@@ -403,21 +382,12 @@ enfermedad:
   - **DMAE húmeda o exudativa**: En la DMAE húmeda, crece una membrana
     vascular bajo la retina. De la misma forma que en la Retinopatía
     Diabética Proliferativa, estos nuevos vasos sanguíneos son muy
-    frágiles y pueden romperse derramando líquido que afectará
+    frágiles y pueden romperse derramando líquido, lo que afectará
     severamente a la visión.
-
-![Retina con drusas a causa de DMAE
-\label{drusen}](source/figures/drusen.png){width=70%}
 
 
 
 ### Sistemas de diagnóstico
-<!--
-    Comienzo: 18 Mayo
-    Fin V1:
-    Papers útiles:
-    Webs:
--->
 
 Uno de los grandes problemas de la Retinopatía Diabética es que no
 existe ninguna señal que nos avise en estadios muy tempranos de la
@@ -433,7 +403,7 @@ manejar y de transportar. Además, las cámaras de fondo de ojo pueden
 capturar la información de la retina mediante técnicas no
 invasivas. En función de la patología que se intente diagnosticar,
 estas imágenes están centradas en la mácula o en el disco óptico. La
-figura \ref{retina} analizada anteriormente para explicar las partes
+Figura \ref{retina} analizada anteriormente para explicar las partes
 de la retina, es un ejemplo de las imágenes que proporcionan este tipo
 de cámaras, con tamaños de hasta 16 megapíxeles. Es por ello por lo
 que la fotografía de fondo de ojo es el sistema más utilizado en los
@@ -463,8 +433,8 @@ ya se realizaba de forma manual por un profesional.
 Además, según se ha puesto de manifiesto en previos estudios, los
 profesionales difieren en numerosas ocasiones en el diagnóstico de los
 diferentes estados de este tipo de patologías, debido a que existe un
-cierto grado de subjetividad [@sellahewa2014grader]
-[@ruamviboonsuk2005screening].
+cierto grado de subjetividad [@ruamviboonsuk2005screening],
+[@sellahewa2014grader].
 
 Las técnicas ARIA se basaron en los últimos años en la **extracción de
 manual de caráctrísticas** de las imágenes de fondo de ojo, que
@@ -484,8 +454,8 @@ poder mucho mayor de predicción, puesto que toda la red ha sido
 entrenada para ello.
 
 Sin embargo, la naturaleza del problema, la **falta de
-estandarización** y la **escasa cantidad de imágenes etiquetadas**, ha
-provocado que estos sistemas tuvieran serias dificultades para su
+estandarización** y la **escasa cantidad de imágenes etiquetadas**,
+han provocado que estos sistemas tuvieran serias dificultades para su
 aplicación general.
 
 Esta aproximación al problema del diagnóstico de la RD y DMAE plantea

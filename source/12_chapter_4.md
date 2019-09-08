@@ -1,11 +1,4 @@
 # Estado del arte en detección de RD y DMAE {#arte}
-<!-- Comienzo: Sabado, 9 de Junio
-     Previsión:
-     Papers útiles:  Practicamente todos (P5 es resumen)
-     Fin previsto versión 1: Domingo
-     Fin versión 1: 16 Junio
--->
-
 A lo largo de este capítulo se analizará el estado del arte de la
 detección de **Retinopatía Diabética** y **Degeneración Macular
 Asociada a la Edad** a partir de imágenes de fondo de ojo. En la
@@ -21,12 +14,11 @@ las métricas de evaluación de los algoritmos que se detallarán a lo
 largo de este capítulo, puesto que cada modelo habrá sido entrenado y
 evaluado con datos distintos. De hecho, muchos de estos modelos han
 sido entrenados con conjuntos de apenas 100 o 200 imágenes, lo que
-hace muy probable que exista **sobreajuste (u overfitting)** y que el
-resultado de ponerlos en producción sea mucho peor del esperado.
+hace muy probable que exista **sobreajuste** (u *overfitting*) y que
+el resultado de ponerlos en producción sea mucho peor del esperado.
 
 
 ## Aproximaciones basadas en Machine Learning
-<!-- Papers utiles: (P37) (P38) (P39) (P40) -->
 
 Las modelos basados en Machine Learning para la detección de
 patologías en imágenes de fondo de ojo requieren una gran cantidad de
@@ -55,7 +47,7 @@ enfermedad, e incluso, estimar su gravedad.
 
 Muchos de estos modelos comienzan por la obtención de imágenes
 binarias que representaran los **vasos sanguíneos** presentes en la
-imagen de la retina (figura \ref{venas}). La longitud, tamaño o
+imagen de la retina (Figura \ref{venas}). La longitud, tamaño o
 posición de los mismos son de gran ayuda para el diagnóstico de la
 RD. Mediante la aplicación de una serie de técnicas al canal verde de
 las imágenes de fondo de ojo, es posible aislar estos vasos del resto
@@ -82,7 +74,7 @@ realiza habitualmente junto con la detección de los vasos sanguíneos.
 La presencia de **exudados** es el síntoma más característico de
 RD. Para la detección de éstos es común comenzar por la eliminación de
 los vasos sanguíneos y el disco óptico de las imágenes. Una vez
-eliminados este elementos, es posible detectar los exudados mediante
+eliminados estos elementos, es posible detectar los exudados mediante
 una secuencia de algoritmos de procesamiento de imágen
 [@acharya2009computer]. Técnicas más avanzadas, basadas en
 **clasificadores estadísticos** basados en los niveles de brillo y uso
@@ -114,15 +106,14 @@ demostrado ser eficaz en la detección de microaneurismas
 
 De la misma forma que muchas de las técnicas explicadas hasta ahora
 basan su predicción en la detección de alguna de las lesiones típicas
-de la retinopatía diabética, también existen sistemas más complejos
-que son capaces de detectar, de forma simultánea, los tres tipos de
-lesiones y realizar predicciones en base a la presencia de cada tipo
-de lesión mediante clasificadores como **árboles de decisión** o
-**redes neuronales** [@reza2011decision] [@ege2000screening]
-[@sinthanayothin2002automated]
-[@sinthanayothin2003automated]. Técnicas de aprendizaje no supervisado
-como el **FCM**^[Fuzzy c-means] también han demostrado ser eficaces en
-esta tarea [@osareh2002classification]
+de la RD, también existen sistemas más complejos que son capaces de
+detectar, de forma simultánea, los tres tipos de lesiones y realizar
+predicciones en base a la presencia de cada tipo de lesión mediante
+clasificadores como **árboles de decisión** o **redes neuronales**
+[@ege2000screening], [@sinthanayothin2002automated],
+[@sinthanayothin2003automated], [@reza2011decision]. Técnicas de
+aprendizaje no supervisado como el **FCM**^[Fuzzy c-means] también han
+demostrado ser eficaces en esta tarea [@osareh2002classification]
 
 Todas las investigaciones analizadas anteriormente trataban de
 predecir una variable binaria, la presencia o no de retinopatía
@@ -131,8 +122,9 @@ también el **tipo de RD** (Proliferativa o No Proliferativa). Estas
 técnicas han conseguido sensibilidad y especifidad de más del 95%
 [@mookiah2013evolutionary] mediante el uso de **redes
 neuronales**. Otros trabajos han intentado distinguir, con éxito,
-hasta **5 grados de RD** [@acharya2012integrated]
-[@acharya2008application] [@acharya2009computer]
+hasta **5 grados de RD**
+[@acharya2008application],[@acharya2009computer],
+[@acharya2012integrated].
 
 ### Detección de DMAE mediante Machine Learning
 A pesar de ser la mayor causa de ceguera en países desarrollados
@@ -152,7 +144,7 @@ El principal signo de DMAE, como se ha analizado en capítulos
 anteriores, es la aparición de **drusas**, que pueden ser observadas
 en la imágenes de fondo de ojo como pequeños conjuntos de manchas
 blancas y amarillas. Por lo tanto, este tipo de modelos tratarán de
-buscar estas lesiones en las imágenes. En la figura \ref{metodosamd}
+buscar estas lesiones en las imágenes. En la Figura \ref{metodosamd}
 vemos cuáles son las tareas principales en la detección de DMAE
 mediante Machine Learning.
 
@@ -171,8 +163,8 @@ detección diversas características calculadas a partir de los
 **histogramas** de las imágenes. Además, es común aplicar una
 **ecualización del histograma** como paso previo a la extracción de
 características para obtener un mayor contraste en las imágenes
-[@hijazi2010retinal] [@mookiah2014automated] [@mookiah2014decision]
-[@zheng2012automated]. Aplicar un **filtro de mediana** permite
+[@hijazi2010retinal], [@zheng2012automated], [@mookiah2014automated],
+[@mookiah2014decision]. Aplicar un **filtro de mediana** permite
 eliminar, antes de la extracción de características, el ruido de alta
 frecuencia de las imágenes [@kankanahalli2013automated]
 [@phan2016automatic]. El uso de técnicas de **morfología matemática**
@@ -199,11 +191,11 @@ grado de parecido entre el histograma de la imágen de fondo de ojo a
 predecir y cada uno de los histogramas de las imágenes del conjunto de
 datos de entrenamiento [@hijazi2010retinal]. También encontramos
 métodos basados en los algoritmos **Naive Bayes** o **SVM**
-[@garcia2017machine] [@zheng2011automated]. Sin embargo, otras
+[@zheng2011automated], [@garcia2017machine]. Sin embargo, otras
 publicaciones han tratado de detectar también la gravedad de la
 enfermedad (estableciendo 5 posibles grados) con algoritmos como
 **Random Forest**, **K-Nearest Neighbors** o **SVM**
-[@phan2016automatic] [@kankanahalli2013automated].
+[@kankanahalli2013automated], [@phan2016automatic].
 
 
 
@@ -241,10 +233,10 @@ demostrado ser muy efectiva en la detección de la RD proliferativa.
 [@gulshan2016development]. En este caso, se trataba de una
 clasificación binaria donde sólo existían dos posibles salidas
 (enfermo/sano). Sin embargo, muchos otros investigadores han tratado
-de detectar diferentes niveles de gravedad [@colas2016deep]
-[@quellec2017deep] [@costa2017convolutional]. Además, agunos de estos
+de detectar diferentes niveles de gravedad [@colas2016deep],
+[@quellec2017deep], [@costa2017convolutional]. Además, agunos de estos
 modelos son capaces de detectar también las lesiones concretas que
-aparecen en cada imagen [@quellec2017deep] [@colas2016deep]
+aparecen en cada imagen [@colas2016deep], [@quellec2017deep]
 
 Otros investigadores también han hecho uso, de forma satisfactoria, de
 la arquitectura **AlexNet** [@mansour2018deep], o **ResNet**
@@ -271,7 +263,7 @@ para solventar el problema de la falta de imágenes ha sido el
 **Transfer Learning**. Esta técnica ha sido aplicada utilizando, como
 base para nuestros modelos, otros modelos que habían sido previamente
 entrenados en otros datasets con todo tipo de imágenes
-[@maninis2016deep] [@li2017convolutional] o con datasets específicos
+[@maninis2016deep], [@li2017convolutional] o con datasets específicos
 de imágenes de fondo de ojo [@gondal2017weakly]. De ambas formas ha
 demostrado ser de utilidad, especialmente en los casos en los que el
 conjunto de imágenes de entrenamiento era demasiado reducido como para
@@ -287,7 +279,7 @@ clasificador. Prácticamente la totalidad de los modelos de Deep
 Learning de este tipo han hecho uso de **Redes Neuronales
 Convolucionales**. Estas redes han sido entrenadas desde 0
 [@tan2018age] o, en ocasiones se ha hecho uso de la técnica del
-**Transfer Learning**. Gracias a esta, se han utilizado los pesos de
+**Transfer Learning**. Gracias a ésta, se han utilizado los pesos de
 redes entrenadas previamente en otros conjuntos de imágenes como punto
 de partida para el entrenamiento de las últimas capas de las redes
 convolucionales [@burlina2016detection]. Además, como es común en Deep
